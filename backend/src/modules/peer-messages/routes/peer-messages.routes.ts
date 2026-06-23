@@ -1,0 +1,36 @@
+import { Router } from 'express';
+import { asyncHandler } from '../../../shared/middleware/async-handler.js';
+import { denyFacultyOps } from '../../../shared/middleware/role-based/deny-faculty-ops.js';
+import { validateRequest } from '../../../shared/middleware/validation/validate-request.js';
+import { peerMessagesController } from '../controllers/peer-messages.controller.js';
+import {
+  listPeerMessagesSchema,
+  markPeerConversationReadSchema,
+  sendPeerMessageSchema
+} from '../dto/peer-messages.dto.js';
+
+const router = Router();
+
+router.use(denyFacultyOps());
+
+router.get(
+  '/inbox',
+  asyncHandler((req, res) => peerMessagesController.inbox(req, res))
+);
+router.post(
+  '/read',
+  validateRequest(markPeerConversationReadSchema),
+  asyncHandler((req, res) => peerMessagesController.markRead(req, res))
+);
+router.get(
+  '/',
+  validateRequest(listPeerMessagesSchema),
+  asyncHandler((req, res) => peerMessagesController.list(req, res))
+);
+router.post(
+  '/',
+  validateRequest(sendPeerMessageSchema),
+  asyncHandler((req, res) => peerMessagesController.send(req, res))
+);
+
+export default router;

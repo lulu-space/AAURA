@@ -1,0 +1,28 @@
+# Render Blueprint — deploy backend from GitHub.
+# Dashboard: https://dashboard.render.com → New → Blueprint → connect repo.
+#
+# After deploy, set CORS_ORIGINS to your Firebase web URL (see docs/DEPLOY.md).
+
+services:
+  - type: web
+    name: aaura-api
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: JWT_AUDIENCE
+        value: authenticated
+      - key: AI_SERVICE_URL
+        value: http://localhost:8000
+      - key: CORS_ORIGINS
+        sync: false

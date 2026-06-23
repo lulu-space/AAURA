@@ -1,0 +1,535 @@
+{
+  "info": {
+    "name": "AAURA Phase 1 - Auth & RBAC",
+    "_postman_id": "d7cc5f59-80b5-4a6e-a2f6-cf47e7d1cc00",
+    "description": "Phase 1 test flow: login each role, provision, verify /users/me.\n\nBefore testing:\n1) Create users in Supabase Auth (Authentication → Users → Add user).\n2) Fill emails/passwords in environment **AAURA Local Supabase**.\n3) npm run dev (backend) must be running for provision + /users/me.\n\nSuggested emails:\n- student2@student.aaup.edu\n- club.lead@student.aaup.edu\n- affairs@staff.aaup.edu\n- dean@aaup.edu\n- admin@aaup.edu",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "0 - Setup",
+      "item": [
+        {
+          "name": "Backend - Health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/health"
+          }
+        },
+        {
+          "name": "AI - Health (via backend)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/ai/health"
+          }
+        }
+      ]
+    },
+    {
+      "name": "1 - Auth Login (run one per user)",
+      "item": [
+        {
+          "name": "Auth - Login (Student 1)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Login OK', () => pm.response.to.have.status(200));",
+                  "if (pm.response.code === 200) {",
+                  "  const j = pm.response.json();",
+                  "  if (j.access_token) pm.environment.set('student_access_token', j.access_token);",
+                  "  if (j.user?.id) pm.environment.set('student_user_id', j.user.id);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "apikey", "value": "{{supabase_anon_key}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{student_email}}\",\n  \"password\": \"{{student_password}}\"\n}"
+            },
+            "url": "{{supabase_auth_url}}/token?grant_type=password"
+          }
+        },
+        {
+          "name": "Auth - Login (Student 2)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Login OK', () => pm.response.to.have.status(200));",
+                  "if (pm.response.code === 200) {",
+                  "  const j = pm.response.json();",
+                  "  if (j.access_token) pm.environment.set('student2_access_token', j.access_token);",
+                  "  if (j.user?.id) pm.environment.set('student2_user_id', j.user.id);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "apikey", "value": "{{supabase_anon_key}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{student2_email}}\",\n  \"password\": \"{{student2_password}}\"\n}"
+            },
+            "url": "{{supabase_auth_url}}/token?grant_type=password"
+          }
+        },
+        {
+          "name": "Auth - Login (Club Organizer)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Login OK', () => pm.response.to.have.status(200));",
+                  "if (pm.response.code === 200) {",
+                  "  const j = pm.response.json();",
+                  "  if (j.access_token) pm.environment.set('club_organizer_access_token', j.access_token);",
+                  "  if (j.user?.id) pm.environment.set('club_organizer_user_id', j.user.id);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "apikey", "value": "{{supabase_anon_key}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{club_organizer_email}}\",\n  \"password\": \"{{club_organizer_password}}\"\n}"
+            },
+            "url": "{{supabase_auth_url}}/token?grant_type=password"
+          }
+        },
+        {
+          "name": "Auth - Login (Student Affairs)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Login OK', () => pm.response.to.have.status(200));",
+                  "if (pm.response.code === 200) {",
+                  "  const j = pm.response.json();",
+                  "  if (j.access_token) pm.environment.set('student_affairs_access_token', j.access_token);",
+                  "  if (j.user?.id) pm.environment.set('student_affairs_user_id', j.user.id);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "apikey", "value": "{{supabase_anon_key}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{student_affairs_email}}\",\n  \"password\": \"{{student_affairs_password}}\"\n}"
+            },
+            "url": "{{supabase_auth_url}}/token?grant_type=password"
+          }
+        },
+        {
+          "name": "Auth - Login (Dean of Faculty)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Login OK', () => pm.response.to.have.status(200));",
+                  "if (pm.response.code === 200) {",
+                  "  const j = pm.response.json();",
+                  "  if (j.access_token) pm.environment.set('dean_access_token', j.access_token);",
+                  "  if (j.user?.id) pm.environment.set('dean_user_id', j.user.id);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "apikey", "value": "{{supabase_anon_key}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{dean_email}}\",\n  \"password\": \"{{dean_password}}\"\n}"
+            },
+            "url": "{{supabase_auth_url}}/token?grant_type=password"
+          }
+        },
+        {
+          "name": "Auth - Login (Staff)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Login OK', () => pm.response.to.have.status(200));",
+                  "if (pm.response.code === 200) {",
+                  "  const j = pm.response.json();",
+                  "  if (j.access_token) pm.environment.set('staff_access_token', j.access_token);",
+                  "  if (j.user?.id) pm.environment.set('staff_user_id', j.user.id);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "apikey", "value": "{{supabase_anon_key}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{staff_email}}\",\n  \"password\": \"{{staff_password}}\"\n}"
+            },
+            "url": "{{supabase_auth_url}}/token?grant_type=password"
+          }
+        },
+        {
+          "name": "Auth - Login (Admin)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Login OK', () => pm.response.to.have.status(200));",
+                  "if (pm.response.code === 200) {",
+                  "  const j = pm.response.json();",
+                  "  if (j.access_token) pm.environment.set('admin_access_token', j.access_token);",
+                  "  if (j.user?.id) pm.environment.set('admin_user_id', j.user.id);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "apikey", "value": "{{supabase_anon_key}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"{{admin_email}}\",\n  \"password\": \"{{admin_password}}\"\n}"
+            },
+            "url": "{{supabase_auth_url}}/token?grant_type=password"
+          }
+        }
+      ]
+    },
+    {
+      "name": "2 - Provision (new users only)",
+      "item": [
+        {
+          "name": "Provision - Student 2",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{student2_access_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fullName\": \"Test Student Two\",\n  \"universityId\": \"UNI-002\",\n  \"major\": \"IT\",\n  \"department\": \"Engineering\",\n  \"academicYear\": 2\n}"
+            },
+            "url": "{{base_url}}/auth/provision"
+          }
+        },
+        {
+          "name": "Provision - Club Organizer",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{club_organizer_access_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fullName\": \"Club Lead Student\",\n  \"universityId\": \"UNI-003\",\n  \"major\": \"CS\",\n  \"department\": \"Engineering\",\n  \"academicYear\": 4\n}"
+            },
+            "url": "{{base_url}}/auth/provision"
+          }
+        },
+        {
+          "name": "Provision - Student Affairs",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{student_affairs_access_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fullName\": \"Student Affairs Officer\"\n}"
+            },
+            "url": "{{base_url}}/auth/provision"
+          }
+        },
+        {
+          "name": "Provision - Dean",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{dean_access_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fullName\": \"Dean of Faculty\"\n}"
+            },
+            "url": "{{base_url}}/auth/provision"
+          }
+        },
+        {
+          "name": "Provision - Staff",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{staff_access_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fullName\": \"Staff Approver\"\n}"
+            },
+            "url": "{{base_url}}/auth/provision"
+          }
+        },
+        {
+          "name": "Provision - Admin",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_access_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fullName\": \"System Admin\"\n}"
+            },
+            "url": "{{base_url}}/auth/provision"
+          }
+        }
+      ]
+    },
+    {
+      "name": "3 - Admin assign roles (run after provision)",
+      "item": [
+        {
+          "name": "Admin - Set club_organizer role",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_access_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"role\": \"club_organizer\"\n}"
+            },
+            "url": "{{base_url}}/users/{{club_organizer_user_id}}"
+          }
+        },
+        {
+          "name": "Admin - Set student_affairs role",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_access_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"role\": \"student_affairs\"\n}"
+            },
+            "url": "{{base_url}}/users/{{student_affairs_user_id}}"
+          }
+        },
+        {
+          "name": "Admin - Set dean_of_faculty role",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_access_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"role\": \"dean_of_faculty\"\n}"
+            },
+            "url": "{{base_url}}/users/{{dean_user_id}}"
+          }
+        },
+        {
+          "name": "Admin - Set staff role",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_access_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"role\": \"staff\"\n}"
+            },
+            "url": "{{base_url}}/users/{{staff_user_id}}"
+          }
+        },
+        {
+          "name": "Admin - Set admin role (bootstrap once)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_access_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"role\": \"admin\"\n}"
+            },
+            "url": "{{base_url}}/users/{{admin_user_id}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "4 - Verify role (/users/me)",
+      "item": [
+        {
+          "name": "Users/me - Student 1",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{student_access_token}}" }
+            ],
+            "url": "{{base_url}}/users/me"
+          }
+        },
+        {
+          "name": "Users/me - Student 2",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{student2_access_token}}" }
+            ],
+            "url": "{{base_url}}/users/me"
+          }
+        },
+        {
+          "name": "Users/me - Club Organizer",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{club_organizer_access_token}}" }
+            ],
+            "url": "{{base_url}}/users/me"
+          }
+        },
+        {
+          "name": "Users/me - Student Affairs",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{student_affairs_access_token}}" }
+            ],
+            "url": "{{base_url}}/users/me"
+          }
+        },
+        {
+          "name": "Users/me - Dean",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{dean_access_token}}" }
+            ],
+            "url": "{{base_url}}/users/me"
+          }
+        },
+        {
+          "name": "Users/me - Staff",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{staff_access_token}}" }
+            ],
+            "url": "{{base_url}}/users/me"
+          }
+        },
+        {
+          "name": "Users/me - Admin",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_access_token}}" }
+            ],
+            "url": "{{base_url}}/users/me"
+          }
+        }
+      ]
+    },
+    {
+      "name": "5 - RBAC smoke (PostgREST)",
+      "item": [
+        {
+          "name": "Events - Club Organizer Create Event",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "apikey", "value": "{{supabase_anon_key}}" },
+              { "key": "Authorization", "value": "Bearer {{club_organizer_access_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"organizer_id\": \"{{club_organizer_user_id}}\",\n  \"title\": \"AI Study Jam\",\n  \"description\": \"Campus event\",\n  \"location\": \"Main Hall\",\n  \"starts_at\": \"2026-06-15T14:00:00Z\",\n  \"ends_at\": \"2026-06-15T16:00:00Z\",\n  \"capacity\": 120,\n  \"status\": \"draft\"\n}"
+            },
+            "url": "{{supabase_rest_url}}/events"
+          }
+        },
+        {
+          "name": "System Logs - Admin Read",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "apikey", "value": "{{supabase_anon_key}}" },
+              { "key": "Authorization", "value": "Bearer {{admin_access_token}}" }
+            ],
+            "url": "{{supabase_rest_url}}/system_logs?select=*&order=created_at.desc&limit=5"
+          }
+        }
+      ]
+    }
+  ]
+}

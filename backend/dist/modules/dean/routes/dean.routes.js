@@ -1,0 +1,17 @@
+import { Router } from 'express';
+import { asyncHandler } from '../../../shared/middleware/async-handler.js';
+import { authorizeRoles } from '../../../shared/middleware/role-based/authorize-roles.js';
+import { validateRequest } from '../../../shared/middleware/validation/validate-request.js';
+import { deanController } from '../controllers/dean.controller.js';
+import { deanAnnouncementSchema, deanReportParamsSchema } from '../dto/dean.dto.js';
+const router = Router();
+const deanOnly = authorizeRoles('dean_of_faculty');
+router.get('/faculties', deanOnly, asyncHandler((req, res) => deanController.faculties(req, res)));
+router.get('/dashboard', deanOnly, asyncHandler((req, res) => deanController.dashboard(req, res)));
+router.get('/events', deanOnly, asyncHandler((req, res) => deanController.events(req, res)));
+router.get('/clubs', deanOnly, asyncHandler((req, res) => deanController.clubs(req, res)));
+router.get('/insights', deanOnly, asyncHandler((req, res) => deanController.insights(req, res)));
+router.get('/reports/:type', deanOnly, validateRequest(deanReportParamsSchema), asyncHandler((req, res) => deanController.report(req, res)));
+router.post('/announcements', deanOnly, validateRequest(deanAnnouncementSchema), asyncHandler((req, res) => deanController.announce(req, res)));
+router.get('/announcements', deanOnly, asyncHandler((req, res) => deanController.announcements(req, res)));
+export default router;

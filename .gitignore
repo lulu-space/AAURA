@@ -1,0 +1,7 @@
+.env
+.env.local
+.env.*.local
+deploy.env
+backend/.env
+frontend/.env
+node_modules/

@@ -1,0 +1,14 @@
+{
+  "name": "aaura",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix backend",
+    "dev:app": "powershell -NoProfile -ExecutionPolicy Bypass -File flutter-app/scripts/run-web.ps1",
+    "build:web": "powershell -NoProfile -ExecutionPolicy Bypass -File flutter-app/scripts/build-web-release.ps1",
+    "dev:ai": "py ai/main.py",
+    "train:ai": "cd ai && py -m app.ml.train_event_success",
+    "build": "npm run build --prefix backend",
+    "check": "npm run check --prefix backend",
+    "verify": "npm run verify --prefix backend"
+  }
+}

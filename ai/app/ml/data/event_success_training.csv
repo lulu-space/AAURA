@@ -1,0 +1,2401 @@
+student_major,event_type,department,organizer_type,expected_attendance,interest_match_score,skill_match_score,target_major_count,target_interest_count,success
+Engineering,workshop,Student Affairs,student_affairs,140,0.3,0.76,4,0,1
+Computer Science,workshop,Engineering,club_event,134,0.55,0.12,1,5,1
+Law,career,Sciences,student_affairs,18,0.78,0.24,3,2,0
+Arts,volunteer,Engineering,club_student,209,0.19,0.86,4,2,1
+Architecture,seminar,Sciences,club_student,165,0.85,0.66,2,4,1
+Engineering,workshop,Student Affairs,club_event,163,0.99,0.87,0,3,1
+Education,social,Arts,student_affairs,122,0.7,0.73,0,4,1
+Arts,social,Sciences,dean_of_faculty,153,0.99,0.68,4,1,1
+Computer Science,career,Computer Science,club_student,176,0.46,0.16,4,5,1
+Architecture,hackathon,Student Affairs,dean_of_faculty,88,0.34,0.32,4,4,0
+Law,hackathon,Arts,club_event,85,0.56,0.18,0,0,0
+Business,hackathon,Medicine,club_student,212,0.44,1.0,4,2,1
+Computer Science,seminar,Student Affairs,student_affairs,189,0.2,0.49,3,0,1
+Medicine,social,Medicine,club_student,167,0.86,0.56,1,1,1
+Business,workshop,Medicine,student_affairs,265,0.12,0.94,2,1,0
+Engineering,seminar,Student Affairs,dean_of_faculty,50,0.98,0.58,1,1,1
+Business,sports,Medicine,dean_of_faculty,123,0.94,0.78,1,5,1
+Education,cultural,Medicine,dean_of_faculty,76,0.32,0.16,0,4,0
+Arts,workshop,Engineering,club_student,132,0.16,0.13,2,0,0
+Medicine,cultural,Business,club_event,257,0.32,0.53,3,1,1
+Law,volunteer,Sciences,dean_of_faculty,254,0.88,0.15,0,0,1
+Education,seminar,Business,club_event,112,0.58,0.23,1,2,1
+Engineering,cultural,Computer Science,club_student,40,0.69,0.59,0,0,1
+Arts,social,Sciences,dean_of_faculty,261,0.29,0.46,0,1,1
+Law,sports,Computer Science,dean_of_faculty,161,0.48,0.96,4,5,1
+Business,career,Arts,club_event,44,0.62,0.59,2,0,0
+Architecture,social,Engineering,club_student,110,0.16,0.16,1,3,0
+Arts,workshop,Medicine,club_student,229,0.69,0.61,2,2,1
+Education,career,Arts,dean_of_faculty,82,0.7,0.37,2,0,0
+Engineering,seminar,Medicine,club_event,274,0.34,0.94,0,1,1
+Business,cultural,Computer Science,student_affairs,19,0.7,0.6,0,1,1
+Engineering,social,Arts,student_affairs,122,0.75,0.28,2,4,1
+Computer Science,seminar,Student Affairs,dean_of_faculty,156,0.14,0.4,1,5,1
+Business,cultural,Medicine,dean_of_faculty,19,0.2,0.95,1,4,1
+Education,social,Sciences,club_event,36,0.38,0.91,0,2,1
+Arts,seminar,Arts,dean_of_faculty,94,0.93,0.31,1,1,1
+Computer Science,social,Student Affairs,student_affairs,225,0.82,0.88,1,2,1
+Engineering,hackathon,Computer Science,club_student,255,0.3,0.83,3,2,1
+Arts,career,Engineering,club_event,219,0.4,0.88,2,2,1
+Law,volunteer,Engineering,club_student,148,0.26,0.97,2,0,1
+Law,volunteer,Student Affairs,student_affairs,238,0.65,0.56,3,4,1
+Computer Science,hackathon,Engineering,club_event,201,0.49,0.95,2,4,1
+Engineering,sports,Medicine,student_affairs,224,0.39,0.73,4,1,1
+Law,social,Medicine,student_affairs,222,0.59,0.1,2,1,1
+Education,cultural,Sciences,dean_of_faculty,124,0.56,0.81,1,5,1
+Education,seminar,Computer Science,club_event,173,0.3,0.28,0,0,0
+Architecture,seminar,Sciences,dean_of_faculty,114,0.75,0.45,3,1,1
+Computer Science,seminar,Computer Science,dean_of_faculty,127,0.26,0.96,4,3,0
+Arts,seminar,Sciences,club_event,252,0.7,0.99,4,2,1
+Architecture,hackathon,Computer Science,dean_of_faculty,96,0.77,0.53,2,1,1
+Medicine,cultural,Student Affairs,club_event,155,0.5,0.74,1,2,1
+Engineering,social,Business,club_event,211,0.72,0.74,0,3,1
+Architecture,hackathon,Engineering,club_event,230,0.45,0.79,0,4,1
+Computer Science,volunteer,Arts,dean_of_faculty,229,0.58,0.76,4,1,1
+Medicine,hackathon,Sciences,club_student,214,0.4,0.71,3,5,1
+Architecture,social,Medicine,club_student,216,0.63,0.7,0,5,1
+Architecture,social,Engineering,student_affairs,209,0.39,0.51,2,3,1
+Law,sports,Computer Science,club_student,255,0.12,0.59,2,1,1
+Computer Science,workshop,Business,club_event,25,0.66,0.31,3,5,1
+Arts,cultural,Student Affairs,student_affairs,203,0.25,0.65,0,1,1
+Engineering,workshop,Arts,dean_of_faculty,218,0.95,0.28,4,5,1
+Arts,seminar,Student Affairs,student_affairs,76,0.82,0.61,0,2,1
+Education,seminar,Medicine,student_affairs,21,0.86,0.84,0,3,1
+Architecture,social,Sciences,club_event,153,0.65,0.93,3,3,1
+Medicine,volunteer,Computer Science,club_event,59,0.35,0.51,3,4,1
+Law,volunteer,Engineering,dean_of_faculty,181,0.26,0.29,2,2,1
+Medicine,workshop,Medicine,club_event,58,0.32,0.47,4,1,0
+Architecture,cultural,Computer Science,club_student,62,0.36,0.46,1,2,1
+Education,cultural,Medicine,student_affairs,232,1.0,0.6,2,5,1
+Medicine,sports,Business,club_student,113,0.38,0.77,1,1,1
+Architecture,sports,Student Affairs,student_affairs,66,0.85,0.37,2,1,1
+Business,sports,Engineering,club_student,164,0.73,0.21,3,0,1
+Medicine,cultural,Sciences,dean_of_faculty,189,0.27,0.15,3,0,1
+Law,cultural,Engineering,club_student,92,0.23,0.61,2,0,1
+Engineering,hackathon,Medicine,club_event,209,0.51,0.5,4,3,1
+Computer Science,seminar,Computer Science,club_event,123,0.34,0.17,1,1,0
+Business,workshop,Sciences,dean_of_faculty,255,0.36,0.31,2,5,1
+Engineering,career,Arts,club_event,232,0.2,0.3,1,2,1
+Engineering,workshop,Business,student_affairs,162,0.5,0.52,2,5,1
+Medicine,cultural,Sciences,club_student,35,0.9,0.76,4,2,0
+Arts,workshop,Computer Science,student_affairs,35,0.79,0.26,4,5,1
+Medicine,social,Medicine,dean_of_faculty,266,0.97,0.52,3,2,1
+Engineering,social,Arts,dean_of_faculty,268,0.36,0.95,4,0,1
+Education,sports,Arts,club_student,221,0.88,0.84,0,5,1
+Architecture,hackathon,Engineering,club_event,280,0.43,0.78,3,0,1
+Business,sports,Sciences,dean_of_faculty,77,0.13,0.67,1,5,0
+Computer Science,hackathon,Engineering,club_event,73,0.52,0.21,1,3,1
+Medicine,sports,Sciences,dean_of_faculty,256,0.32,0.6,3,1,1
+Business,seminar,Arts,dean_of_faculty,189,0.94,0.56,0,2,1
+Architecture,social,Sciences,dean_of_faculty,191,0.4,0.79,3,3,1
+Arts,career,Medicine,dean_of_faculty,134,0.87,0.47,2,5,1
+Law,hackathon,Student Affairs,club_event,268,0.97,0.21,4,2,1
+Architecture,seminar,Medicine,dean_of_faculty,22,0.75,0.47,1,0,1
+Medicine,volunteer,Medicine,dean_of_faculty,56,0.87,0.87,4,3,1
+Architecture,workshop,Medicine,club_student,135,0.67,0.93,1,5,1
+Engineering,seminar,Sciences,club_event,168,0.91,0.14,0,2,1
+Law,social,Business,dean_of_faculty,107,0.25,0.17,3,4,1
+Architecture,social,Business,dean_of_faculty,145,0.51,0.7,3,2,1
+Business,seminar,Sciences,student_affairs,168,0.68,0.48,2,3,1
+Arts,hackathon,Computer Science,dean_of_faculty,69,0.31,0.61,4,2,1
+Medicine,workshop,Computer Science,dean_of_faculty,155,0.11,0.88,0,4,1
+Medicine,career,Medicine,student_affairs,127,0.67,0.66,1,5,1
+Computer Science,sports,Computer Science,dean_of_faculty,32,0.62,0.76,0,2,1
+Law,social,Business,club_event,202,0.58,0.92,1,2,1
+Architecture,sports,Student Affairs,student_affairs,73,0.52,0.17,1,5,1
+Law,volunteer,Engineering,dean_of_faculty,22,0.34,0.21,2,5,0
+Medicine,hackathon,Computer Science,student_affairs,70,0.71,0.52,4,4,1
+Arts,seminar,Student Affairs,dean_of_faculty,169,0.68,0.21,0,0,1
+Architecture,seminar,Engineering,club_event,84,0.45,0.43,4,3,1
+Business,hackathon,Student Affairs,club_student,265,0.65,0.95,2,0,1
+Arts,cultural,Sciences,club_event,200,0.19,0.72,4,5,1
+Law,sports,Business,club_student,247,0.18,0.29,4,0,0
+Education,career,Business,club_event,50,0.85,0.6,4,1,1
+Arts,volunteer,Computer Science,club_event,16,0.35,0.99,1,4,1
+Business,seminar,Student Affairs,club_student,82,0.11,0.81,1,4,1
+Business,sports,Engineering,club_event,230,0.57,0.77,3,3,1
+Engineering,cultural,Medicine,club_event,37,0.75,0.92,4,2,1
+Computer Science,workshop,Sciences,dean_of_faculty,233,0.72,0.54,3,0,1
+Education,social,Engineering,club_event,155,0.66,0.63,2,3,1
+Medicine,cultural,Medicine,dean_of_faculty,65,0.81,0.2,4,5,1
+Law,cultural,Business,dean_of_faculty,188,0.84,0.46,0,2,1
+Medicine,volunteer,Business,dean_of_faculty,49,0.18,0.18,3,0,0
+Education,social,Medicine,club_student,183,0.7,0.47,3,5,0
+Medicine,sports,Arts,club_student,274,0.29,0.69,1,0,1
+Education,seminar,Computer Science,student_affairs,130,0.83,0.86,4,4,1
+Computer Science,sports,Engineering,club_event,154,0.73,0.38,2,2,0
+Business,hackathon,Engineering,club_event,30,0.18,0.58,3,3,0
+Business,volunteer,Arts,student_affairs,58,0.9,0.24,4,0,1
+Medicine,cultural,Student Affairs,dean_of_faculty,263,0.65,0.47,1,4,1
+Law,seminar,Arts,dean_of_faculty,172,0.14,0.46,4,0,0
+Medicine,career,Computer Science,club_event,145,0.36,0.21,3,5,1
+Business,hackathon,Medicine,club_event,271,0.6,0.7,2,0,1
+Computer Science,hackathon,Engineering,dean_of_faculty,54,0.88,0.62,4,3,1
+Law,sports,Engineering,dean_of_faculty,25,0.97,0.25,4,3,1
+Education,seminar,Sciences,club_student,139,0.49,0.46,0,3,1
+Education,career,Arts,club_event,54,0.56,0.2,4,1,1
+Education,volunteer,Student Affairs,club_event,135,0.19,0.33,1,4,1
+Engineering,social,Computer Science,dean_of_faculty,252,0.78,0.78,3,5,1
+Education,volunteer,Business,dean_of_faculty,49,0.52,0.67,2,4,0
+Engineering,sports,Sciences,dean_of_faculty,34,0.15,0.85,0,5,1
+Engineering,hackathon,Sciences,club_student,245,0.92,0.61,1,2,1
+Business,workshop,Sciences,club_student,190,0.98,0.18,1,0,1
+Architecture,cultural,Medicine,club_event,201,0.44,0.35,3,2,1
+Computer Science,volunteer,Engineering,student_affairs,63,0.6,0.45,2,5,1
+Business,volunteer,Engineering,club_event,194,0.38,0.69,3,1,1
+Engineering,sports,Medicine,dean_of_faculty,183,0.83,0.7,4,0,1
+Law,volunteer,Engineering,student_affairs,173,0.26,0.29,3,1,0
+Business,social,Engineering,student_affairs,66,0.56,0.59,4,0,1
+Business,hackathon,Business,club_event,107,0.85,0.79,1,5,1
+Law,volunteer,Student Affairs,club_event,242,0.65,0.78,3,1,1
+Medicine,cultural,Computer Science,club_event,203,0.71,0.61,3,3,1
+Law,hackathon,Business,club_event,85,0.89,0.15,3,2,1
+Engineering,seminar,Arts,club_student,97,0.35,0.91,1,3,1
+Arts,cultural,Arts,club_student,227,0.15,0.55,1,3,1
+Education,career,Engineering,student_affairs,65,0.86,0.68,1,1,0
+Architecture,social,Computer Science,dean_of_faculty,244,0.65,0.92,0,2,1
+Business,hackathon,Engineering,student_affairs,136,0.37,0.14,3,5,1
+Architecture,seminar,Engineering,dean_of_faculty,23,0.67,0.62,1,2,1
+Education,career,Medicine,dean_of_faculty,110,0.7,0.18,2,0,1
+Computer Science,hackathon,Computer Science,dean_of_faculty,37,0.67,0.98,2,5,0
+Engineering,volunteer,Business,club_student,185,0.22,0.42,2,5,1
+Architecture,cultural,Student Affairs,club_event,84,0.16,0.8,3,0,1
+Computer Science,career,Engineering,student_affairs,173,0.56,0.99,4,3,1
+Arts,sports,Arts,club_student,184,0.35,0.82,3,3,1
+Law,volunteer,Business,dean_of_faculty,269,0.43,0.82,2,0,1
+Engineering,hackathon,Medicine,club_event,165,0.39,0.17,2,2,1
+Law,social,Student Affairs,dean_of_faculty,194,0.5,0.75,2,4,1
+Medicine,workshop,Engineering,dean_of_faculty,201,0.56,0.77,1,0,1
+Architecture,workshop,Business,club_student,135,0.8,0.43,3,4,0
+Business,cultural,Arts,student_affairs,242,0.79,0.62,4,2,1
+Medicine,career,Engineering,club_student,110,0.55,0.45,4,0,1
+Medicine,cultural,Business,student_affairs,266,0.28,0.22,0,3,1
+Architecture,seminar,Computer Science,student_affairs,192,0.74,0.59,2,2,1
+Business,volunteer,Medicine,club_event,77,0.99,0.81,1,3,0
+Education,cultural,Computer Science,club_event,59,0.16,0.46,3,4,0
+Law,seminar,Business,student_affairs,52,0.5,0.71,2,1,1
+Business,social,Sciences,club_student,78,0.57,0.37,1,2,1
+Arts,volunteer,Medicine,student_affairs,55,0.33,0.67,4,2,1
+Medicine,seminar,Medicine,club_event,93,0.25,0.66,4,2,1
+Computer Science,workshop,Engineering,club_student,150,0.69,0.79,3,4,1
+Architecture,sports,Student Affairs,student_affairs,262,0.32,0.83,3,2,1
+Computer Science,social,Sciences,dean_of_faculty,262,0.52,0.41,1,2,1
+Education,volunteer,Sciences,club_event,204,0.56,0.2,1,3,1
+Architecture,career,Business,club_student,40,0.36,0.45,4,3,1
+Business,volunteer,Medicine,student_affairs,112,0.79,0.55,4,3,1
+Medicine,cultural,Engineering,club_student,216,0.55,0.97,1,4,1
+Computer Science,sports,Sciences,dean_of_faculty,161,0.58,0.86,3,1,1
+Education,hackathon,Arts,club_student,220,0.15,0.61,2,4,1
+Law,cultural,Computer Science,student_affairs,75,0.22,0.19,2,2,0
+Education,social,Business,dean_of_faculty,271,0.14,0.14,2,3,1
+Business,social,Arts,student_affairs,98,0.45,0.65,2,4,1
+Architecture,sports,Sciences,club_student,203,0.4,0.2,3,4,1
+Computer Science,cultural,Arts,club_event,41,0.63,0.25,4,3,1
+Arts,workshop,Medicine,club_student,112,0.12,0.38,1,3,0
+Law,cultural,Computer Science,club_student,85,0.57,0.6,3,4,1
+Business,cultural,Medicine,student_affairs,196,0.71,0.88,2,4,1
+Arts,sports,Medicine,student_affairs,130,0.95,0.98,2,5,1
+Architecture,volunteer,Sciences,student_affairs,155,0.36,0.62,4,3,1
+Law,volunteer,Computer Science,club_event,163,0.14,0.96,0,2,1
+Medicine,cultural,Business,club_event,153,0.94,0.73,1,0,1
+Arts,career,Engineering,club_event,134,0.15,0.47,3,0,0
+Business,workshop,Medicine,club_event,223,0.69,0.89,3,3,1
+Medicine,volunteer,Arts,club_student,60,0.69,0.31,0,1,1
+Business,workshop,Computer Science,dean_of_faculty,268,0.27,0.77,2,0,0
+Engineering,volunteer,Arts,dean_of_faculty,267,0.9,0.22,4,3,1
+Engineering,volunteer,Business,dean_of_faculty,146,0.75,0.11,2,2,1
+Arts,social,Medicine,dean_of_faculty,233,0.56,0.18,0,1,1
+Architecture,volunteer,Business,club_student,148,0.45,0.5,2,2,1
+Computer Science,sports,Student Affairs,student_affairs,135,0.16,0.21,2,1,0
+Medicine,seminar,Student Affairs,student_affairs,203,0.65,0.3,1,3,1
+Education,hackathon,Student Affairs,dean_of_faculty,126,0.79,0.71,4,0,1
+Education,seminar,Medicine,club_student,46,0.85,0.91,1,4,1
+Business,volunteer,Computer Science,dean_of_faculty,74,0.71,0.75,3,0,1
+Architecture,workshop,Sciences,club_event,277,0.47,0.61,4,3,1
+Medicine,workshop,Sciences,student_affairs,16,0.77,0.62,0,3,1
+Engineering,workshop,Engineering,dean_of_faculty,31,0.36,0.26,1,5,1
+Law,volunteer,Sciences,dean_of_faculty,208,0.44,0.71,4,1,1
+Education,seminar,Business,dean_of_faculty,80,0.76,0.3,0,0,1
+Architecture,hackathon,Medicine,dean_of_faculty,132,0.32,0.41,2,1,1
+Engineering,workshop,Computer Science,dean_of_faculty,23,0.32,0.16,4,0,0
+Computer Science,career,Student Affairs,club_student,220,0.5,0.59,0,1,1
+Medicine,career,Computer Science,student_affairs,179,0.31,0.89,4,1,1
+Medicine,workshop,Medicine,club_event,233,0.6,0.14,2,5,1
+Education,hackathon,Sciences,club_event,168,0.44,0.78,3,1,1
+Medicine,social,Computer Science,dean_of_faculty,44,0.61,0.97,4,4,1
+Arts,sports,Business,student_affairs,55,0.93,0.86,0,4,1
+Arts,workshop,Arts,dean_of_faculty,35,0.89,0.27,4,5,1
+Arts,cultural,Business,student_affairs,170,0.96,0.11,1,5,1
+Architecture,career,Student Affairs,club_event,218,0.92,0.6,2,3,1
+Education,sports,Arts,student_affairs,277,0.89,0.52,3,2,1
+Education,volunteer,Sciences,club_student,128,0.77,0.11,4,4,1
+Law,sports,Business,club_event,183,0.31,0.61,1,3,1
+Education,sports,Computer Science,dean_of_faculty,266,0.51,0.76,2,1,1
+Architecture,social,Medicine,club_student,32,0.86,0.17,0,0,1
+Arts,seminar,Student Affairs,club_event,19,0.3,0.51,0,4,0
+Architecture,cultural,Engineering,club_student,225,0.11,0.58,2,4,1
+Computer Science,hackathon,Computer Science,club_event,69,0.93,0.57,1,1,1
+Medicine,volunteer,Arts,dean_of_faculty,55,0.44,0.47,4,1,1
+Arts,sports,Student Affairs,club_student,31,0.18,0.44,4,3,0
+Computer Science,social,Engineering,dean_of_faculty,237,0.68,0.4,0,4,1
+Arts,career,Computer Science,dean_of_faculty,153,0.14,0.17,2,4,0
+Computer Science,social,Computer Science,student_affairs,23,0.97,0.63,3,0,1
+Arts,hackathon,Student Affairs,student_affairs,211,0.78,0.23,0,4,1
+Education,workshop,Engineering,dean_of_faculty,133,0.85,0.41,4,4,1
+Education,workshop,Student Affairs,student_affairs,245,0.54,0.42,3,3,1
+Law,seminar,Computer Science,student_affairs,141,0.74,0.17,1,3,1
+Business,hackathon,Arts,student_affairs,69,0.18,0.95,3,2,1
+Engineering,social,Engineering,club_event,235,0.5,0.6,3,0,0
+Education,seminar,Medicine,student_affairs,212,0.11,0.47,0,5,1
+Arts,social,Student Affairs,dean_of_faculty,101,0.22,0.37,3,1,1
+Law,sports,Sciences,student_affairs,262,0.8,0.43,1,5,1
+Arts,cultural,Engineering,club_event,170,0.11,0.46,4,3,1
+Education,cultural,Arts,dean_of_faculty,84,0.37,0.64,1,3,1
+Law,volunteer,Arts,dean_of_faculty,139,0.39,0.35,3,2,1
+Arts,social,Student Affairs,club_student,251,0.95,0.29,2,5,1
+Law,cultural,Business,student_affairs,138,0.33,0.24,3,3,1
+Architecture,hackathon,Medicine,dean_of_faculty,33,0.81,0.42,4,4,1
+Engineering,seminar,Computer Science,club_event,196,0.25,0.65,4,5,1
+Law,volunteer,Computer Science,dean_of_faculty,69,0.11,0.33,4,5,0
+Arts,cultural,Arts,dean_of_faculty,252,0.8,0.63,4,1,1
+Computer Science,cultural,Engineering,student_affairs,227,0.93,0.18,1,2,1
+Architecture,career,Medicine,dean_of_faculty,193,0.53,0.49,3,2,1
+Computer Science,seminar,Engineering,student_affairs,70,0.71,0.25,1,4,1
+Business,volunteer,Medicine,dean_of_faculty,251,0.31,0.46,1,1,1
+Law,hackathon,Engineering,club_event,245,0.63,0.45,1,1,1
+Engineering,seminar,Computer Science,club_event,202,0.39,0.51,2,5,1
+Education,hackathon,Medicine,dean_of_faculty,73,0.41,0.86,4,1,1
+Medicine,seminar,Student Affairs,club_event,175,0.21,0.37,1,2,1
+Law,hackathon,Medicine,club_event,211,0.48,0.54,4,5,1
+Business,social,Sciences,student_affairs,86,0.27,0.86,4,0,1
+Computer Science,cultural,Business,club_event,211,0.97,0.55,3,3,1
+Law,cultural,Sciences,club_event,57,0.61,0.82,1,2,0
+Arts,sports,Business,dean_of_faculty,268,0.59,0.2,0,2,1
+Education,workshop,Computer Science,dean_of_faculty,126,0.99,0.19,1,2,1
+Computer Science,cultural,Arts,student_affairs,59,0.5,0.99,1,1,1
+Education,hackathon,Business,club_event,120,0.83,0.82,4,2,1
+Business,volunteer,Student Affairs,student_affairs,163,0.62,0.96,4,5,1
+Business,hackathon,Engineering,student_affairs,79,0.73,0.22,1,5,1
+Arts,hackathon,Sciences,club_event,152,0.67,0.44,0,5,1
+Engineering,hackathon,Medicine,student_affairs,203,0.51,0.54,4,0,1
+Engineering,cultural,Student Affairs,student_affairs,47,0.82,0.46,3,1,1
+Education,sports,Arts,club_event,263,0.81,0.9,0,0,1
+Architecture,workshop,Engineering,club_event,240,0.51,0.99,3,1,1
+Business,sports,Business,student_affairs,62,0.69,0.33,2,5,1
+Business,workshop,Sciences,student_affairs,134,0.49,0.18,0,0,1
+Engineering,social,Medicine,club_event,280,0.71,0.11,2,0,1
+Law,social,Sciences,club_student,132,0.44,0.76,0,0,1
+Medicine,social,Sciences,club_event,88,0.16,0.61,4,5,1
+Education,career,Student Affairs,club_event,225,0.65,0.5,1,0,1
+Business,seminar,Medicine,dean_of_faculty,194,0.97,0.38,1,1,1
+Engineering,career,Medicine,student_affairs,28,0.86,0.69,2,1,1
+Arts,hackathon,Arts,club_student,137,0.55,0.2,3,5,1
+Computer Science,volunteer,Arts,club_event,213,0.87,0.61,2,4,1
+Architecture,seminar,Engineering,club_student,22,0.34,0.14,0,3,0
+Law,hackathon,Student Affairs,dean_of_faculty,57,0.68,0.58,1,2,1
+Engineering,career,Computer Science,club_event,182,0.45,0.67,0,2,1
+Arts,workshop,Business,club_student,237,0.2,0.65,0,2,1
+Business,seminar,Engineering,club_event,20,0.25,0.96,4,4,0
+Medicine,social,Arts,club_event,152,0.76,0.21,0,2,1
+Medicine,seminar,Arts,club_student,269,0.51,0.42,3,4,1
+Business,sports,Computer Science,club_student,74,0.31,0.56,0,0,1
+Architecture,volunteer,Sciences,club_event,106,0.94,0.87,4,5,1
+Law,career,Arts,club_event,228,0.92,0.39,0,4,1
+Computer Science,social,Business,club_student,220,0.16,0.52,2,2,1
+Architecture,workshop,Arts,club_event,164,0.61,0.37,4,1,1
+Architecture,career,Student Affairs,club_event,92,0.11,0.47,1,4,0
+Computer Science,volunteer,Engineering,dean_of_faculty,172,0.19,0.58,1,3,1
+Computer Science,social,Student Affairs,student_affairs,62,0.14,0.31,4,3,0
+Education,cultural,Student Affairs,club_student,63,0.55,0.67,3,0,1
+Computer Science,hackathon,Student Affairs,club_event,136,0.36,0.87,3,5,1
+Education,volunteer,Sciences,student_affairs,134,0.17,0.28,4,0,0
+Business,cultural,Sciences,student_affairs,223,0.21,0.42,1,3,1
+Medicine,seminar,Engineering,club_event,170,0.84,0.73,0,1,1
+Education,social,Engineering,club_event,197,0.46,0.14,2,2,1
+Business,workshop,Sciences,dean_of_faculty,142,0.19,0.19,1,0,1
+Arts,social,Business,dean_of_faculty,205,0.72,0.94,0,4,1
+Engineering,workshop,Engineering,club_event,242,0.83,0.18,2,0,0
+Architecture,workshop,Business,dean_of_faculty,217,0.55,0.44,3,1,1
+Business,sports,Arts,dean_of_faculty,91,0.13,0.66,1,5,1
+Law,cultural,Engineering,club_student,158,0.44,0.48,4,1,1
+Computer Science,hackathon,Computer Science,student_affairs,260,0.59,0.54,4,4,1
+Medicine,social,Engineering,student_affairs,127,0.13,0.83,2,0,1
+Architecture,volunteer,Computer Science,club_event,96,0.19,0.69,2,4,1
+Computer Science,career,Medicine,dean_of_faculty,196,0.94,0.99,1,1,1
+Education,volunteer,Medicine,club_student,195,0.95,0.61,4,1,1
+Architecture,sports,Business,dean_of_faculty,34,0.18,0.31,1,0,0
+Computer Science,volunteer,Medicine,club_event,81,0.41,0.26,2,0,1
+Business,seminar,Computer Science,student_affairs,52,0.44,0.95,3,4,1
+Medicine,volunteer,Business,club_event,238,0.81,0.96,2,1,1
+Education,career,Student Affairs,club_event,208,0.38,0.72,1,1,1
+Law,workshop,Business,student_affairs,128,0.68,0.19,3,1,1
+Engineering,career,Arts,student_affairs,100,0.67,0.97,2,3,0
+Arts,career,Student Affairs,club_student,194,0.33,0.2,0,0,1
+Law,social,Sciences,dean_of_faculty,208,0.42,0.44,3,4,1
+Arts,social,Sciences,club_student,32,0.37,0.39,0,0,1
+Law,social,Student Affairs,club_student,62,0.4,0.99,3,5,0
+Business,hackathon,Business,club_student,66,0.4,0.98,3,5,1
+Medicine,sports,Arts,club_event,64,0.14,0.61,3,1,1
+Computer Science,hackathon,Engineering,student_affairs,260,0.28,0.12,1,5,1
+Engineering,cultural,Computer Science,club_student,172,0.81,0.52,2,0,1
+Law,social,Arts,dean_of_faculty,204,0.27,0.14,3,3,1
+Medicine,workshop,Business,club_student,58,0.7,0.83,3,4,1
+Computer Science,hackathon,Computer Science,dean_of_faculty,258,0.62,0.31,2,0,1
+Computer Science,social,Engineering,dean_of_faculty,103,0.95,0.25,1,1,1
+Law,seminar,Student Affairs,dean_of_faculty,118,1.0,0.66,4,2,1
+Engineering,seminar,Sciences,dean_of_faculty,181,0.87,0.57,0,5,1
+Law,seminar,Sciences,club_event,90,0.61,0.62,0,0,1
+Engineering,sports,Computer Science,student_affairs,225,0.34,0.69,4,4,1
+Business,sports,Sciences,club_event,220,0.13,0.9,2,5,1
+Architecture,sports,Arts,club_student,187,0.84,0.37,2,3,1
+Engineering,career,Business,student_affairs,241,0.8,0.39,3,4,1
+Arts,cultural,Business,dean_of_faculty,263,0.78,0.88,0,4,1
+Engineering,sports,Student Affairs,dean_of_faculty,84,0.8,0.57,4,0,1
+Arts,workshop,Business,club_student,248,0.15,0.42,1,2,1
+Architecture,hackathon,Student Affairs,club_student,30,0.32,0.54,3,1,0
+Architecture,volunteer,Arts,club_event,147,0.77,0.72,2,0,1
+Business,career,Computer Science,club_event,130,0.71,0.34,3,4,0
+Computer Science,cultural,Business,club_event,19,0.3,0.65,2,5,0
+Medicine,hackathon,Sciences,student_affairs,250,0.33,0.52,4,4,1
+Engineering,workshop,Medicine,student_affairs,159,0.37,0.2,0,2,1
+Education,sports,Arts,student_affairs,111,0.23,0.79,0,4,1
+Education,social,Student Affairs,club_student,269,1.0,0.33,3,3,1
+Computer Science,career,Arts,club_event,258,0.92,0.7,4,2,1
+Business,sports,Engineering,dean_of_faculty,80,0.77,0.75,4,1,1
+Education,seminar,Business,student_affairs,129,0.77,0.38,2,2,1
+Medicine,cultural,Computer Science,club_student,255,0.15,0.67,4,4,1
+Arts,seminar,Computer Science,dean_of_faculty,167,0.47,0.88,1,1,1
+Education,hackathon,Medicine,dean_of_faculty,88,0.38,0.74,0,3,1
+Business,volunteer,Student Affairs,club_student,17,0.51,0.29,1,4,0
+Architecture,seminar,Business,dean_of_faculty,234,0.46,0.97,3,0,0
+Arts,volunteer,Engineering,student_affairs,112,0.12,0.1,1,1,0
+Education,sports,Business,club_student,211,0.55,0.38,0,0,1
+Medicine,cultural,Student Affairs,student_affairs,237,0.9,1.0,2,3,1
+Arts,social,Computer Science,dean_of_faculty,24,0.31,0.75,1,1,0
+Business,seminar,Arts,club_student,207,0.89,0.33,4,4,0
+Computer Science,seminar,Student Affairs,club_student,39,0.72,0.48,3,0,1
+Architecture,social,Business,club_student,169,0.48,0.19,4,2,1
+Business,hackathon,Computer Science,club_student,276,0.75,0.21,0,0,1
+Arts,sports,Computer Science,club_event,198,0.73,0.37,0,4,1
+Arts,cultural,Arts,club_event,16,0.11,0.18,0,4,0
+Business,seminar,Computer Science,club_student,66,0.91,0.68,3,2,1
+Computer Science,seminar,Computer Science,club_event,35,0.87,0.42,2,3,1
+Engineering,workshop,Engineering,club_event,102,0.4,0.91,4,2,1
+Engineering,volunteer,Computer Science,student_affairs,108,0.2,0.46,3,2,1
+Architecture,hackathon,Student Affairs,club_event,72,0.22,0.75,1,0,0
+Architecture,cultural,Business,dean_of_faculty,198,0.65,0.88,1,3,1
+Engineering,hackathon,Sciences,club_student,47,0.34,0.38,4,5,1
+Arts,volunteer,Medicine,club_student,236,0.7,0.32,2,5,1
+Law,social,Computer Science,club_student,20,0.68,0.24,3,3,1
+Engineering,cultural,Arts,club_event,184,0.97,0.15,1,4,1
+Law,career,Engineering,dean_of_faculty,242,0.82,0.5,3,3,1
+Architecture,workshop,Engineering,dean_of_faculty,226,0.13,0.59,0,4,1
+Medicine,career,Student Affairs,dean_of_faculty,189,0.43,0.15,1,3,1
+Architecture,volunteer,Student Affairs,dean_of_faculty,73,0.19,0.69,0,2,0
+Medicine,volunteer,Student Affairs,club_student,38,0.91,0.54,3,0,1
+Arts,career,Engineering,dean_of_faculty,125,0.51,0.8,2,0,1
+Computer Science,seminar,Computer Science,dean_of_faculty,249,0.69,0.96,1,3,0
+Computer Science,hackathon,Computer Science,dean_of_faculty,275,0.8,0.92,4,1,1
+Business,seminar,Sciences,student_affairs,273,0.89,0.48,4,5,1
+Medicine,hackathon,Arts,student_affairs,246,0.82,0.22,4,5,1
+Medicine,volunteer,Student Affairs,club_event,117,0.29,0.74,2,5,1
+Business,volunteer,Student Affairs,club_student,195,0.61,0.62,3,5,1
+Medicine,hackathon,Computer Science,club_student,69,0.12,0.23,0,1,0
+Business,sports,Student Affairs,student_affairs,89,0.86,0.72,2,1,1
+Computer Science,volunteer,Computer Science,dean_of_faculty,67,0.65,0.71,4,1,1
+Law,career,Medicine,student_affairs,39,0.93,0.45,2,4,0
+Medicine,career,Medicine,dean_of_faculty,130,0.92,0.73,2,4,1
+Arts,career,Arts,dean_of_faculty,105,0.99,0.17,1,5,1
+Law,workshop,Sciences,student_affairs,150,0.22,0.63,2,0,1
+Business,workshop,Business,student_affairs,41,0.8,0.66,2,3,1
+Education,seminar,Computer Science,student_affairs,127,0.96,0.57,4,1,1
+Law,seminar,Arts,club_event,124,0.7,0.4,2,1,1
+Architecture,workshop,Engineering,student_affairs,243,0.32,0.68,4,1,1
+Education,hackathon,Computer Science,club_student,212,0.33,0.75,0,4,1
+Education,cultural,Sciences,club_student,166,0.91,0.27,4,0,1
+Business,workshop,Student Affairs,club_student,122,0.7,0.8,3,0,1
+Law,seminar,Student Affairs,club_event,27,0.51,0.4,0,0,0
+Medicine,seminar,Medicine,club_event,147,0.47,0.51,3,3,1
+Law,seminar,Medicine,club_student,47,0.78,0.63,0,2,1
+Engineering,sports,Computer Science,student_affairs,59,0.35,0.93,3,3,1
+Computer Science,cultural,Business,club_event,84,0.77,0.82,4,2,1
+Business,sports,Student Affairs,student_affairs,20,0.6,0.6,0,0,0
+Law,seminar,Arts,club_event,191,0.29,0.92,4,1,1
+Arts,sports,Business,club_student,107,0.7,0.61,0,4,1
+Engineering,sports,Student Affairs,club_student,143,0.19,0.75,3,2,1
+Arts,seminar,Arts,club_student,114,0.39,0.51,4,5,1
+Business,volunteer,Computer Science,student_affairs,234,0.25,0.38,1,5,1
+Law,sports,Computer Science,student_affairs,83,0.71,0.4,3,3,1
+Medicine,cultural,Medicine,club_student,104,0.68,0.17,2,1,1
+Arts,sports,Student Affairs,club_student,53,0.9,0.86,0,4,1
+Arts,workshop,Medicine,student_affairs,256,0.69,0.23,3,1,1
+Medicine,social,Sciences,club_student,218,0.43,0.11,1,4,1
+Business,cultural,Business,club_event,89,0.76,0.54,2,0,1
+Architecture,career,Engineering,student_affairs,204,0.31,0.7,4,2,1
+Architecture,workshop,Engineering,student_affairs,67,0.73,0.57,2,5,1
+Business,hackathon,Student Affairs,dean_of_faculty,202,0.63,0.91,0,4,1
+Arts,hackathon,Arts,student_affairs,264,0.81,0.9,0,4,1
+Architecture,social,Business,club_student,278,0.68,0.29,1,1,1
+Engineering,career,Sciences,student_affairs,73,0.53,0.53,1,4,1
+Law,workshop,Business,club_student,80,0.62,0.25,4,0,1
+Business,workshop,Business,student_affairs,107,0.56,0.46,4,5,0
+Medicine,seminar,Business,dean_of_faculty,256,0.88,0.25,3,4,1
+Business,sports,Business,student_affairs,247,0.64,0.16,3,3,1
+Computer Science,career,Medicine,dean_of_faculty,91,0.64,0.26,4,4,0
+Engineering,seminar,Sciences,club_event,15,0.91,0.8,3,4,1
+Computer Science,hackathon,Business,dean_of_faculty,210,0.42,0.82,4,0,1
+Medicine,cultural,Computer Science,club_event,57,0.35,0.89,3,2,1
+Computer Science,seminar,Medicine,club_student,207,0.69,0.72,2,3,1
+Business,hackathon,Student Affairs,student_affairs,148,0.87,0.48,2,4,1
+Law,career,Sciences,dean_of_faculty,106,0.43,0.6,2,2,1
+Law,social,Computer Science,club_student,132,0.5,0.73,1,0,1
+Law,volunteer,Computer Science,club_student,97,0.45,0.67,0,1,1
+Law,seminar,Engineering,student_affairs,128,0.43,0.65,3,3,1
+Medicine,workshop,Computer Science,club_event,268,0.5,0.28,4,2,1
+Arts,social,Student Affairs,club_student,199,0.32,0.1,1,0,1
+Law,volunteer,Student Affairs,dean_of_faculty,222,0.63,0.57,0,0,1
+Education,volunteer,Computer Science,student_affairs,130,0.65,0.28,3,4,0
+Business,hackathon,Medicine,club_student,52,0.55,0.41,0,4,1
+Medicine,cultural,Sciences,dean_of_faculty,139,0.78,0.97,3,5,1
+Computer Science,cultural,Engineering,student_affairs,49,0.44,0.81,1,5,1
+Education,hackathon,Arts,club_student,149,0.32,0.18,2,0,1
+Business,cultural,Arts,student_affairs,126,0.9,0.34,1,3,1
+Arts,career,Computer Science,student_affairs,120,0.31,0.85,4,2,1
+Engineering,seminar,Engineering,dean_of_faculty,18,0.79,0.59,0,3,1
+Education,cultural,Medicine,student_affairs,266,0.26,0.79,4,2,1
+Business,workshop,Medicine,dean_of_faculty,259,0.95,0.13,2,3,1
+Business,cultural,Engineering,dean_of_faculty,176,0.72,0.11,1,3,1
+Education,volunteer,Medicine,student_affairs,110,0.59,0.31,3,4,1
+Business,cultural,Sciences,club_event,229,0.73,0.44,3,2,1
+Business,career,Computer Science,club_student,153,0.82,0.6,3,1,1
+Business,cultural,Computer Science,club_student,105,0.48,0.22,4,4,1
+Architecture,sports,Arts,club_student,218,0.19,0.25,1,2,1
+Engineering,cultural,Student Affairs,student_affairs,148,0.42,0.6,2,2,0
+Engineering,volunteer,Computer Science,club_event,104,0.98,0.36,2,5,1
+Architecture,seminar,Sciences,student_affairs,252,0.67,0.23,1,5,1
+Education,hackathon,Student Affairs,dean_of_faculty,51,0.17,0.41,2,2,1
+Medicine,hackathon,Arts,dean_of_faculty,200,0.77,0.57,3,3,1
+Computer Science,social,Student Affairs,club_event,143,0.95,0.73,0,1,1
+Engineering,seminar,Engineering,dean_of_faculty,42,0.12,0.46,0,0,0
+Business,seminar,Student Affairs,dean_of_faculty,173,0.31,0.76,3,5,1
+Business,workshop,Engineering,student_affairs,181,0.88,0.52,4,2,1
+Business,social,Medicine,dean_of_faculty,237,0.57,0.68,2,2,1
+Arts,seminar,Sciences,student_affairs,202,0.47,0.24,0,0,1
+Business,volunteer,Arts,dean_of_faculty,19,0.72,0.54,3,2,0
+Law,sports,Medicine,club_event,18,0.59,0.27,4,3,0
+Business,hackathon,Computer Science,dean_of_faculty,127,0.34,0.48,1,4,1
+Medicine,sports,Student Affairs,student_affairs,226,0.27,0.16,1,2,1
+Architecture,cultural,Arts,dean_of_faculty,111,0.39,0.24,4,0,1
+Engineering,sports,Arts,club_event,239,0.75,0.31,1,0,1
+Education,hackathon,Arts,dean_of_faculty,205,0.52,0.81,2,0,1
+Business,workshop,Arts,dean_of_faculty,51,0.59,0.26,2,3,1
+Engineering,career,Sciences,dean_of_faculty,141,0.76,0.13,3,5,1
+Arts,cultural,Sciences,student_affairs,180,0.24,0.76,4,4,1
+Architecture,sports,Business,student_affairs,41,0.88,0.3,0,1,1
+Education,workshop,Business,student_affairs,76,0.46,0.32,0,4,1
+Architecture,social,Arts,club_student,142,0.24,0.18,4,2,1
+Computer Science,workshop,Arts,club_event,69,0.21,0.31,4,5,0
+Architecture,career,Engineering,dean_of_faculty,198,0.75,0.33,0,3,1
+Medicine,cultural,Business,club_event,193,0.39,0.52,4,4,1
+Business,cultural,Arts,student_affairs,202,0.51,0.8,4,3,1
+Computer Science,volunteer,Computer Science,club_event,179,0.75,0.69,4,3,1
+Architecture,social,Medicine,student_affairs,180,0.47,0.39,0,4,1
+Computer Science,social,Business,club_student,118,0.2,0.27,0,4,0
+Law,cultural,Medicine,student_affairs,40,0.43,0.65,0,0,1
+Arts,cultural,Computer Science,club_student,254,0.82,0.15,4,5,1
+Law,volunteer,Computer Science,club_student,151,0.58,0.76,2,0,1
+Engineering,seminar,Student Affairs,club_event,212,0.27,0.57,1,4,1
+Business,hackathon,Student Affairs,club_student,198,0.71,0.73,3,0,1
+Business,hackathon,Medicine,student_affairs,95,0.58,0.64,2,2,1
+Education,volunteer,Sciences,dean_of_faculty,180,0.65,0.61,1,3,1
+Medicine,volunteer,Sciences,dean_of_faculty,218,0.1,0.13,2,4,0
+Business,sports,Engineering,student_affairs,128,0.29,0.38,2,4,1
+Business,seminar,Engineering,dean_of_faculty,197,0.24,0.34,4,1,1
+Medicine,seminar,Medicine,dean_of_faculty,126,0.76,0.75,3,1,1
+Engineering,sports,Engineering,dean_of_faculty,55,0.8,0.93,2,2,1
+Law,hackathon,Computer Science,club_student,131,0.77,0.86,0,5,1
+Law,workshop,Arts,club_student,178,0.59,0.23,4,5,1
+Computer Science,hackathon,Sciences,club_student,128,0.49,0.81,1,1,1
+Architecture,workshop,Medicine,dean_of_faculty,149,0.18,0.55,1,1,0
+Arts,cultural,Sciences,club_event,141,0.32,0.34,3,2,1
+Engineering,seminar,Student Affairs,dean_of_faculty,231,0.43,0.27,2,4,1
+Medicine,social,Arts,dean_of_faculty,89,0.5,0.93,1,1,1
+Business,seminar,Engineering,club_student,139,0.95,0.93,2,0,1
+Engineering,sports,Sciences,dean_of_faculty,26,0.4,0.77,1,1,1
+Medicine,cultural,Medicine,club_event,24,0.44,0.92,4,0,1
+Computer Science,sports,Business,student_affairs,42,0.52,0.95,0,3,1
+Education,seminar,Engineering,student_affairs,212,0.31,0.44,0,2,1
+Engineering,social,Business,dean_of_faculty,26,0.14,0.93,2,2,1
+Business,workshop,Arts,student_affairs,196,0.66,0.31,4,2,1
+Medicine,hackathon,Computer Science,club_student,158,0.3,0.41,3,5,1
+Law,career,Sciences,club_event,93,0.48,0.38,4,2,1
+Business,career,Student Affairs,club_event,118,0.88,0.38,4,1,1
+Business,social,Arts,club_student,75,0.27,0.86,1,5,0
+Education,hackathon,Sciences,student_affairs,241,0.77,0.84,2,1,1
+Engineering,social,Business,club_student,151,0.65,0.65,4,1,1
+Computer Science,volunteer,Engineering,dean_of_faculty,83,0.55,0.64,2,1,1
+Architecture,cultural,Business,club_event,113,0.3,0.47,0,2,1
+Arts,career,Computer Science,club_event,48,0.26,0.96,3,4,1
+Education,cultural,Business,dean_of_faculty,222,0.8,0.65,3,5,1
+Computer Science,seminar,Sciences,dean_of_faculty,36,0.89,0.32,4,3,1
+Computer Science,hackathon,Medicine,club_student,112,0.36,0.46,2,2,1
+Law,sports,Medicine,club_student,279,0.91,0.52,3,0,1
+Engineering,social,Computer Science,club_event,216,0.47,0.51,1,3,1
+Arts,cultural,Engineering,student_affairs,180,0.72,0.92,1,5,1
+Engineering,seminar,Student Affairs,dean_of_faculty,200,0.18,0.74,4,4,1
+Law,hackathon,Engineering,club_event,186,0.61,0.69,1,1,1
+Business,workshop,Sciences,student_affairs,173,0.76,0.96,2,5,1
+Business,career,Engineering,student_affairs,21,0.51,0.87,4,0,1
+Architecture,career,Business,dean_of_faculty,247,0.47,0.17,4,0,1
+Medicine,career,Engineering,club_event,90,0.15,0.41,1,0,0
+Medicine,volunteer,Engineering,club_student,70,0.48,0.26,2,4,1
+Business,cultural,Student Affairs,student_affairs,33,0.18,0.37,2,3,1
+Law,seminar,Arts,dean_of_faculty,83,0.21,0.87,2,4,1
+Arts,career,Medicine,club_student,70,0.61,0.98,4,0,1
+Medicine,hackathon,Medicine,student_affairs,147,0.57,1.0,2,1,1
+Architecture,cultural,Sciences,club_event,134,0.74,0.98,0,0,0
+Engineering,career,Computer Science,dean_of_faculty,226,0.14,0.41,1,0,1
+Medicine,sports,Computer Science,club_student,172,0.37,0.59,0,0,1
+Education,hackathon,Student Affairs,club_student,104,0.27,0.85,3,3,1
+Business,cultural,Business,dean_of_faculty,186,0.52,0.83,0,4,1
+Education,workshop,Business,student_affairs,196,0.16,0.23,0,2,0
+Business,hackathon,Business,club_student,172,0.73,0.38,0,2,1
+Architecture,career,Arts,dean_of_faculty,169,0.29,0.37,0,2,1
+Arts,seminar,Sciences,club_student,262,0.91,0.24,2,3,1
+Medicine,volunteer,Business,club_student,279,0.71,0.22,0,3,1
+Engineering,workshop,Arts,club_student,59,0.4,0.9,0,4,1
+Medicine,workshop,Medicine,student_affairs,122,0.39,0.27,2,4,1
+Architecture,seminar,Arts,club_event,95,0.35,0.11,4,4,1
+Arts,volunteer,Medicine,student_affairs,153,0.23,0.73,2,4,1
+Engineering,sports,Medicine,student_affairs,242,0.15,0.13,0,0,0
+Engineering,hackathon,Sciences,club_event,243,0.65,0.38,1,5,1
+Engineering,cultural,Medicine,club_event,62,0.83,0.93,3,0,1
+Architecture,cultural,Business,club_event,88,0.87,0.66,2,3,1
+Education,volunteer,Sciences,dean_of_faculty,30,0.16,0.2,3,3,0
+Medicine,volunteer,Medicine,club_event,275,0.19,0.84,0,2,1
+Engineering,sports,Medicine,dean_of_faculty,220,0.63,0.31,1,4,1
+Architecture,hackathon,Engineering,student_affairs,121,0.83,0.63,3,4,1
+Arts,social,Student Affairs,club_student,264,0.2,0.64,2,4,1
+Architecture,social,Arts,dean_of_faculty,50,0.64,0.72,4,3,1
+Computer Science,seminar,Business,club_event,15,0.78,0.69,3,4,1
+Architecture,career,Business,student_affairs,168,0.61,0.92,2,3,1
+Education,seminar,Medicine,club_student,276,0.46,0.21,2,0,1
+Computer Science,workshop,Student Affairs,student_affairs,71,0.88,0.88,1,3,1
+Law,volunteer,Student Affairs,dean_of_faculty,222,0.44,0.59,1,3,1
+Law,volunteer,Computer Science,dean_of_faculty,93,0.36,0.89,1,1,0
+Computer Science,social,Student Affairs,dean_of_faculty,238,0.98,0.22,1,5,1
+Architecture,hackathon,Medicine,club_event,247,0.56,0.6,3,3,1
+Business,hackathon,Medicine,club_student,270,0.86,0.31,4,2,1
+Education,workshop,Engineering,dean_of_faculty,203,0.2,0.53,0,1,1
+Medicine,cultural,Medicine,club_student,60,0.32,0.67,0,5,1
+Medicine,workshop,Arts,club_student,255,0.51,0.92,4,5,1
+Education,sports,Arts,club_event,33,0.73,0.64,2,5,1
+Medicine,workshop,Student Affairs,dean_of_faculty,101,0.62,0.69,2,5,1
+Medicine,cultural,Engineering,club_event,273,0.17,0.81,2,1,1
+Medicine,sports,Engineering,club_student,104,0.92,0.77,3,2,1
+Medicine,career,Sciences,club_event,31,0.41,0.18,1,4,0
+Business,cultural,Computer Science,dean_of_faculty,211,0.31,0.5,1,1,1
+Education,workshop,Student Affairs,student_affairs,74,0.15,0.52,3,2,1
+Arts,hackathon,Student Affairs,dean_of_faculty,257,0.34,0.58,3,0,1
+Architecture,hackathon,Student Affairs,student_affairs,36,0.19,0.58,2,3,0
+Medicine,volunteer,Arts,student_affairs,65,0.33,0.63,3,5,1
+Arts,volunteer,Student Affairs,club_event,175,0.59,0.71,0,0,1
+Engineering,cultural,Arts,club_event,160,0.33,0.13,4,0,1
+Arts,seminar,Student Affairs,club_student,59,0.87,0.22,4,1,1
+Business,sports,Arts,dean_of_faculty,53,0.67,0.93,2,3,1
+Education,sports,Business,club_student,156,0.8,0.44,2,0,1
+Medicine,social,Sciences,club_student,266,0.98,0.28,3,1,1
+Engineering,social,Medicine,dean_of_faculty,126,0.65,0.2,3,5,1
+Computer Science,seminar,Engineering,student_affairs,243,0.12,0.55,0,0,1
+Medicine,social,Student Affairs,student_affairs,215,0.62,0.56,3,3,1
+Engineering,career,Engineering,dean_of_faculty,261,0.21,0.58,2,2,1
+Law,workshop,Student Affairs,club_student,202,0.58,0.96,0,3,1
+Medicine,career,Business,club_student,211,0.69,0.37,3,0,1
+Education,cultural,Engineering,dean_of_faculty,112,0.23,0.27,4,1,0
+Engineering,sports,Sciences,dean_of_faculty,23,0.13,0.15,0,3,0
+Architecture,social,Student Affairs,club_event,51,0.13,0.23,0,3,0
+Computer Science,career,Student Affairs,club_event,22,0.26,0.14,2,0,0
+Business,seminar,Computer Science,club_student,73,0.55,0.82,1,0,1
+Law,volunteer,Computer Science,dean_of_faculty,181,0.21,0.72,4,1,1
+Arts,workshop,Medicine,club_event,186,0.16,0.35,3,1,0
+Business,cultural,Business,club_student,83,0.19,0.86,4,3,1
+Computer Science,cultural,Engineering,club_student,18,0.26,0.18,4,2,0
+Architecture,social,Business,club_event,153,0.57,0.47,1,4,1
+Business,cultural,Medicine,club_student,169,0.41,0.1,1,1,1
+Engineering,volunteer,Computer Science,club_event,252,0.79,0.69,2,0,1
+Business,cultural,Sciences,club_event,96,0.7,0.14,2,2,1
+Medicine,volunteer,Medicine,dean_of_faculty,37,0.19,0.15,4,1,0
+Computer Science,cultural,Medicine,club_student,51,0.91,0.75,4,4,1
+Arts,volunteer,Business,club_student,181,0.31,0.31,3,1,1
+Arts,seminar,Sciences,dean_of_faculty,42,0.9,0.23,4,3,1
+Education,social,Sciences,club_event,198,0.98,0.28,1,0,1
+Computer Science,sports,Business,club_student,253,0.51,0.25,2,1,1
+Business,social,Medicine,club_event,59,0.47,0.57,1,4,1
+Architecture,sports,Engineering,dean_of_faculty,141,0.32,0.49,1,4,1
+Computer Science,hackathon,Engineering,club_student,255,0.76,0.55,3,4,1
+Engineering,cultural,Sciences,club_event,57,0.6,0.11,3,1,1
+Medicine,career,Student Affairs,club_student,23,0.53,0.37,3,4,1
+Computer Science,cultural,Sciences,club_event,222,0.27,0.88,3,5,1
+Engineering,hackathon,Student Affairs,student_affairs,31,0.37,0.78,4,4,1
+Arts,seminar,Medicine,student_affairs,43,0.56,0.92,2,0,1
+Education,cultural,Medicine,club_student,202,0.43,0.68,0,4,1
+Arts,social,Arts,club_event,73,0.68,0.76,4,5,1
+Arts,volunteer,Arts,student_affairs,272,0.71,0.35,0,2,1
+Architecture,seminar,Sciences,student_affairs,246,0.66,0.82,0,1,1
+Architecture,seminar,Engineering,dean_of_faculty,106,0.36,0.96,0,1,1
+Business,cultural,Business,club_event,26,0.36,0.97,4,1,1
+Law,cultural,Student Affairs,club_student,164,0.27,0.12,1,4,1
+Law,volunteer,Student Affairs,student_affairs,263,0.63,0.73,4,3,1
+Business,sports,Business,student_affairs,131,0.54,0.97,0,1,1
+Architecture,social,Medicine,club_event,161,0.26,0.26,1,1,0
+Computer Science,volunteer,Medicine,club_event,240,0.33,0.27,4,5,0
+Education,volunteer,Business,student_affairs,244,0.59,0.25,2,0,1
+Law,cultural,Computer Science,club_event,249,0.94,0.24,4,4,1
+Medicine,cultural,Arts,club_event,241,0.4,0.2,3,0,1
+Engineering,sports,Engineering,dean_of_faculty,127,0.5,0.18,0,4,1
+Arts,sports,Business,club_student,57,0.58,0.5,0,4,1
+Architecture,volunteer,Medicine,club_student,199,0.46,0.74,3,2,1
+Computer Science,sports,Arts,student_affairs,172,0.98,0.89,0,1,1
+Architecture,hackathon,Computer Science,dean_of_faculty,162,0.25,0.76,3,5,1
+Business,seminar,Business,club_event,170,0.53,0.88,2,0,1
+Law,seminar,Engineering,dean_of_faculty,154,0.47,0.6,4,1,1
+Law,sports,Medicine,dean_of_faculty,36,0.84,0.37,4,2,1
+Architecture,career,Engineering,club_student,93,0.34,0.96,3,0,1
+Medicine,hackathon,Business,dean_of_faculty,140,0.13,0.79,3,0,1
+Education,cultural,Medicine,dean_of_faculty,147,0.67,0.53,0,2,1
+Computer Science,sports,Business,club_student,89,0.39,0.89,1,2,1
+Medicine,volunteer,Sciences,student_affairs,39,0.36,0.58,0,4,1
+Business,seminar,Medicine,club_event,180,0.89,0.84,2,2,1
+Education,seminar,Medicine,student_affairs,88,0.11,0.57,2,3,0
+Business,seminar,Business,club_event,272,0.3,0.27,4,4,1
+Engineering,hackathon,Sciences,club_student,74,0.84,0.93,3,2,1
+Education,social,Computer Science,dean_of_faculty,190,0.25,0.37,0,1,1
+Business,career,Arts,club_event,122,0.22,0.17,0,0,1
+Architecture,hackathon,Engineering,club_event,70,0.13,0.69,4,0,0
+Medicine,workshop,Engineering,student_affairs,20,0.78,0.8,4,1,1
+Arts,social,Student Affairs,student_affairs,29,0.18,0.86,2,4,1
+Business,career,Medicine,club_student,65,0.84,0.79,4,1,1
+Medicine,social,Computer Science,club_student,65,0.93,0.93,3,2,1
+Business,cultural,Student Affairs,club_student,107,0.85,0.98,3,1,1
+Law,seminar,Computer Science,student_affairs,78,0.52,0.57,3,2,1
+Computer Science,seminar,Arts,dean_of_faculty,74,0.45,0.51,2,5,1
+Architecture,career,Medicine,dean_of_faculty,163,0.99,0.49,0,3,1
+Education,social,Engineering,dean_of_faculty,68,0.46,0.57,0,0,1
+Law,seminar,Student Affairs,club_event,48,0.43,0.28,1,4,1
+Law,seminar,Business,dean_of_faculty,270,0.35,0.74,4,4,1
+Law,volunteer,Sciences,dean_of_faculty,263,0.56,0.23,3,0,1
+Architecture,cultural,Business,club_event,30,0.19,0.15,0,3,0
+Business,hackathon,Medicine,student_affairs,93,0.37,0.66,0,5,1
+Architecture,cultural,Business,student_affairs,269,0.54,0.34,2,4,1
+Computer Science,hackathon,Engineering,dean_of_faculty,245,0.38,0.44,3,0,0
+Medicine,social,Sciences,dean_of_faculty,83,0.38,0.45,0,4,1
+Architecture,cultural,Medicine,club_event,274,0.15,0.34,4,3,1
+Education,sports,Arts,club_student,29,0.63,0.22,2,2,1
+Computer Science,volunteer,Sciences,club_student,234,0.41,0.42,2,0,1
+Arts,career,Student Affairs,student_affairs,58,0.92,0.16,2,0,1
+Computer Science,volunteer,Engineering,dean_of_faculty,231,0.61,0.91,2,0,1
+Computer Science,volunteer,Sciences,dean_of_faculty,180,0.62,0.83,0,5,1
+Education,cultural,Medicine,student_affairs,100,0.65,0.43,3,1,1
+Engineering,career,Arts,student_affairs,39,0.37,0.62,1,4,1
+Engineering,seminar,Medicine,student_affairs,154,0.16,0.82,3,3,1
+Engineering,sports,Medicine,student_affairs,236,0.7,0.38,3,3,1
+Architecture,social,Engineering,club_event,270,0.29,0.97,3,2,1
+Law,workshop,Medicine,club_event,201,0.52,0.32,2,3,1
+Engineering,career,Computer Science,dean_of_faculty,151,0.84,0.68,2,5,1
+Law,career,Engineering,club_event,113,0.12,0.82,2,3,1
+Law,hackathon,Student Affairs,club_student,118,0.24,0.22,2,2,1
+Business,workshop,Student Affairs,dean_of_faculty,25,0.15,0.91,2,4,1
+Engineering,hackathon,Arts,club_student,218,0.95,0.75,1,1,1
+Engineering,sports,Sciences,club_student,136,0.64,0.8,2,2,1
+Law,career,Sciences,club_event,88,0.2,0.29,2,3,0
+Computer Science,cultural,Medicine,student_affairs,72,0.38,0.48,1,2,1
+Business,volunteer,Sciences,student_affairs,172,0.12,0.97,4,0,1
+Computer Science,career,Arts,dean_of_faculty,173,0.68,0.73,0,4,1
+Architecture,hackathon,Engineering,dean_of_faculty,145,0.37,0.94,1,2,1
+Business,cultural,Student Affairs,student_affairs,223,0.81,0.35,0,3,1
+Law,volunteer,Student Affairs,dean_of_faculty,66,0.84,0.73,4,0,1
+Education,cultural,Student Affairs,club_student,41,0.68,0.27,3,5,1
+Law,career,Student Affairs,student_affairs,175,0.62,0.2,1,4,1
+Business,hackathon,Computer Science,student_affairs,246,0.53,0.76,2,1,1
+Education,sports,Business,club_student,227,0.43,0.45,3,4,1
+Computer Science,career,Engineering,dean_of_faculty,116,0.34,0.87,0,3,1
+Medicine,social,Engineering,student_affairs,102,0.95,0.21,4,3,1
+Architecture,cultural,Engineering,club_event,119,0.27,0.88,2,2,1
+Law,social,Sciences,club_event,125,1.0,0.35,1,3,1
+Business,workshop,Arts,student_affairs,135,0.66,0.92,2,4,1
+Architecture,seminar,Engineering,dean_of_faculty,83,0.88,0.98,3,5,1
+Law,hackathon,Student Affairs,student_affairs,52,0.19,0.15,2,1,0
+Education,workshop,Engineering,student_affairs,273,0.66,0.37,3,5,1
+Computer Science,social,Arts,club_event,272,0.54,0.41,3,1,1
+Law,social,Arts,club_student,175,0.14,0.22,2,5,1
+Law,sports,Arts,student_affairs,279,0.38,0.9,2,5,1
+Business,cultural,Engineering,club_event,91,0.15,0.26,3,2,0
+Architecture,hackathon,Engineering,dean_of_faculty,35,0.5,0.99,4,3,1
+Engineering,social,Engineering,student_affairs,62,0.28,0.36,1,5,1
+Medicine,career,Medicine,club_student,107,0.47,0.17,3,5,1
+Education,workshop,Arts,club_student,216,0.44,0.94,0,2,1
+Engineering,cultural,Computer Science,dean_of_faculty,247,0.67,0.34,0,2,1
+Architecture,volunteer,Student Affairs,club_event,123,0.88,0.82,2,2,1
+Engineering,hackathon,Engineering,dean_of_faculty,145,0.26,0.97,3,0,0
+Arts,social,Sciences,dean_of_faculty,160,0.68,0.96,1,0,1
+Law,sports,Student Affairs,club_event,198,0.7,0.85,4,1,1
+Law,cultural,Arts,dean_of_faculty,61,0.78,0.83,4,1,1
+Law,seminar,Engineering,student_affairs,252,0.71,0.68,1,3,1
+Engineering,sports,Sciences,dean_of_faculty,55,0.92,0.53,1,1,1
+Medicine,career,Medicine,dean_of_faculty,166,0.61,0.6,0,4,1
+Law,hackathon,Engineering,dean_of_faculty,144,0.42,0.63,4,0,1
+Architecture,social,Computer Science,club_event,216,0.14,0.47,2,2,1
+Architecture,cultural,Medicine,student_affairs,189,0.97,0.88,1,1,1
+Medicine,seminar,Sciences,club_student,17,0.46,0.11,3,3,0
+Architecture,sports,Medicine,student_affairs,217,0.82,0.18,1,0,1
+Computer Science,career,Computer Science,club_student,122,0.53,0.23,1,3,1
+Arts,seminar,Arts,dean_of_faculty,90,0.53,0.12,1,1,1
+Architecture,cultural,Sciences,club_student,245,0.63,0.28,4,3,0
+Computer Science,seminar,Student Affairs,dean_of_faculty,227,0.86,0.76,4,5,1
+Medicine,workshop,Sciences,dean_of_faculty,263,0.56,0.75,3,1,1
+Computer Science,hackathon,Medicine,student_affairs,47,0.34,0.68,3,0,0
+Education,cultural,Student Affairs,dean_of_faculty,25,0.25,0.75,3,2,1
+Arts,volunteer,Medicine,dean_of_faculty,82,0.89,0.75,3,3,1
+Education,cultural,Computer Science,club_event,121,0.35,0.77,3,1,1
+Business,cultural,Engineering,dean_of_faculty,267,0.37,0.29,0,0,1
+Medicine,volunteer,Student Affairs,club_event,104,0.85,0.91,0,0,1
+Engineering,career,Engineering,club_event,264,0.33,0.41,2,0,1
+Medicine,social,Computer Science,club_student,40,0.93,0.49,3,0,1
+Engineering,workshop,Medicine,club_student,100,0.67,0.88,2,1,1
+Architecture,cultural,Student Affairs,club_student,93,0.68,0.4,1,0,1
+Architecture,hackathon,Computer Science,club_student,140,0.85,0.53,2,4,1
+Medicine,volunteer,Student Affairs,dean_of_faculty,199,0.67,0.32,4,3,1
+Business,hackathon,Sciences,dean_of_faculty,249,0.96,0.56,2,0,1
+Computer Science,seminar,Engineering,student_affairs,176,0.46,0.8,3,0,1
+Computer Science,social,Medicine,club_student,166,0.48,0.9,4,2,1
+Education,volunteer,Engineering,student_affairs,90,0.73,0.5,1,4,1
+Architecture,volunteer,Computer Science,dean_of_faculty,116,0.89,0.18,4,2,1
+Business,sports,Business,club_student,276,0.6,0.57,1,0,0
+Medicine,career,Computer Science,student_affairs,231,0.99,0.2,0,2,1
+Education,seminar,Engineering,club_student,244,0.37,0.76,3,2,1
+Arts,volunteer,Arts,student_affairs,86,0.74,0.57,1,0,1
+Arts,volunteer,Sciences,club_student,90,0.74,0.85,0,0,1
+Business,cultural,Business,dean_of_faculty,54,0.43,0.57,4,4,1
+Law,sports,Medicine,dean_of_faculty,231,1.0,0.72,3,5,1
+Business,social,Medicine,club_event,263,0.74,0.22,4,4,1
+Arts,cultural,Sciences,club_student,95,0.95,0.43,0,4,1
+Engineering,seminar,Arts,student_affairs,35,0.57,0.21,2,2,1
+Architecture,workshop,Computer Science,club_event,87,0.81,0.48,2,2,1
+Architecture,workshop,Engineering,student_affairs,49,0.88,0.48,4,2,1
+Education,hackathon,Sciences,club_event,85,0.55,0.51,3,5,1
+Education,seminar,Computer Science,dean_of_faculty,213,0.31,0.46,4,0,1
+Architecture,sports,Student Affairs,club_student,99,0.74,0.61,2,4,1
+Engineering,career,Medicine,club_student,111,0.78,0.55,0,0,1
+Business,workshop,Arts,club_event,140,0.85,0.86,4,3,1
+Education,hackathon,Medicine,club_student,266,0.88,0.12,3,1,1
+Education,hackathon,Arts,club_student,73,0.98,0.59,2,1,1
+Engineering,social,Arts,dean_of_faculty,101,0.15,0.97,1,0,1
+Medicine,hackathon,Engineering,student_affairs,87,0.47,0.39,3,0,0
+Arts,career,Sciences,dean_of_faculty,73,0.34,0.39,4,3,0
+Computer Science,hackathon,Student Affairs,club_event,24,0.34,0.97,0,1,0
+Business,sports,Medicine,dean_of_faculty,243,0.18,0.67,1,1,1
+Business,career,Medicine,dean_of_faculty,246,0.14,0.83,4,2,1
+Business,workshop,Engineering,dean_of_faculty,154,0.64,0.86,3,2,1
+Arts,sports,Engineering,club_event,50,0.37,0.46,0,1,1
+Medicine,hackathon,Business,student_affairs,190,0.67,0.98,3,2,1
+Education,volunteer,Business,dean_of_faculty,183,0.11,0.72,0,4,1
+Computer Science,social,Sciences,dean_of_faculty,216,0.58,0.81,0,4,0
+Architecture,seminar,Arts,dean_of_faculty,198,0.45,0.86,0,0,1
+Arts,cultural,Engineering,club_event,25,0.78,0.71,2,1,1
+Medicine,career,Business,dean_of_faculty,200,0.13,0.54,4,1,0
+Law,seminar,Computer Science,student_affairs,271,0.54,0.6,4,5,1
+Business,seminar,Medicine,club_event,48,0.21,0.94,1,4,1
+Medicine,career,Computer Science,club_student,144,0.71,0.89,0,3,1
+Computer Science,volunteer,Sciences,dean_of_faculty,155,0.21,0.57,3,2,1
+Computer Science,career,Engineering,student_affairs,230,0.58,0.38,3,1,1
+Computer Science,career,Student Affairs,dean_of_faculty,53,0.93,0.28,2,2,1
+Engineering,workshop,Sciences,dean_of_faculty,27,0.63,0.66,2,2,1
+Architecture,career,Arts,club_student,185,0.57,0.31,0,4,1
+Engineering,cultural,Medicine,club_student,58,0.98,0.93,3,2,1
+Engineering,social,Engineering,dean_of_faculty,43,0.37,0.66,0,0,1
+Computer Science,sports,Computer Science,dean_of_faculty,220,0.19,0.78,1,4,1
+Computer Science,cultural,Sciences,dean_of_faculty,234,0.89,0.66,2,5,1
+Computer Science,cultural,Medicine,student_affairs,113,0.2,0.11,0,4,0
+Arts,social,Student Affairs,student_affairs,196,0.48,0.75,3,1,1
+Computer Science,workshop,Business,student_affairs,238,0.56,0.69,2,2,1
+Business,social,Sciences,student_affairs,190,0.36,0.97,4,4,1
+Business,workshop,Business,club_student,231,0.41,0.98,1,0,1
+Architecture,cultural,Medicine,student_affairs,186,0.65,0.48,1,0,1
+Computer Science,cultural,Business,club_student,129,0.72,0.52,1,1,1
+Education,hackathon,Business,dean_of_faculty,109,0.84,0.11,0,0,1
+Engineering,social,Arts,dean_of_faculty,114,0.67,0.92,2,0,1
+Arts,career,Arts,club_event,127,0.9,0.75,2,4,1
+Arts,workshop,Business,student_affairs,66,0.12,0.71,3,5,0
+Engineering,volunteer,Business,student_affairs,248,0.32,0.83,1,4,1
+Law,seminar,Engineering,club_event,81,0.82,0.27,3,5,1
+Law,career,Engineering,club_event,165,0.81,0.39,0,5,1
+Business,cultural,Business,club_student,255,0.81,0.65,1,4,1
+Education,cultural,Medicine,dean_of_faculty,106,0.39,0.44,3,5,1
+Architecture,sports,Medicine,dean_of_faculty,33,0.29,0.91,3,1,1
+Medicine,hackathon,Sciences,club_event,206,0.33,0.18,0,2,1
+Education,career,Medicine,club_student,253,0.56,0.4,3,3,1
+Education,cultural,Arts,student_affairs,210,0.12,0.5,2,5,1
+Engineering,sports,Computer Science,club_student,156,0.93,0.19,0,2,0
+Arts,volunteer,Business,student_affairs,143,0.37,0.83,2,1,1
+Business,sports,Engineering,student_affairs,159,0.84,0.8,3,3,1
+Computer Science,cultural,Student Affairs,club_event,218,0.3,0.75,1,3,1
+Architecture,cultural,Arts,club_student,175,0.86,0.49,3,1,1
+Computer Science,volunteer,Business,club_event,171,0.95,0.11,2,2,1
+Law,hackathon,Computer Science,student_affairs,181,0.63,0.61,0,1,1
+Education,hackathon,Sciences,club_event,215,0.16,0.45,3,0,1
+Architecture,sports,Engineering,club_event,68,0.71,0.26,4,3,0
+Arts,seminar,Sciences,student_affairs,120,0.31,0.69,0,3,0
+Computer Science,social,Arts,dean_of_faculty,215,0.24,0.2,4,3,1
+Engineering,hackathon,Computer Science,club_event,81,0.88,0.38,3,1,1
+Medicine,career,Medicine,dean_of_faculty,156,0.28,0.99,3,0,1
+Arts,volunteer,Medicine,dean_of_faculty,250,0.52,0.14,0,2,1
+Architecture,volunteer,Student Affairs,student_affairs,215,0.65,0.83,1,3,1
+Law,cultural,Sciences,club_event,63,0.45,0.95,1,1,1
+Medicine,seminar,Student Affairs,club_event,267,0.47,0.79,0,2,1
+Engineering,volunteer,Sciences,dean_of_faculty,99,0.33,0.56,3,0,1
+Architecture,hackathon,Arts,dean_of_faculty,114,0.46,0.11,0,5,1
+Education,cultural,Sciences,dean_of_faculty,49,0.17,0.69,3,1,0
+Medicine,social,Business,club_student,66,0.26,0.21,3,1,0
+Computer Science,sports,Business,dean_of_faculty,198,0.26,0.74,4,1,1
+Computer Science,seminar,Sciences,student_affairs,242,0.15,0.1,3,1,1
+Education,career,Business,club_student,23,0.48,0.99,2,1,1
+Engineering,career,Engineering,club_event,100,0.14,0.56,2,2,1
+Arts,career,Medicine,dean_of_faculty,234,0.21,0.29,2,2,1
+Law,volunteer,Engineering,dean_of_faculty,123,0.51,0.16,2,5,1
+Computer Science,seminar,Business,dean_of_faculty,169,0.79,0.55,0,5,1
+Business,sports,Engineering,student_affairs,213,0.71,0.98,1,2,1
+Education,cultural,Engineering,student_affairs,24,0.65,0.63,3,4,1
+Arts,workshop,Business,club_student,78,0.38,0.76,1,4,1
+Business,volunteer,Sciences,student_affairs,118,0.24,0.28,0,1,0
+Architecture,volunteer,Business,student_affairs,177,0.68,0.78,4,3,1
+Medicine,workshop,Business,student_affairs,190,0.32,0.59,1,5,1
+Arts,hackathon,Medicine,student_affairs,108,0.5,0.11,3,0,1
+Computer Science,social,Business,club_event,61,0.26,0.59,1,1,0
+Law,cultural,Arts,club_event,116,0.32,0.26,1,2,0
+Architecture,career,Arts,dean_of_faculty,55,0.96,0.42,3,1,1
+Law,hackathon,Computer Science,club_event,261,0.12,0.44,0,2,1
+Business,social,Arts,dean_of_faculty,252,0.38,0.35,4,4,1
+Education,social,Student Affairs,dean_of_faculty,115,0.24,0.27,0,4,1
+Education,cultural,Sciences,dean_of_faculty,217,0.97,0.44,3,2,1
+Engineering,hackathon,Engineering,club_student,212,0.94,0.25,3,2,1
+Education,cultural,Student Affairs,student_affairs,44,0.69,0.93,1,1,1
+Education,workshop,Student Affairs,club_event,148,0.64,0.95,1,2,1
+Business,workshop,Engineering,club_student,211,0.46,0.63,0,4,1
+Law,social,Computer Science,dean_of_faculty,144,0.72,0.55,4,5,1
+Medicine,hackathon,Computer Science,club_student,70,0.67,0.8,2,1,1
+Arts,hackathon,Student Affairs,student_affairs,18,0.99,0.83,0,0,1
+Law,hackathon,Student Affairs,student_affairs,235,0.25,0.44,1,1,1
+Engineering,cultural,Medicine,club_event,110,0.28,0.77,1,2,1
+Law,cultural,Student Affairs,club_student,100,0.17,0.18,0,2,0
+Computer Science,career,Sciences,dean_of_faculty,66,0.11,0.34,0,5,1
+Computer Science,seminar,Business,club_student,207,0.64,0.99,2,3,1
+Education,hackathon,Arts,student_affairs,190,1.0,0.84,2,5,1
+Computer Science,volunteer,Computer Science,student_affairs,66,0.1,0.88,3,5,1
+Business,workshop,Medicine,club_student,158,0.96,0.78,1,2,1
+Architecture,hackathon,Student Affairs,club_event,16,0.99,0.96,2,0,1
+Computer Science,volunteer,Student Affairs,dean_of_faculty,134,0.65,0.46,4,0,1
+Architecture,seminar,Student Affairs,dean_of_faculty,165,0.65,0.74,4,4,1
+Computer Science,social,Sciences,club_student,169,0.85,1.0,3,1,1
+Engineering,cultural,Student Affairs,club_event,139,0.29,0.78,0,0,1
+Computer Science,social,Arts,dean_of_faculty,158,0.3,0.33,3,5,1
+Business,cultural,Engineering,student_affairs,129,0.94,0.79,4,0,1
+Law,hackathon,Student Affairs,dean_of_faculty,134,0.3,0.2,0,0,0
+Arts,seminar,Medicine,student_affairs,80,0.87,0.96,4,5,0
+Computer Science,career,Computer Science,dean_of_faculty,231,0.39,0.43,1,4,1
+Arts,seminar,Sciences,club_student,250,0.38,0.83,2,1,1
+Architecture,social,Medicine,student_affairs,89,0.77,0.86,0,4,1
+Engineering,sports,Computer Science,dean_of_faculty,125,0.55,0.73,3,0,1
+Education,social,Computer Science,club_event,130,0.73,0.15,1,3,1
+Medicine,social,Engineering,dean_of_faculty,187,0.48,0.53,2,3,1
+Medicine,sports,Student Affairs,club_event,216,0.19,0.39,4,0,1
+Medicine,cultural,Student Affairs,club_event,85,0.5,0.53,1,1,1
+Arts,workshop,Arts,club_student,90,0.44,0.98,1,0,1
+Architecture,social,Engineering,club_student,278,0.69,0.63,1,5,1
+Arts,workshop,Engineering,club_event,218,0.54,0.72,1,5,1
+Engineering,cultural,Computer Science,dean_of_faculty,155,0.67,0.5,0,0,1
+Engineering,cultural,Student Affairs,club_event,26,0.63,0.99,3,2,1
+Engineering,social,Sciences,dean_of_faculty,237,0.37,0.21,2,0,1
+Business,hackathon,Computer Science,club_student,216,0.6,0.58,4,3,1
+Engineering,career,Student Affairs,club_student,107,0.88,0.73,0,4,1
+Education,seminar,Engineering,club_event,120,0.69,0.18,2,0,1
+Engineering,sports,Arts,club_event,231,0.98,0.69,1,2,0
+Medicine,cultural,Business,dean_of_faculty,175,0.57,0.99,2,4,1
+Arts,seminar,Student Affairs,club_student,136,0.13,0.23,1,1,0
+Arts,volunteer,Arts,club_event,231,0.17,0.33,3,5,1
+Law,cultural,Engineering,student_affairs,232,0.95,0.23,1,0,1
+Medicine,career,Student Affairs,student_affairs,276,0.64,0.48,1,2,1
+Law,hackathon,Engineering,club_event,54,0.34,0.58,4,3,0
+Engineering,volunteer,Arts,student_affairs,89,0.88,0.3,0,0,1
+Arts,hackathon,Engineering,club_student,104,0.57,0.89,4,3,1
+Education,sports,Medicine,student_affairs,65,0.91,0.25,3,1,1
+Law,cultural,Medicine,club_event,147,0.11,0.56,1,5,1
+Law,sports,Engineering,student_affairs,142,0.71,0.48,3,1,1
+Education,cultural,Medicine,student_affairs,156,0.96,0.57,1,2,1
+Engineering,sports,Sciences,student_affairs,61,0.67,0.17,1,0,1
+Computer Science,seminar,Student Affairs,student_affairs,267,0.83,0.11,3,5,1
+Business,cultural,Sciences,club_student,222,0.11,0.27,0,5,1
+Education,career,Student Affairs,club_student,244,0.97,0.71,4,1,1
+Education,social,Medicine,student_affairs,41,0.48,0.44,2,0,1
+Arts,seminar,Arts,student_affairs,262,0.36,0.29,4,3,1
+Medicine,workshop,Sciences,dean_of_faculty,44,0.42,0.65,2,2,1
+Computer Science,volunteer,Student Affairs,club_event,220,0.42,0.19,3,1,1
+Business,hackathon,Engineering,dean_of_faculty,18,0.24,0.69,1,3,0
+Medicine,volunteer,Sciences,club_event,152,0.2,0.49,3,1,1
+Law,workshop,Arts,club_event,71,0.27,0.14,3,3,0
+Computer Science,social,Student Affairs,club_event,260,0.96,0.98,0,3,1
+Architecture,social,Arts,dean_of_faculty,271,0.75,0.77,3,1,1
+Engineering,workshop,Business,club_event,191,0.55,0.79,1,0,1
+Education,hackathon,Medicine,club_student,237,0.53,0.35,0,3,1
+Business,social,Business,student_affairs,73,0.88,0.99,1,5,1
+Arts,cultural,Student Affairs,club_student,272,0.65,0.27,4,5,1
+Arts,seminar,Business,dean_of_faculty,34,0.35,0.27,1,3,1
+Arts,seminar,Computer Science,club_student,209,0.47,0.38,1,1,1
+Architecture,workshop,Medicine,dean_of_faculty,41,0.37,0.34,2,2,1
+Arts,volunteer,Engineering,club_event,35,0.1,0.69,2,1,0
+Medicine,seminar,Sciences,club_event,144,0.95,0.43,2,0,1
+Computer Science,social,Arts,student_affairs,200,0.77,0.63,4,2,1
+Medicine,career,Medicine,dean_of_faculty,59,0.9,0.22,4,0,0
+Arts,career,Student Affairs,dean_of_faculty,65,0.17,0.59,2,2,1
+Arts,social,Engineering,club_event,113,0.48,0.74,4,2,1
+Architecture,seminar,Sciences,club_student,262,0.48,0.94,4,0,1
+Medicine,social,Arts,club_student,46,0.81,0.72,3,3,1
+Engineering,social,Sciences,dean_of_faculty,214,0.46,0.34,1,0,1
+Arts,workshop,Computer Science,dean_of_faculty,272,0.74,0.57,2,1,1
+Medicine,seminar,Business,club_event,38,0.58,0.36,1,2,1
+Medicine,workshop,Student Affairs,club_event,122,0.58,0.1,2,5,1
+Education,volunteer,Engineering,student_affairs,83,0.47,0.65,2,0,1
+Computer Science,volunteer,Business,student_affairs,105,0.33,0.11,4,0,0
+Law,sports,Computer Science,club_event,241,0.3,0.34,4,5,1
+Law,social,Sciences,club_event,237,0.43,0.91,0,3,1
+Business,social,Business,dean_of_faculty,107,0.68,0.12,1,1,1
+Arts,seminar,Business,club_student,233,0.32,0.92,3,0,1
+Business,workshop,Medicine,club_student,208,0.45,0.2,0,5,1
+Business,career,Computer Science,club_student,152,0.23,0.66,0,0,1
+Engineering,volunteer,Computer Science,club_student,118,0.23,0.78,3,1,1
+Architecture,social,Business,club_student,151,0.66,0.21,0,0,1
+Engineering,hackathon,Business,club_student,129,0.12,0.48,1,2,1
+Arts,hackathon,Student Affairs,club_student,266,0.25,0.2,0,2,1
+Education,seminar,Arts,club_student,37,0.64,0.26,4,2,1
+Law,social,Student Affairs,student_affairs,161,0.41,0.19,3,5,1
+Medicine,seminar,Computer Science,club_student,91,0.8,0.23,1,3,1
+Architecture,seminar,Engineering,dean_of_faculty,157,0.23,0.39,1,1,1
+Education,volunteer,Sciences,dean_of_faculty,261,0.72,0.47,2,1,1
+Arts,hackathon,Sciences,dean_of_faculty,267,0.58,0.84,3,0,1
+Law,career,Student Affairs,club_student,135,0.43,0.28,0,2,1
+Business,seminar,Engineering,student_affairs,199,0.86,0.88,1,2,1
+Law,career,Business,club_event,43,0.77,0.21,1,3,1
+Law,volunteer,Engineering,club_student,52,0.53,0.63,1,0,1
+Business,seminar,Business,club_student,21,0.61,0.83,1,1,1
+Business,sports,Sciences,dean_of_faculty,187,0.5,0.68,0,2,1
+Computer Science,workshop,Medicine,club_event,272,0.24,0.46,3,5,1
+Architecture,sports,Medicine,student_affairs,131,0.48,0.24,0,4,1
+Business,career,Sciences,club_student,127,0.45,0.84,4,4,1
+Architecture,cultural,Arts,dean_of_faculty,209,0.25,0.82,3,1,1
+Engineering,seminar,Arts,student_affairs,29,0.32,0.25,0,0,0
+Computer Science,sports,Business,club_event,31,0.32,0.18,4,4,1
+Architecture,workshop,Engineering,student_affairs,62,0.95,0.11,2,2,1
+Arts,volunteer,Computer Science,dean_of_faculty,197,0.98,0.73,0,2,1
+Engineering,social,Engineering,dean_of_faculty,259,0.63,0.87,2,1,1
+Architecture,seminar,Student Affairs,club_student,133,0.9,0.83,1,5,1
+Education,cultural,Computer Science,club_event,188,0.36,0.66,3,0,1
+Law,career,Business,club_student,93,0.61,0.99,0,0,1
+Medicine,seminar,Sciences,club_student,247,0.38,0.94,1,0,1
+Education,volunteer,Engineering,club_student,106,0.74,0.51,3,2,1
+Architecture,social,Engineering,dean_of_faculty,35,0.43,0.36,3,4,1
+Business,cultural,Arts,student_affairs,206,0.18,0.47,3,2,1
+Computer Science,workshop,Student Affairs,club_event,19,0.24,0.19,3,1,0
+Engineering,career,Sciences,dean_of_faculty,62,0.41,0.52,4,3,1
+Business,seminar,Sciences,dean_of_faculty,117,0.46,0.16,2,4,1
+Architecture,seminar,Arts,dean_of_faculty,34,0.59,0.95,1,5,1
+Computer Science,hackathon,Engineering,student_affairs,235,0.98,0.29,1,0,1
+Law,sports,Arts,club_event,57,0.23,0.35,0,2,0
+Architecture,hackathon,Medicine,club_event,147,0.27,0.15,3,2,0
+Medicine,social,Business,student_affairs,229,0.53,0.58,1,5,1
+Law,workshop,Medicine,club_event,54,0.75,0.62,1,2,1
+Education,workshop,Business,dean_of_faculty,90,0.55,0.38,3,2,1
+Computer Science,cultural,Computer Science,club_event,245,0.68,0.62,0,1,1
+Arts,hackathon,Student Affairs,club_event,208,0.29,0.29,1,5,1
+Computer Science,volunteer,Computer Science,student_affairs,23,0.37,0.38,0,5,1
+Architecture,hackathon,Sciences,student_affairs,195,0.85,0.48,2,0,1
+Architecture,hackathon,Arts,club_event,98,0.59,0.44,3,5,1
+Engineering,seminar,Computer Science,club_student,60,0.68,0.65,3,0,1
+Engineering,cultural,Medicine,club_student,163,0.87,0.29,3,4,1
+Arts,cultural,Engineering,student_affairs,252,0.47,0.84,3,0,1
+Arts,sports,Arts,student_affairs,172,0.85,0.82,3,5,1
+Law,workshop,Engineering,club_student,93,0.81,0.86,4,5,1
+Education,social,Medicine,dean_of_faculty,138,0.6,0.45,4,5,1
+Computer Science,hackathon,Business,dean_of_faculty,103,0.46,0.39,1,3,1
+Business,seminar,Student Affairs,dean_of_faculty,148,0.85,0.24,2,1,1
+Computer Science,hackathon,Engineering,club_event,29,0.66,0.59,0,4,1
+Business,cultural,Student Affairs,student_affairs,110,0.32,0.91,2,1,1
+Arts,hackathon,Computer Science,student_affairs,41,0.35,0.94,0,5,1
+Engineering,seminar,Sciences,club_student,69,0.23,0.34,1,0,1
+Education,career,Sciences,club_student,266,0.82,0.47,3,5,1
+Law,hackathon,Arts,dean_of_faculty,97,0.26,0.11,1,5,0
+Computer Science,seminar,Arts,student_affairs,262,1.0,0.64,0,1,1
+Medicine,seminar,Business,club_student,26,0.57,0.78,1,2,1
+Arts,workshop,Arts,club_event,127,0.18,0.72,1,2,1
+Arts,seminar,Arts,student_affairs,254,0.77,0.55,4,3,1
+Medicine,social,Business,student_affairs,216,0.19,0.81,4,2,1
+Arts,cultural,Sciences,dean_of_faculty,231,0.64,0.34,2,4,1
+Law,hackathon,Business,student_affairs,206,0.91,0.84,3,1,1
+Medicine,hackathon,Arts,student_affairs,218,0.13,0.26,2,3,1
+Education,career,Engineering,club_event,205,0.43,0.8,0,0,1
+Computer Science,volunteer,Business,dean_of_faculty,179,0.91,0.61,3,2,1
+Arts,seminar,Medicine,student_affairs,53,0.62,0.68,3,2,1
+Arts,career,Engineering,dean_of_faculty,270,0.14,0.35,0,0,1
+Education,hackathon,Business,club_student,160,0.12,0.8,4,0,1
+Medicine,social,Computer Science,dean_of_faculty,33,0.91,0.93,0,2,1
+Engineering,cultural,Engineering,dean_of_faculty,169,0.35,0.78,3,0,1
+Education,cultural,Medicine,club_student,216,0.37,0.99,3,5,1
+Engineering,volunteer,Medicine,club_student,29,0.3,0.84,1,0,0
+Law,career,Business,club_student,112,0.75,0.83,4,0,1
+Computer Science,sports,Computer Science,club_student,71,0.14,0.37,2,2,1
+Law,sports,Student Affairs,club_event,85,0.63,0.21,2,1,1
+Law,cultural,Student Affairs,club_student,138,0.62,0.7,2,2,1
+Architecture,career,Engineering,student_affairs,166,0.74,0.42,1,5,1
+Arts,seminar,Engineering,dean_of_faculty,45,0.29,0.7,3,3,0
+Engineering,volunteer,Business,student_affairs,174,0.74,0.69,4,0,1
+Arts,volunteer,Sciences,dean_of_faculty,277,0.28,0.46,0,2,1
+Medicine,seminar,Business,dean_of_faculty,69,0.77,0.32,3,1,1
+Architecture,cultural,Arts,student_affairs,75,0.93,0.18,3,1,1
+Law,volunteer,Engineering,dean_of_faculty,154,0.43,0.14,3,5,1
+Arts,sports,Business,dean_of_faculty,105,0.63,0.58,3,4,1
+Computer Science,career,Engineering,club_event,73,0.15,0.13,2,1,0
+Engineering,sports,Business,dean_of_faculty,215,0.45,0.3,2,3,1
+Arts,volunteer,Student Affairs,student_affairs,162,0.76,0.18,4,5,1
+Medicine,career,Business,student_affairs,50,0.25,0.4,3,1,0
+Architecture,hackathon,Arts,club_student,105,0.98,0.89,1,5,1
+Computer Science,volunteer,Sciences,club_student,265,0.89,0.53,0,0,1
+Medicine,career,Medicine,club_event,90,0.8,0.19,2,3,1
+Education,sports,Student Affairs,dean_of_faculty,144,0.43,0.11,2,2,1
+Architecture,seminar,Arts,club_student,90,0.98,0.87,1,2,1
+Arts,hackathon,Arts,club_event,60,0.27,0.96,0,2,1
+Architecture,social,Arts,student_affairs,184,0.45,0.48,2,2,1
+Education,seminar,Sciences,dean_of_faculty,192,0.36,0.97,3,5,1
+Business,sports,Medicine,club_event,170,0.54,0.16,2,0,1
+Arts,sports,Computer Science,club_student,42,0.54,0.1,2,5,1
+Computer Science,sports,Business,student_affairs,160,0.81,0.55,4,1,1
+Medicine,social,Student Affairs,club_event,236,0.63,0.17,1,0,1
+Education,career,Computer Science,dean_of_faculty,231,0.46,0.91,2,2,1
+Business,hackathon,Student Affairs,student_affairs,86,0.71,0.28,1,3,1
+Medicine,sports,Engineering,student_affairs,251,0.59,0.44,3,0,1
+Architecture,volunteer,Medicine,student_affairs,254,0.42,0.52,3,3,0
+Computer Science,hackathon,Engineering,club_event,169,0.81,0.62,2,1,1
+Medicine,workshop,Computer Science,dean_of_faculty,79,0.46,0.11,4,3,1
+Engineering,workshop,Arts,club_student,185,0.63,0.84,4,3,1
+Computer Science,seminar,Student Affairs,club_student,119,0.56,0.61,3,1,1
+Business,sports,Student Affairs,student_affairs,18,0.83,0.66,1,0,1
+Business,seminar,Medicine,club_student,141,0.28,0.53,4,3,1
+Engineering,sports,Sciences,dean_of_faculty,109,0.84,0.86,4,2,1
+Architecture,seminar,Sciences,club_event,26,0.27,0.84,1,1,0
+Arts,cultural,Sciences,student_affairs,163,0.7,0.96,3,2,1
+Law,hackathon,Student Affairs,club_student,252,0.48,0.48,0,2,1
+Law,workshop,Medicine,student_affairs,32,0.68,0.9,4,3,0
+Education,social,Sciences,dean_of_faculty,156,0.11,0.24,4,4,0
+Law,seminar,Business,club_event,195,0.69,0.61,3,5,1
+Business,sports,Computer Science,student_affairs,216,0.16,0.86,3,3,1
+Business,sports,Business,student_affairs,193,0.63,0.85,0,0,0
+Business,career,Engineering,club_student,270,0.94,0.53,1,5,1
+Engineering,social,Student Affairs,dean_of_faculty,230,0.93,0.16,2,0,0
+Engineering,cultural,Computer Science,student_affairs,30,0.93,0.39,3,3,1
+Arts,career,Arts,dean_of_faculty,239,0.71,0.3,1,3,1
+Arts,seminar,Medicine,club_student,64,0.28,0.83,0,2,1
+Engineering,volunteer,Business,dean_of_faculty,112,0.85,0.61,3,4,1
+Business,seminar,Sciences,dean_of_faculty,207,0.89,0.61,1,4,1
+Engineering,cultural,Business,club_student,184,0.12,0.84,2,2,1
+Education,seminar,Computer Science,club_event,162,0.17,0.62,4,4,1
+Law,workshop,Medicine,club_student,256,0.94,0.99,0,0,1
+Medicine,career,Arts,club_student,86,0.28,0.84,2,5,1
+Computer Science,career,Sciences,club_student,33,0.41,0.16,3,4,1
+Engineering,cultural,Business,student_affairs,36,0.19,0.55,1,5,0
+Architecture,sports,Computer Science,club_event,25,0.94,0.12,1,4,1
+Law,workshop,Medicine,dean_of_faculty,41,0.45,0.44,1,3,1
+Business,seminar,Sciences,club_student,203,0.42,0.41,0,1,1
+Computer Science,career,Sciences,club_student,22,0.89,0.32,0,0,0
+Architecture,social,Arts,club_student,175,0.41,0.69,1,2,1
+Law,cultural,Student Affairs,club_student,54,0.17,0.94,1,3,1
+Education,career,Sciences,student_affairs,202,0.8,0.36,1,4,1
+Education,seminar,Engineering,student_affairs,225,0.73,0.66,2,0,1
+Business,career,Arts,club_event,77,0.44,0.83,1,0,1
+Architecture,cultural,Engineering,club_student,270,0.85,0.34,4,3,1
+Engineering,workshop,Arts,dean_of_faculty,268,0.12,0.44,3,0,1
+Law,social,Student Affairs,dean_of_faculty,41,0.69,0.13,2,0,1
+Education,sports,Computer Science,club_event,29,0.41,0.85,3,3,1
+Computer Science,seminar,Medicine,dean_of_faculty,162,0.87,0.94,3,3,1
+Medicine,social,Sciences,dean_of_faculty,136,0.22,0.11,2,0,0
+Medicine,volunteer,Medicine,dean_of_faculty,34,0.65,0.43,2,5,1
+Computer Science,seminar,Arts,student_affairs,150,0.86,0.5,0,3,0
+Computer Science,volunteer,Sciences,club_event,224,0.15,0.94,2,4,1
+Engineering,cultural,Business,student_affairs,156,0.33,0.55,1,5,1
+Computer Science,career,Engineering,club_student,109,0.72,0.87,4,2,0
+Arts,workshop,Student Affairs,student_affairs,146,0.11,0.86,2,4,1
+Arts,volunteer,Engineering,club_student,274,0.5,0.56,1,1,1
+Education,hackathon,Engineering,dean_of_faculty,159,0.23,0.39,2,2,1
+Education,cultural,Arts,club_student,97,0.43,0.36,1,4,0
+Arts,volunteer,Medicine,student_affairs,125,0.44,0.62,1,3,1
+Engineering,seminar,Business,dean_of_faculty,77,0.86,0.57,0,4,1
+Architecture,volunteer,Arts,club_event,165,0.92,0.4,2,1,1
+Engineering,career,Sciences,dean_of_faculty,200,0.17,0.6,0,2,1
+Arts,cultural,Computer Science,dean_of_faculty,132,0.61,0.84,1,4,1
+Law,social,Medicine,student_affairs,161,0.41,0.21,3,3,1
+Business,cultural,Student Affairs,club_event,107,0.89,0.11,0,3,1
+Architecture,seminar,Business,club_student,235,0.12,0.25,0,1,0
+Law,hackathon,Arts,club_event,220,0.73,0.32,2,0,1
+Education,seminar,Student Affairs,club_student,52,0.76,0.42,3,3,1
+Law,sports,Computer Science,dean_of_faculty,83,0.76,0.75,4,4,1
+Computer Science,volunteer,Student Affairs,dean_of_faculty,209,0.39,0.26,4,2,1
+Engineering,career,Arts,dean_of_faculty,189,0.14,0.57,4,4,1
+Law,sports,Arts,dean_of_faculty,178,0.78,0.96,0,5,1
+Arts,hackathon,Medicine,student_affairs,175,0.19,0.36,0,2,1
+Architecture,career,Business,student_affairs,147,0.99,0.78,1,5,1
+Engineering,career,Medicine,club_event,29,0.64,0.14,4,4,1
+Computer Science,cultural,Computer Science,club_student,204,0.28,0.95,4,3,1
+Business,cultural,Arts,club_student,76,0.5,0.49,2,0,1
+Medicine,seminar,Arts,club_student,128,0.75,0.39,4,2,1
+Engineering,volunteer,Engineering,dean_of_faculty,66,0.94,0.81,2,1,1
+Computer Science,workshop,Business,club_event,207,0.88,0.3,1,2,1
+Architecture,social,Student Affairs,dean_of_faculty,159,0.22,0.67,0,4,1
+Arts,workshop,Sciences,club_student,266,0.6,0.29,1,0,1
+Medicine,hackathon,Student Affairs,club_event,193,0.54,0.69,1,2,1
+Medicine,cultural,Sciences,dean_of_faculty,197,0.59,0.37,1,0,1
+Medicine,hackathon,Sciences,student_affairs,141,0.7,0.2,3,2,1
+Education,hackathon,Student Affairs,club_event,262,0.86,0.88,4,3,1
+Computer Science,sports,Arts,club_event,224,0.15,0.79,2,5,1
+Law,cultural,Sciences,dean_of_faculty,148,0.92,0.34,1,2,1
+Computer Science,sports,Sciences,dean_of_faculty,128,0.62,0.25,1,5,1
+Education,social,Medicine,club_student,25,0.82,0.18,2,2,1
+Engineering,workshop,Medicine,club_event,200,0.58,0.99,4,3,1
+Arts,sports,Computer Science,club_event,206,0.4,0.29,1,0,0
+Computer Science,seminar,Medicine,dean_of_faculty,263,0.14,0.35,0,1,1
+Arts,workshop,Arts,club_student,208,0.69,0.22,2,0,1
+Law,workshop,Engineering,club_event,63,0.76,0.81,1,4,1
+Education,hackathon,Medicine,club_student,169,0.35,0.28,2,5,1
+Law,sports,Sciences,club_student,128,0.97,0.6,3,2,1
+Arts,hackathon,Engineering,dean_of_faculty,216,0.96,0.79,0,3,1
+Computer Science,hackathon,Computer Science,club_event,243,0.43,0.61,2,2,1
+Engineering,seminar,Medicine,club_event,121,0.88,0.54,1,0,1
+Architecture,career,Engineering,dean_of_faculty,144,0.47,0.77,1,0,1
+Law,workshop,Arts,club_event,265,0.59,0.38,1,2,1
+Architecture,seminar,Engineering,dean_of_faculty,54,0.44,0.78,1,4,1
+Business,career,Sciences,club_student,34,0.9,0.55,4,3,1
+Law,hackathon,Engineering,student_affairs,75,0.49,0.36,2,4,1
+Education,social,Business,student_affairs,119,0.82,0.96,2,4,1
+Architecture,cultural,Business,student_affairs,84,0.25,0.74,3,0,1
+Business,social,Sciences,club_student,17,0.38,0.27,0,4,0
+Engineering,workshop,Medicine,dean_of_faculty,95,0.16,0.67,1,2,1
+Arts,sports,Arts,dean_of_faculty,171,0.43,0.79,2,4,1
+Arts,seminar,Medicine,club_event,67,0.76,0.35,2,4,1
+Law,volunteer,Medicine,student_affairs,257,0.29,0.1,1,1,1
+Business,social,Business,dean_of_faculty,15,0.39,0.91,0,1,1
+Architecture,hackathon,Student Affairs,dean_of_faculty,182,0.37,0.78,1,4,1
+Law,cultural,Arts,student_affairs,177,0.58,0.89,1,1,1
+Medicine,social,Computer Science,dean_of_faculty,241,0.54,0.81,0,4,1
+Education,social,Engineering,student_affairs,253,0.79,0.41,3,1,1
+Arts,hackathon,Arts,club_event,20,0.28,0.42,1,0,0
+Education,seminar,Arts,student_affairs,272,0.93,0.65,0,5,1
+Architecture,hackathon,Engineering,student_affairs,155,0.66,0.97,0,5,1
+Architecture,cultural,Business,dean_of_faculty,68,0.13,0.13,1,5,0
+Business,seminar,Sciences,club_student,43,0.5,0.74,2,0,1
+Medicine,career,Student Affairs,club_student,185,0.85,0.86,2,5,1
+Education,workshop,Student Affairs,dean_of_faculty,228,0.85,0.7,0,1,1
+Business,sports,Engineering,club_event,242,0.14,0.65,4,3,1
+Computer Science,sports,Arts,student_affairs,75,0.41,0.61,0,4,1
+Engineering,seminar,Engineering,club_event,59,0.27,0.63,0,1,1
+Arts,volunteer,Sciences,club_student,141,0.38,0.71,1,5,1
+Business,sports,Engineering,dean_of_faculty,161,0.26,0.23,2,3,1
+Arts,sports,Business,club_event,166,0.33,0.5,0,3,1
+Education,volunteer,Computer Science,dean_of_faculty,102,0.13,0.85,3,1,1
+Arts,hackathon,Arts,student_affairs,121,0.41,0.97,4,5,1
+Engineering,career,Arts,club_event,254,0.33,0.93,4,5,1
+Architecture,social,Sciences,student_affairs,205,0.61,0.69,0,2,1
+Education,workshop,Business,dean_of_faculty,258,0.4,0.68,0,1,1
+Medicine,social,Sciences,club_event,26,0.5,0.65,4,4,1
+Law,cultural,Computer Science,club_event,144,0.75,0.64,3,5,1
+Computer Science,career,Computer Science,club_student,230,0.48,0.34,4,3,1
+Business,social,Arts,club_event,86,0.22,0.4,0,0,0
+Business,volunteer,Sciences,dean_of_faculty,99,0.51,0.69,1,1,1
+Engineering,social,Business,club_event,238,0.18,0.32,4,2,0
+Business,volunteer,Engineering,dean_of_faculty,216,0.73,0.92,3,3,1
+Engineering,hackathon,Business,student_affairs,83,0.46,0.39,2,5,1
+Law,hackathon,Medicine,club_student,192,0.54,0.77,4,0,1
+Business,career,Arts,student_affairs,189,0.55,0.1,4,3,1
+Arts,social,Sciences,club_event,37,0.29,0.49,2,3,0
+Law,social,Arts,student_affairs,213,0.71,0.53,2,3,1
+Law,seminar,Sciences,club_student,192,0.72,0.19,3,0,1
+Business,hackathon,Student Affairs,dean_of_faculty,20,0.54,0.96,3,3,1
+Medicine,hackathon,Arts,club_student,245,0.55,0.8,2,4,1
+Engineering,social,Sciences,dean_of_faculty,55,0.24,0.4,4,2,1
+Architecture,hackathon,Engineering,dean_of_faculty,159,0.14,0.88,3,2,0
+Education,sports,Sciences,student_affairs,166,0.79,0.12,2,1,1
+Law,workshop,Sciences,student_affairs,167,0.67,0.64,2,5,0
+Law,career,Business,club_student,63,0.21,0.23,3,3,0
+Education,cultural,Student Affairs,club_event,249,0.14,0.39,0,1,1
+Engineering,hackathon,Medicine,club_student,187,0.93,0.77,3,3,0
+Medicine,seminar,Computer Science,dean_of_faculty,74,0.81,0.61,2,4,1
+Arts,workshop,Arts,dean_of_faculty,125,0.78,0.49,1,2,1
+Computer Science,hackathon,Business,student_affairs,154,0.1,0.29,3,5,0
+Medicine,cultural,Medicine,student_affairs,64,0.3,0.12,2,1,0
+Medicine,cultural,Medicine,dean_of_faculty,183,0.59,0.53,4,0,1
+Education,volunteer,Computer Science,dean_of_faculty,92,0.52,0.77,1,4,1
+Law,sports,Sciences,club_student,55,0.67,0.61,2,0,1
+Education,sports,Arts,student_affairs,246,0.71,0.13,4,4,1
+Education,hackathon,Sciences,club_student,160,0.6,0.54,1,3,1
+Business,hackathon,Medicine,club_student,64,0.46,0.29,0,4,1
+Business,hackathon,Medicine,dean_of_faculty,195,0.78,0.48,4,2,1
+Education,seminar,Student Affairs,student_affairs,272,0.58,0.45,3,3,1
+Medicine,cultural,Business,club_event,219,0.36,0.58,2,3,1
+Engineering,hackathon,Medicine,dean_of_faculty,229,0.47,0.67,4,1,1
+Engineering,hackathon,Engineering,student_affairs,142,0.25,0.66,0,2,0
+Law,career,Computer Science,club_event,249,0.43,0.89,1,3,1
+Arts,volunteer,Business,student_affairs,48,0.91,0.29,3,3,1
+Architecture,career,Computer Science,club_event,251,0.55,0.2,4,2,1
+Business,career,Sciences,club_student,18,0.77,0.71,3,4,1
+Law,seminar,Computer Science,dean_of_faculty,148,0.9,0.58,4,5,1
+Computer Science,cultural,Sciences,club_student,164,0.83,0.85,0,2,1
+Architecture,hackathon,Computer Science,club_student,68,0.23,0.34,4,0,0
+Education,hackathon,Student Affairs,student_affairs,87,0.92,0.82,1,2,1
+Engineering,cultural,Student Affairs,dean_of_faculty,140,0.78,0.41,3,2,1
+Medicine,sports,Medicine,club_student,86,0.23,0.36,1,2,1
+Medicine,sports,Student Affairs,club_event,171,0.53,0.5,2,1,1
+Business,social,Medicine,student_affairs,211,0.33,0.31,1,4,1
+Computer Science,sports,Arts,dean_of_faculty,259,0.66,0.25,2,5,1
+Education,volunteer,Sciences,dean_of_faculty,101,0.88,0.53,3,3,0
+Engineering,volunteer,Business,student_affairs,120,0.3,0.35,0,5,1
+Architecture,cultural,Medicine,club_student,131,0.77,0.43,0,3,1
+Education,seminar,Arts,club_student,43,0.5,0.57,1,2,1
+Business,career,Business,dean_of_faculty,105,0.14,0.65,4,2,1
+Arts,seminar,Business,student_affairs,46,0.29,0.32,4,3,0
+Computer Science,volunteer,Computer Science,club_student,115,0.53,0.5,3,1,1
+Arts,cultural,Arts,club_student,235,0.88,0.2,3,5,1
+Architecture,workshop,Arts,dean_of_faculty,153,0.54,0.26,4,3,1
+Medicine,sports,Computer Science,club_event,189,0.35,0.61,2,5,1
+Business,cultural,Engineering,student_affairs,275,0.52,0.25,0,3,1
+Engineering,cultural,Arts,club_event,114,0.8,0.79,1,2,1
+Education,cultural,Engineering,student_affairs,122,0.61,0.24,1,1,1
+Business,social,Medicine,club_event,181,0.96,0.98,4,3,1
+Medicine,career,Arts,dean_of_faculty,170,0.43,0.38,2,5,1
+Medicine,hackathon,Medicine,dean_of_faculty,228,0.11,0.95,0,3,1
+Business,cultural,Computer Science,student_affairs,24,0.84,0.28,2,2,1
+Computer Science,volunteer,Sciences,dean_of_faculty,181,0.6,0.77,1,4,1
+Medicine,seminar,Engineering,club_event,97,0.39,0.53,4,3,1
+Computer Science,hackathon,Student Affairs,dean_of_faculty,142,0.35,0.65,3,0,1
+Education,sports,Medicine,student_affairs,239,0.93,0.2,1,5,1
+Law,social,Computer Science,club_event,168,0.62,0.61,3,1,1
+Medicine,sports,Student Affairs,club_student,86,0.79,0.16,2,2,1
+Architecture,career,Business,student_affairs,254,0.3,0.43,1,5,1
+Medicine,sports,Medicine,club_student,86,0.21,0.47,3,3,1
+Computer Science,volunteer,Engineering,dean_of_faculty,31,0.96,0.89,2,4,1
+Education,seminar,Student Affairs,club_student,62,0.98,0.8,4,1,1
+Engineering,cultural,Medicine,club_event,52,0.79,0.49,2,3,1
+Business,volunteer,Engineering,club_event,188,0.51,0.8,3,0,1
+Medicine,workshop,Medicine,dean_of_faculty,24,0.11,0.39,1,2,0
+Education,cultural,Student Affairs,club_event,196,0.9,0.74,4,1,1
+Business,career,Arts,club_event,66,0.12,0.64,0,1,0
+Engineering,volunteer,Computer Science,student_affairs,132,0.69,0.28,1,3,1
+Arts,career,Computer Science,student_affairs,28,0.22,0.91,3,0,0
+Law,workshop,Sciences,club_event,209,0.14,0.49,1,1,1
+Engineering,seminar,Business,club_student,98,0.78,0.21,3,5,1
+Education,hackathon,Business,club_event,61,0.82,0.42,2,4,1
+Architecture,workshop,Engineering,dean_of_faculty,230,0.46,0.87,2,2,1
+Engineering,hackathon,Computer Science,student_affairs,132,1.0,0.18,3,3,0
+Medicine,volunteer,Engineering,club_event,142,0.26,0.11,4,1,0
+Architecture,workshop,Engineering,club_event,165,0.43,0.47,1,3,1
+Business,social,Arts,club_student,98,0.13,0.28,3,5,0
+Medicine,volunteer,Engineering,club_student,184,0.13,0.52,1,3,0
+Law,social,Business,club_student,22,0.41,0.3,3,0,1
+Architecture,cultural,Sciences,dean_of_faculty,83,0.87,0.83,0,2,1
+Medicine,social,Arts,student_affairs,64,0.53,0.77,4,1,1
+Business,social,Business,club_student,63,0.75,0.35,4,0,1
+Medicine,social,Student Affairs,student_affairs,183,0.74,0.52,4,4,1
+Medicine,social,Arts,dean_of_faculty,206,0.7,0.62,0,5,1
+Law,workshop,Computer Science,club_event,108,0.11,0.67,1,1,0
+Computer Science,cultural,Sciences,student_affairs,111,0.67,0.84,4,3,1
+Arts,cultural,Medicine,student_affairs,240,0.21,0.35,4,2,1
+Business,sports,Arts,dean_of_faculty,248,0.7,0.7,2,4,1
+Education,hackathon,Student Affairs,club_student,79,0.19,0.98,0,0,1
+Medicine,social,Computer Science,student_affairs,172,0.51,0.6,0,4,1
+Arts,social,Computer Science,club_event,23,0.28,0.77,4,4,0
+Computer Science,volunteer,Medicine,club_event,100,0.44,0.19,1,5,0
+Arts,social,Medicine,dean_of_faculty,118,0.35,0.96,3,2,1
+Law,cultural,Sciences,student_affairs,84,0.75,0.37,0,2,1
+Medicine,career,Student Affairs,club_student,45,0.78,0.23,3,1,1
+Arts,hackathon,Computer Science,club_event,229,0.45,0.27,2,0,1
+Medicine,social,Sciences,club_student,92,0.29,0.23,2,2,0
+Engineering,sports,Medicine,club_student,256,0.31,0.49,0,4,1
+Architecture,social,Engineering,student_affairs,154,0.95,0.14,2,0,1
+Law,social,Student Affairs,dean_of_faculty,164,0.3,0.19,4,4,1
+Arts,cultural,Computer Science,dean_of_faculty,230,0.15,0.19,2,5,1
+Medicine,volunteer,Sciences,student_affairs,197,0.17,0.19,3,1,1
+Arts,hackathon,Student Affairs,student_affairs,68,1.0,0.84,3,4,1
+Law,hackathon,Engineering,club_student,65,0.62,0.21,1,2,1
+Law,hackathon,Student Affairs,club_student,192,0.68,0.5,3,4,1
+Computer Science,hackathon,Computer Science,dean_of_faculty,28,0.29,0.26,2,0,0
+Law,workshop,Student Affairs,dean_of_faculty,144,0.42,0.71,2,1,1
+Computer Science,volunteer,Sciences,student_affairs,97,0.29,0.79,4,5,1
+Law,volunteer,Computer Science,club_event,270,0.87,0.4,4,4,1
+Arts,volunteer,Computer Science,student_affairs,66,0.92,0.18,3,2,1
+Business,hackathon,Business,student_affairs,263,0.42,0.83,2,1,1
+Education,workshop,Engineering,club_event,173,0.92,0.73,4,2,1
+Business,hackathon,Medicine,club_student,116,0.18,0.74,3,2,1
+Education,volunteer,Sciences,club_event,212,0.19,0.96,2,4,1
+Engineering,volunteer,Business,dean_of_faculty,35,0.32,0.24,2,0,0
+Arts,career,Business,dean_of_faculty,125,0.23,0.37,0,4,0
+Architecture,hackathon,Medicine,club_event,226,0.27,0.57,3,5,1
+Law,sports,Student Affairs,student_affairs,149,0.49,0.43,1,2,1
+Engineering,social,Arts,club_event,80,0.19,0.93,4,5,1
+Education,seminar,Computer Science,club_event,193,0.75,0.68,4,1,1
+Computer Science,cultural,Medicine,dean_of_faculty,269,0.63,0.16,1,0,1
+Computer Science,volunteer,Sciences,club_event,47,0.71,0.16,2,4,1
+Computer Science,cultural,Sciences,club_event,217,0.29,0.51,4,5,1
+Education,career,Medicine,dean_of_faculty,88,0.79,0.98,4,2,1
+Computer Science,volunteer,Medicine,club_student,51,0.65,0.58,1,5,1
+Business,social,Engineering,dean_of_faculty,76,0.4,0.18,3,4,1
+Law,hackathon,Sciences,dean_of_faculty,85,0.86,0.26,2,2,1
+Law,sports,Sciences,club_student,109,0.33,0.28,2,5,1
+Education,cultural,Computer Science,club_student,146,0.12,0.65,4,0,1
+Engineering,social,Engineering,club_student,17,0.39,0.38,4,4,1
+Engineering,social,Business,dean_of_faculty,108,0.58,0.98,0,5,1
+Education,social,Sciences,club_event,274,0.23,0.84,0,4,0
+Engineering,sports,Arts,club_student,193,0.71,0.63,1,0,1
+Business,volunteer,Sciences,dean_of_faculty,244,0.95,0.7,0,2,1
+Business,career,Computer Science,dean_of_faculty,111,0.81,0.14,0,3,1
+Engineering,seminar,Student Affairs,student_affairs,216,0.78,0.68,2,2,1
+Arts,sports,Student Affairs,dean_of_faculty,221,0.49,0.17,0,3,1
+Architecture,hackathon,Arts,dean_of_faculty,162,0.79,0.73,4,0,1
+Engineering,sports,Medicine,club_event,175,0.77,0.58,0,2,1
+Education,workshop,Computer Science,dean_of_faculty,275,0.57,0.26,2,5,1
+Arts,seminar,Sciences,club_event,128,0.74,0.17,1,3,1
+Computer Science,workshop,Sciences,club_event,74,0.93,0.1,1,5,1
+Education,social,Sciences,club_event,205,0.93,0.46,1,1,1
+Medicine,hackathon,Student Affairs,student_affairs,119,0.95,0.69,2,3,1
+Law,hackathon,Sciences,student_affairs,112,0.84,0.54,4,0,1
+Law,workshop,Student Affairs,dean_of_faculty,80,0.7,0.3,0,0,1
+Architecture,seminar,Business,student_affairs,100,0.95,0.33,3,2,1
+Medicine,sports,Engineering,club_student,217,0.84,0.9,0,4,1
+Arts,social,Medicine,club_student,255,0.53,0.2,0,3,1
+Engineering,career,Sciences,student_affairs,239,0.76,0.5,0,5,1
+Arts,career,Student Affairs,student_affairs,37,0.61,0.95,2,2,1
+Education,cultural,Business,club_student,215,0.44,0.95,4,0,1
+Arts,volunteer,Student Affairs,dean_of_faculty,27,0.88,0.16,1,4,1
+Business,social,Medicine,student_affairs,44,0.2,0.16,4,4,1
+Business,volunteer,Arts,club_student,88,0.91,0.72,0,3,0
+Computer Science,hackathon,Computer Science,club_student,129,0.79,0.13,4,0,0
+Architecture,hackathon,Arts,dean_of_faculty,245,0.92,0.31,3,4,1
+Architecture,cultural,Business,dean_of_faculty,199,0.3,0.36,1,3,1
+Business,volunteer,Student Affairs,club_student,236,0.82,0.23,3,3,1
+Arts,hackathon,Business,student_affairs,121,0.95,0.48,3,3,1
+Architecture,hackathon,Sciences,student_affairs,187,0.39,0.46,4,1,1
+Arts,career,Computer Science,student_affairs,252,0.59,0.79,3,2,1
+Arts,hackathon,Business,dean_of_faculty,70,0.59,0.51,4,3,0
+Arts,volunteer,Medicine,club_event,211,0.94,0.49,3,0,1
+Law,social,Arts,club_event,220,0.62,0.82,1,3,1
+Arts,social,Computer Science,dean_of_faculty,176,0.65,0.79,4,5,1
+Computer Science,seminar,Computer Science,club_student,58,0.12,0.93,0,2,1
+Education,volunteer,Business,club_event,124,0.38,0.16,4,2,1
+Architecture,cultural,Arts,club_event,163,0.37,0.82,1,1,1
+Engineering,hackathon,Business,dean_of_faculty,158,0.72,0.91,0,5,1
+Architecture,seminar,Computer Science,club_student,84,0.89,0.53,3,1,1
+Education,cultural,Medicine,club_event,244,0.9,0.97,4,2,1
+Engineering,volunteer,Engineering,club_event,84,0.66,0.71,1,0,1
+Arts,volunteer,Arts,club_student,196,0.64,0.82,0,4,1
+Law,social,Arts,student_affairs,113,0.56,0.98,0,3,1
+Business,workshop,Student Affairs,club_event,171,0.34,1.0,2,0,1
+Architecture,seminar,Arts,club_student,81,0.88,0.93,0,5,1
+Medicine,hackathon,Business,dean_of_faculty,209,0.45,0.73,2,5,1
+Education,hackathon,Sciences,student_affairs,82,0.95,0.75,4,1,1
+Medicine,seminar,Sciences,club_student,178,0.88,0.91,0,1,1
+Engineering,career,Engineering,club_event,206,0.16,0.61,1,0,1
+Computer Science,workshop,Student Affairs,student_affairs,51,0.24,0.66,3,5,1
+Engineering,seminar,Engineering,club_event,117,0.93,0.93,1,0,1
+Engineering,workshop,Sciences,club_event,122,0.14,0.17,2,5,0
+Architecture,career,Student Affairs,dean_of_faculty,110,0.52,0.76,4,0,1
+Computer Science,seminar,Business,club_event,149,0.23,0.59,1,5,1
+Engineering,career,Business,student_affairs,131,0.25,0.67,4,2,1
+Medicine,career,Sciences,student_affairs,191,0.76,0.58,2,2,1
+Engineering,workshop,Engineering,dean_of_faculty,191,0.91,0.15,3,0,1
+Architecture,workshop,Student Affairs,club_student,178,0.63,0.92,2,5,1
+Engineering,sports,Student Affairs,student_affairs,245,0.42,0.83,2,3,1
+Architecture,volunteer,Medicine,club_event,131,0.63,0.14,2,3,1
+Architecture,volunteer,Computer Science,dean_of_faculty,252,0.88,0.52,1,1,1
+Law,hackathon,Engineering,club_event,177,0.44,0.88,1,3,1
+Law,social,Business,club_event,126,0.19,0.45,1,2,1
+Computer Science,cultural,Sciences,club_event,170,0.85,0.87,2,1,1
+Architecture,hackathon,Sciences,club_event,264,0.97,0.15,0,0,1
+Architecture,sports,Business,club_event,280,0.95,0.82,3,3,0
+Medicine,social,Arts,student_affairs,234,0.65,0.64,4,2,1
+Education,social,Arts,dean_of_faculty,47,0.12,0.43,1,1,0
+Arts,volunteer,Student Affairs,dean_of_faculty,158,0.6,0.62,2,5,1
+Business,volunteer,Computer Science,club_event,136,0.83,0.32,4,3,1
+Education,seminar,Sciences,club_event,179,0.17,0.54,4,5,1
+Architecture,hackathon,Computer Science,club_event,156,0.74,0.43,0,3,1
+Computer Science,volunteer,Arts,dean_of_faculty,89,0.81,0.96,3,2,1
+Arts,career,Medicine,club_student,166,0.76,0.76,1,4,1
+Medicine,career,Computer Science,dean_of_faculty,231,0.73,0.87,2,2,1
+Medicine,workshop,Engineering,dean_of_faculty,55,0.43,0.8,1,3,1
+Business,cultural,Computer Science,student_affairs,70,0.94,0.51,1,5,1
+Medicine,social,Medicine,club_event,180,0.96,0.21,2,4,1
+Business,volunteer,Computer Science,dean_of_faculty,28,0.67,0.68,3,1,1
+Computer Science,sports,Arts,club_student,276,0.15,0.75,1,3,1
+Engineering,social,Business,club_student,98,0.95,0.31,2,2,1
+Law,volunteer,Computer Science,club_student,267,0.46,0.16,3,5,1
+Business,seminar,Computer Science,club_event,244,0.24,0.79,2,1,1
+Computer Science,workshop,Student Affairs,club_event,260,0.14,0.3,1,1,1
+Business,volunteer,Arts,dean_of_faculty,217,0.12,0.79,3,0,1
+Law,seminar,Engineering,club_event,33,0.29,0.62,0,2,0
+Education,social,Sciences,club_event,92,0.58,0.92,4,2,1
+Education,hackathon,Business,club_event,146,0.4,0.39,2,3,1
+Medicine,cultural,Engineering,dean_of_faculty,277,0.79,0.28,0,0,1
+Engineering,career,Business,student_affairs,124,0.9,0.84,2,3,0
+Arts,sports,Business,club_student,173,0.11,0.85,2,1,1
+Law,volunteer,Sciences,dean_of_faculty,99,0.93,0.53,4,2,1
+Arts,seminar,Medicine,club_student,15,0.87,0.66,0,2,1
+Medicine,cultural,Sciences,club_event,64,0.15,0.29,1,3,0
+Education,seminar,Arts,dean_of_faculty,26,0.37,0.13,0,2,0
+Architecture,career,Engineering,club_student,258,0.26,0.2,1,3,1
+Medicine,sports,Engineering,dean_of_faculty,47,0.76,0.24,0,3,1
+Computer Science,workshop,Sciences,dean_of_faculty,253,0.47,0.98,4,0,1
+Medicine,sports,Student Affairs,dean_of_faculty,118,0.82,0.12,2,1,1
+Architecture,workshop,Student Affairs,club_student,237,0.6,0.73,1,5,1
+Computer Science,sports,Arts,club_student,203,0.51,0.53,1,2,1
+Education,social,Arts,student_affairs,223,0.26,0.46,3,2,1
+Business,cultural,Student Affairs,dean_of_faculty,199,0.97,0.18,2,1,1
+Education,cultural,Sciences,club_event,36,0.41,0.93,1,4,1
+Business,social,Computer Science,club_event,217,0.17,0.48,0,4,1
+Engineering,workshop,Arts,club_event,131,0.72,0.81,3,0,1
+Education,hackathon,Medicine,dean_of_faculty,127,0.62,0.77,0,1,1
+Architecture,social,Computer Science,club_event,15,0.9,0.97,0,3,1
+Engineering,sports,Business,dean_of_faculty,170,0.84,0.59,0,1,0
+Computer Science,sports,Engineering,club_event,110,0.84,0.71,0,2,1
+Engineering,hackathon,Arts,dean_of_faculty,20,0.73,0.37,3,2,1
+Law,cultural,Student Affairs,club_student,266,0.98,0.55,2,0,1
+Architecture,hackathon,Computer Science,club_student,231,0.72,0.66,2,5,1
+Computer Science,hackathon,Engineering,dean_of_faculty,59,0.53,0.59,0,1,1
+Engineering,cultural,Sciences,student_affairs,138,0.64,0.52,2,2,1
+Architecture,career,Medicine,dean_of_faculty,63,0.11,0.22,0,4,0
+Business,cultural,Arts,dean_of_faculty,39,0.33,0.21,4,3,0
+Architecture,sports,Computer Science,club_event,35,0.36,0.4,0,5,1
+Engineering,career,Sciences,dean_of_faculty,142,0.11,0.8,1,3,0
+Business,career,Arts,dean_of_faculty,132,0.74,0.83,0,0,1
+Business,workshop,Sciences,dean_of_faculty,202,0.81,0.49,4,5,1
+Engineering,hackathon,Sciences,club_student,157,0.49,0.73,0,0,1
+Education,cultural,Sciences,club_event,85,0.21,0.25,4,1,0
+Architecture,volunteer,Medicine,student_affairs,259,0.16,0.81,1,4,1
+Computer Science,career,Business,club_event,168,0.22,0.73,0,2,0
+Computer Science,seminar,Medicine,student_affairs,19,0.37,0.83,2,1,1
+Arts,career,Student Affairs,dean_of_faculty,259,0.53,0.19,3,4,1
+Engineering,social,Student Affairs,club_event,276,0.23,0.78,3,4,1
+Engineering,social,Business,dean_of_faculty,200,0.94,0.85,3,0,1
+Computer Science,volunteer,Computer Science,dean_of_faculty,29,0.27,0.75,2,3,1
+Arts,social,Sciences,dean_of_faculty,95,0.32,0.57,3,0,1
+Computer Science,hackathon,Engineering,club_student,89,0.8,0.14,2,3,1
+Education,sports,Computer Science,student_affairs,172,0.87,0.52,3,3,1
+Business,cultural,Arts,club_student,265,0.98,0.58,4,5,1
+Medicine,sports,Computer Science,student_affairs,277,0.31,0.93,2,1,1
+Education,sports,Business,student_affairs,280,0.71,0.35,4,3,1
+Arts,social,Computer Science,student_affairs,112,0.72,0.43,4,4,1
+Architecture,social,Engineering,student_affairs,141,0.29,0.81,2,1,1
+Architecture,volunteer,Business,dean_of_faculty,262,0.75,0.94,3,4,1
+Medicine,seminar,Arts,club_student,207,0.83,0.99,0,0,1
+Medicine,cultural,Sciences,student_affairs,276,0.61,0.28,0,3,1
+Architecture,seminar,Sciences,dean_of_faculty,213,0.38,0.23,0,2,1
+Computer Science,workshop,Computer Science,club_student,157,0.2,0.58,1,0,1
+Law,career,Engineering,club_student,20,0.2,0.98,2,2,0
+Arts,career,Medicine,student_affairs,196,0.86,0.24,4,4,1
+Arts,social,Computer Science,dean_of_faculty,119,0.59,0.12,1,0,1
+Medicine,cultural,Engineering,club_student,141,0.86,0.3,3,4,1
+Business,career,Arts,club_student,16,0.31,0.38,4,4,0
+Architecture,career,Business,club_student,56,0.47,0.5,1,5,1
+Law,workshop,Medicine,student_affairs,120,0.89,0.54,4,2,1
+Architecture,hackathon,Computer Science,dean_of_faculty,120,0.44,0.73,4,5,1
+Business,hackathon,Business,club_event,175,0.42,0.35,2,1,1
+Architecture,workshop,Student Affairs,club_event,48,0.51,0.82,3,4,1
+Law,workshop,Sciences,dean_of_faculty,243,0.92,0.18,2,2,1
+Education,sports,Sciences,club_event,101,0.3,0.63,4,4,1
+Arts,workshop,Sciences,student_affairs,39,0.78,0.18,1,0,1
+Computer Science,sports,Engineering,student_affairs,246,0.23,0.23,3,2,1
+Business,career,Sciences,student_affairs,100,0.57,0.31,0,4,0
+Business,sports,Medicine,dean_of_faculty,231,0.91,0.31,1,4,1
+Engineering,seminar,Arts,club_event,78,0.8,0.6,2,5,1
+Business,career,Computer Science,club_student,181,0.87,0.79,4,0,1
+Computer Science,hackathon,Business,club_event,39,0.52,0.86,1,4,1
+Medicine,cultural,Business,dean_of_faculty,104,0.74,0.74,1,5,1
+Computer Science,seminar,Sciences,club_event,15,0.36,0.58,3,5,1
+Law,cultural,Student Affairs,student_affairs,222,0.78,0.57,3,1,1
+Architecture,social,Computer Science,club_student,120,0.17,1.0,2,0,1
+Law,hackathon,Sciences,student_affairs,206,0.12,0.54,0,1,1
+Business,cultural,Computer Science,club_event,169,0.46,0.23,1,3,1
+Law,cultural,Student Affairs,dean_of_faculty,205,0.89,0.52,3,0,1
+Business,seminar,Arts,student_affairs,42,0.42,0.92,3,0,1
+Education,cultural,Engineering,dean_of_faculty,49,0.42,0.27,4,1,1
+Engineering,social,Student Affairs,student_affairs,45,0.12,0.3,4,2,1
+Law,volunteer,Computer Science,dean_of_faculty,192,0.66,0.36,0,4,1
+Architecture,cultural,Sciences,club_student,274,0.16,0.97,3,2,1
+Architecture,sports,Business,club_event,115,0.18,0.45,3,1,1
+Medicine,workshop,Business,club_event,229,0.61,0.48,1,3,1
+Medicine,career,Engineering,club_student,98,0.87,0.34,3,0,1
+Business,cultural,Engineering,club_student,250,0.83,0.41,2,3,1
+Medicine,volunteer,Student Affairs,student_affairs,94,0.7,0.85,4,4,1
+Arts,career,Computer Science,club_student,237,0.54,0.4,4,2,1
+Law,workshop,Medicine,student_affairs,146,0.2,0.23,1,1,0
+Arts,cultural,Business,club_student,273,0.43,0.77,3,4,1
+Engineering,career,Business,dean_of_faculty,48,0.8,0.93,0,3,1
+Law,social,Sciences,dean_of_faculty,30,0.4,0.43,2,1,1
+Architecture,hackathon,Medicine,club_event,222,0.49,0.31,1,4,1
+Education,social,Medicine,student_affairs,207,0.87,0.19,0,5,0
+Law,cultural,Engineering,club_event,41,0.1,0.26,1,2,0
+Education,volunteer,Student Affairs,club_student,35,0.25,0.38,0,0,0
+Engineering,workshop,Medicine,club_student,113,0.81,0.91,3,0,1
+Medicine,seminar,Computer Science,student_affairs,85,0.16,0.65,2,1,0
+Engineering,cultural,Medicine,club_event,160,0.13,0.87,1,5,1
+Architecture,volunteer,Medicine,student_affairs,165,0.69,0.83,3,1,1
+Medicine,volunteer,Business,club_event,251,0.23,0.24,0,0,0
+Engineering,social,Engineering,dean_of_faculty,79,0.23,0.17,2,5,0
+Arts,cultural,Sciences,dean_of_faculty,77,0.94,0.7,4,5,1
+Arts,cultural,Student Affairs,club_student,201,0.24,0.27,0,0,0
+Medicine,hackathon,Business,dean_of_faculty,252,0.69,0.46,2,3,1
+Education,hackathon,Student Affairs,student_affairs,109,0.11,0.8,2,3,1
+Education,social,Engineering,club_event,137,0.56,0.55,2,1,1
+Law,workshop,Computer Science,club_student,199,0.74,0.82,2,2,0
+Architecture,career,Business,club_event,185,0.71,0.87,4,2,1
+Arts,hackathon,Computer Science,club_student,247,0.97,0.63,2,4,1
+Architecture,workshop,Arts,student_affairs,24,0.47,0.66,0,3,1
+Law,cultural,Medicine,club_event,176,0.85,0.3,2,2,1
+Computer Science,career,Student Affairs,student_affairs,217,0.34,0.58,0,1,1
+Architecture,career,Sciences,club_student,235,0.14,0.17,2,4,1
+Law,workshop,Medicine,student_affairs,41,0.55,0.62,4,5,1
+Engineering,career,Sciences,student_affairs,105,0.59,0.28,3,0,1
+Arts,cultural,Engineering,club_student,81,0.94,0.76,1,5,1
+Medicine,hackathon,Business,dean_of_faculty,119,0.76,0.43,2,2,1
+Engineering,seminar,Business,club_student,16,0.96,0.16,2,1,1
+Architecture,volunteer,Engineering,dean_of_faculty,276,0.21,0.7,2,0,1
+Engineering,volunteer,Business,dean_of_faculty,111,0.59,0.33,0,4,1
+Engineering,seminar,Business,club_event,190,0.24,0.83,4,1,1
+Education,workshop,Arts,dean_of_faculty,236,0.19,0.56,3,1,1
+Architecture,seminar,Student Affairs,club_event,268,0.6,0.51,2,5,1
+Computer Science,workshop,Sciences,club_event,16,0.61,0.12,2,5,1
+Computer Science,volunteer,Computer Science,dean_of_faculty,58,0.22,0.19,4,4,0
+Business,cultural,Sciences,student_affairs,76,0.66,0.13,2,1,1
+Law,sports,Engineering,club_student,43,0.95,0.7,1,5,1
+Law,social,Arts,student_affairs,225,0.98,0.98,2,0,1
+Medicine,hackathon,Engineering,club_student,160,0.39,0.74,1,4,1
+Engineering,volunteer,Engineering,club_student,150,0.79,0.39,0,1,1
+Engineering,career,Engineering,student_affairs,174,0.86,0.6,4,0,1
+Medicine,sports,Engineering,dean_of_faculty,35,0.38,0.89,0,5,1
+Computer Science,social,Engineering,club_student,17,0.2,0.53,3,2,0
+Engineering,sports,Business,club_event,56,0.4,0.27,4,5,1
+Computer Science,cultural,Business,club_event,101,0.76,0.84,4,1,1
+Computer Science,sports,Medicine,club_event,267,0.59,0.15,1,4,1
+Arts,sports,Arts,club_event,222,0.98,0.47,4,2,1
+Engineering,hackathon,Arts,dean_of_faculty,15,0.98,0.46,1,5,1
+Business,social,Computer Science,club_student,142,0.22,0.14,1,5,1
+Engineering,hackathon,Business,club_event,156,0.96,0.62,1,5,1
+Computer Science,hackathon,Engineering,student_affairs,120,0.5,0.23,0,2,1
+Law,hackathon,Student Affairs,student_affairs,242,0.7,0.87,1,1,1
+Arts,career,Sciences,dean_of_faculty,155,0.49,0.33,3,3,1
+Computer Science,cultural,Medicine,student_affairs,119,0.47,0.89,1,2,1
+Law,workshop,Sciences,club_student,247,0.41,0.68,3,1,1
+Medicine,cultural,Sciences,student_affairs,97,0.53,0.49,1,0,1
+Architecture,hackathon,Business,club_event,71,0.34,0.43,2,5,0
+Medicine,hackathon,Engineering,club_student,69,0.32,0.35,1,5,0
+Business,cultural,Medicine,club_student,91,0.96,0.39,4,3,1
+Computer Science,cultural,Business,club_event,70,0.76,0.75,3,2,1
+Medicine,career,Student Affairs,dean_of_faculty,197,0.19,0.52,1,1,1
+Education,volunteer,Sciences,club_event,185,0.54,0.49,4,0,1
+Engineering,social,Business,dean_of_faculty,37,0.28,0.47,0,0,0
+Architecture,social,Business,club_event,126,0.43,0.13,0,4,1
+Medicine,cultural,Business,club_student,189,0.93,0.65,0,2,1
+Arts,workshop,Sciences,student_affairs,100,0.69,0.73,0,3,1
+Arts,hackathon,Arts,club_student,60,0.55,0.31,4,2,0
+Education,volunteer,Computer Science,dean_of_faculty,99,0.12,0.19,4,0,0
+Arts,social,Computer Science,club_event,134,0.76,0.76,1,1,1
+Medicine,cultural,Engineering,dean_of_faculty,130,0.66,0.13,1,2,1
+Medicine,hackathon,Business,club_student,96,0.53,0.11,2,0,1
+Law,seminar,Engineering,club_event,123,0.17,0.47,3,1,0
+Business,sports,Student Affairs,student_affairs,246,0.24,1.0,4,5,1
+Architecture,hackathon,Business,dean_of_faculty,157,0.38,0.65,0,1,1
+Law,cultural,Engineering,club_student,79,0.91,0.31,4,0,1
+Law,social,Engineering,club_event,133,0.82,0.32,0,4,1
+Engineering,career,Medicine,club_student,188,0.57,0.18,2,2,1
+Business,workshop,Sciences,dean_of_faculty,120,0.23,0.81,0,4,1
+Architecture,seminar,Sciences,club_student,179,0.51,0.71,2,0,0
+Computer Science,workshop,Computer Science,club_student,30,0.18,0.25,4,0,0
+Arts,cultural,Computer Science,club_student,239,0.81,0.59,2,0,1
+Computer Science,social,Arts,student_affairs,209,0.7,0.82,4,5,1
+Medicine,sports,Business,club_student,90,0.64,0.62,3,2,1
+Engineering,social,Business,student_affairs,271,0.66,0.14,3,3,0
+Law,cultural,Engineering,club_student,40,0.1,0.34,1,3,0
+Education,seminar,Arts,student_affairs,91,0.46,0.61,1,3,1
+Medicine,career,Arts,student_affairs,40,0.43,0.84,4,3,1
+Computer Science,cultural,Engineering,dean_of_faculty,121,0.32,0.64,4,4,1
+Education,workshop,Computer Science,club_event,79,0.16,0.34,0,0,0
+Medicine,seminar,Medicine,club_student,148,0.66,0.33,1,4,1
+Architecture,career,Medicine,club_event,208,0.75,0.27,0,3,1
+Business,seminar,Business,dean_of_faculty,166,0.75,0.57,2,3,1
+Computer Science,career,Sciences,club_event,203,0.75,0.86,3,1,1
+Medicine,seminar,Sciences,club_student,214,0.36,0.98,3,1,1
+Education,sports,Computer Science,club_student,110,0.46,0.31,2,2,1
+Business,sports,Business,club_student,58,0.52,0.38,2,2,1
+Computer Science,career,Student Affairs,club_student,203,0.32,0.73,4,1,1
+Medicine,volunteer,Student Affairs,club_event,253,0.65,0.73,2,0,1
+Computer Science,sports,Business,club_event,125,0.29,0.79,2,1,1
+Medicine,volunteer,Student Affairs,club_student,217,0.76,0.83,0,0,1
+Architecture,cultural,Student Affairs,club_student,39,0.65,0.28,4,0,1
+Arts,cultural,Business,club_event,222,0.68,1.0,0,3,1
+Engineering,seminar,Computer Science,dean_of_faculty,182,0.99,0.19,4,3,1
+Computer Science,workshop,Business,club_event,28,1.0,0.13,0,2,1
+Engineering,social,Computer Science,club_student,140,0.72,0.4,3,2,1
+Engineering,hackathon,Engineering,club_event,215,0.43,0.81,1,0,1
+Engineering,seminar,Computer Science,student_affairs,70,0.59,0.3,3,4,1
+Computer Science,social,Computer Science,dean_of_faculty,114,0.25,0.75,1,4,1
+Business,seminar,Business,dean_of_faculty,155,0.4,0.48,0,2,1
+Medicine,social,Medicine,dean_of_faculty,36,0.85,0.67,2,1,1
+Law,hackathon,Sciences,club_student,280,0.72,0.2,1,3,1
+Computer Science,workshop,Business,club_student,119,0.43,0.46,4,0,1
+Computer Science,hackathon,Business,dean_of_faculty,52,0.39,0.77,0,1,1
+Medicine,volunteer,Arts,club_student,235,0.56,0.27,4,0,1
+Architecture,hackathon,Computer Science,club_event,122,0.99,0.85,2,5,1
+Engineering,career,Arts,club_student,244,0.8,0.41,1,3,1
+Business,hackathon,Engineering,club_event,134,0.68,0.65,0,0,1
+Education,cultural,Student Affairs,club_student,39,0.56,0.99,4,5,1
+Medicine,sports,Medicine,club_event,23,0.74,0.51,2,4,1
+Law,hackathon,Computer Science,dean_of_faculty,166,0.85,0.68,4,5,1
+Architecture,seminar,Medicine,student_affairs,89,0.58,0.43,3,5,1
+Arts,social,Arts,club_student,165,0.12,0.55,2,4,1
+Arts,social,Business,club_student,109,0.86,0.83,1,2,1
+Law,hackathon,Medicine,club_student,223,0.66,0.12,4,3,1
+Engineering,cultural,Computer Science,dean_of_faculty,30,0.68,0.26,1,2,1
+Arts,career,Arts,student_affairs,139,0.91,0.57,4,0,1
+Medicine,workshop,Arts,dean_of_faculty,75,0.98,0.91,4,4,1
+Computer Science,social,Sciences,student_affairs,90,0.49,0.34,4,3,1
+Education,hackathon,Student Affairs,club_student,125,0.11,0.53,3,0,1
+Business,career,Computer Science,student_affairs,187,0.98,0.78,2,1,1
+Law,social,Business,student_affairs,275,0.34,0.91,0,1,1
+Arts,workshop,Engineering,dean_of_faculty,215,0.92,0.45,0,0,1
+Law,career,Engineering,club_student,113,0.83,0.4,0,0,1
+Law,workshop,Medicine,student_affairs,56,0.36,0.65,2,0,1
+Business,career,Computer Science,dean_of_faculty,225,0.66,0.15,2,1,1
+Medicine,workshop,Sciences,dean_of_faculty,241,0.64,0.45,0,5,1
+Business,hackathon,Computer Science,dean_of_faculty,81,0.64,0.41,4,0,1
+Architecture,cultural,Sciences,club_student,97,0.61,0.94,0,2,0
+Medicine,seminar,Business,club_event,118,0.51,0.18,1,2,1
+Business,career,Arts,dean_of_faculty,70,0.52,0.93,3,0,1
+Business,seminar,Engineering,club_event,15,0.44,0.3,3,1,0
+Education,social,Sciences,dean_of_faculty,191,0.44,0.27,3,0,1
+Medicine,sports,Arts,club_student,101,0.88,0.39,1,3,1
+Computer Science,seminar,Sciences,student_affairs,160,1.0,0.31,1,5,1
+Engineering,hackathon,Sciences,club_student,87,0.91,0.77,3,5,1
+Business,seminar,Engineering,club_event,62,0.89,0.9,4,4,1
+Engineering,career,Arts,dean_of_faculty,102,0.62,0.41,3,5,1
+Architecture,career,Computer Science,dean_of_faculty,133,0.89,0.59,0,4,1
+Education,hackathon,Engineering,student_affairs,132,0.62,0.5,0,3,1
+Law,hackathon,Student Affairs,club_student,247,0.53,0.15,3,1,1
+Business,workshop,Arts,club_student,207,0.59,0.18,1,1,1
+Education,volunteer,Student Affairs,club_event,59,0.99,0.71,2,0,1
+Architecture,seminar,Student Affairs,student_affairs,222,0.61,0.76,4,5,1
+Business,seminar,Medicine,club_event,182,0.61,0.97,4,0,1
+Medicine,career,Sciences,student_affairs,23,0.96,0.21,0,2,1
+Arts,hackathon,Student Affairs,student_affairs,274,0.97,0.68,2,4,1
+Engineering,seminar,Arts,student_affairs,246,0.66,0.56,0,5,1
+Engineering,volunteer,Business,club_event,220,0.5,0.53,4,5,1
+Architecture,sports,Sciences,club_student,47,0.75,0.7,3,3,1
+Architecture,hackathon,Medicine,club_event,238,0.56,0.75,1,1,1
+Arts,cultural,Student Affairs,club_student,177,0.71,0.1,1,5,1
+Arts,volunteer,Engineering,student_affairs,30,0.7,0.88,3,3,1
+Education,cultural,Medicine,club_student,30,0.71,0.25,4,1,1
+Education,volunteer,Arts,student_affairs,108,0.94,0.45,4,3,1
+Education,sports,Business,club_event,83,0.72,0.77,2,3,1
+Arts,career,Medicine,club_student,189,0.46,0.33,2,1,1
+Education,cultural,Business,student_affairs,214,0.25,0.62,3,4,1
+Arts,volunteer,Medicine,student_affairs,67,0.3,0.99,4,0,1
+Law,volunteer,Arts,club_student,265,0.57,0.96,4,2,0
+Education,cultural,Computer Science,student_affairs,148,0.3,0.27,4,0,0
+Engineering,seminar,Sciences,dean_of_faculty,99,0.14,0.57,2,4,1
+Computer Science,seminar,Computer Science,student_affairs,122,0.46,0.18,2,3,1
+Education,career,Engineering,club_event,103,0.43,0.9,3,3,1
+Engineering,career,Computer Science,dean_of_faculty,244,0.87,0.14,4,2,1
+Business,seminar,Arts,club_student,33,0.8,0.26,3,4,1
+Engineering,cultural,Medicine,club_student,82,0.78,0.11,2,1,1
+Education,hackathon,Business,club_event,184,0.6,0.92,3,3,0
+Education,hackathon,Computer Science,dean_of_faculty,241,0.35,0.88,1,3,1
+Education,sports,Medicine,student_affairs,231,0.97,0.82,2,5,1
+Medicine,social,Medicine,club_event,170,0.96,0.92,0,5,1
+Education,workshop,Business,club_student,35,0.14,0.82,2,5,0
+Arts,seminar,Business,club_event,74,0.82,0.88,0,1,0
+Education,cultural,Engineering,club_event,232,0.6,0.26,0,2,1
+Law,hackathon,Medicine,dean_of_faculty,88,0.55,0.87,1,3,1
+Architecture,sports,Student Affairs,dean_of_faculty,91,0.77,0.22,4,5,1
+Education,sports,Business,club_student,126,0.82,0.26,4,0,1
+Arts,seminar,Business,club_event,88,0.89,0.68,2,4,1
+Law,workshop,Engineering,club_event,227,0.34,0.24,4,3,1
+Business,cultural,Sciences,club_student,248,0.26,0.26,2,3,1
+Medicine,volunteer,Medicine,student_affairs,262,0.22,0.24,4,0,1
+Engineering,cultural,Sciences,club_event,67,0.45,0.59,1,5,1
+Engineering,cultural,Business,club_student,249,0.72,0.28,1,4,1
+Business,workshop,Arts,club_event,103,0.24,0.96,4,1,1
+Business,seminar,Student Affairs,dean_of_faculty,182,0.69,0.63,2,1,1
+Business,career,Business,student_affairs,201,0.73,0.32,4,4,1
+Medicine,sports,Sciences,club_student,265,0.75,0.52,3,1,1
+Law,sports,Business,club_student,185,0.33,0.33,3,4,1
+Engineering,social,Sciences,dean_of_faculty,16,0.27,0.26,0,1,1
+Arts,cultural,Computer Science,dean_of_faculty,72,0.29,0.74,2,1,1
+Arts,social,Business,club_student,65,0.22,0.43,0,4,0
+Computer Science,workshop,Arts,dean_of_faculty,253,0.57,0.56,4,3,1
+Arts,volunteer,Student Affairs,student_affairs,109,0.31,0.58,0,0,1
+Medicine,sports,Business,dean_of_faculty,56,0.83,0.87,4,2,1
+Engineering,volunteer,Computer Science,club_event,122,0.88,0.61,0,0,1
+Business,volunteer,Student Affairs,club_student,62,0.37,0.53,4,1,0
+Arts,workshop,Medicine,dean_of_faculty,255,0.17,0.72,3,0,1
+Engineering,social,Sciences,club_student,92,0.76,0.2,1,0,1
+Architecture,hackathon,Sciences,club_event,42,0.2,0.79,0,0,0
+Law,seminar,Business,club_event,36,0.21,0.75,3,1,0
+Architecture,career,Business,club_event,33,0.36,0.27,3,2,0
+Computer Science,social,Sciences,student_affairs,68,0.23,0.81,1,0,1
+Computer Science,hackathon,Student Affairs,club_event,187,0.87,0.62,2,1,1
+Medicine,hackathon,Business,club_student,114,0.73,0.43,2,5,1
+Engineering,workshop,Computer Science,club_event,191,0.22,0.73,3,0,1
+Arts,cultural,Engineering,club_event,156,0.27,0.94,4,2,1
+Law,sports,Computer Science,club_event,123,0.86,0.33,0,5,1
+Computer Science,social,Sciences,club_student,231,0.21,0.65,3,1,1
+Medicine,workshop,Business,club_student,241,0.75,0.97,3,3,1
+Computer Science,hackathon,Business,club_event,79,0.87,0.58,0,2,1
+Business,workshop,Business,student_affairs,31,0.32,0.21,4,2,0
+Law,cultural,Medicine,dean_of_faculty,203,0.48,0.81,4,0,1
+Education,volunteer,Arts,dean_of_faculty,103,0.95,0.33,0,1,1
+Medicine,cultural,Sciences,club_student,71,0.14,0.15,0,4,0
+Arts,workshop,Computer Science,dean_of_faculty,132,0.19,0.46,0,3,0
+Computer Science,workshop,Medicine,club_student,202,0.5,0.23,0,5,1
+Education,workshop,Sciences,club_student,115,0.56,0.47,0,1,0
+Arts,volunteer,Engineering,club_student,162,0.43,0.58,2,3,1
+Law,social,Engineering,club_event,27,0.12,0.49,2,4,0
+Education,cultural,Sciences,dean_of_faculty,144,0.55,0.28,4,0,1
+Arts,hackathon,Business,dean_of_faculty,145,0.85,0.9,3,1,1
+Engineering,career,Computer Science,club_event,258,0.12,0.15,2,3,1
+Engineering,sports,Arts,club_student,49,0.82,0.15,4,3,1
+Engineering,sports,Engineering,club_student,149,0.63,0.59,4,0,1
+Medicine,workshop,Arts,club_event,48,0.38,0.25,2,4,0
+Computer Science,sports,Student Affairs,dean_of_faculty,217,0.8,0.58,3,5,1
+Engineering,career,Sciences,dean_of_faculty,76,0.83,0.44,4,5,1
+Law,hackathon,Engineering,club_event,125,0.54,0.96,3,3,1
+Arts,career,Computer Science,club_event,180,0.49,0.29,4,5,1
+Medicine,seminar,Medicine,dean_of_faculty,22,0.16,0.84,2,1,0
+Business,workshop,Business,dean_of_faculty,41,0.56,0.84,4,1,1
+Law,workshop,Computer Science,club_event,29,0.67,0.69,2,0,1
+Engineering,career,Arts,dean_of_faculty,90,0.91,0.18,3,0,1
+Medicine,workshop,Computer Science,club_student,219,0.9,0.37,1,1,1
+Architecture,volunteer,Medicine,club_event,240,0.98,0.44,0,4,1
+Computer Science,sports,Medicine,club_student,229,0.53,0.53,0,1,1
+Law,seminar,Arts,dean_of_faculty,61,0.79,0.7,1,4,1
+Medicine,social,Medicine,dean_of_faculty,273,0.24,0.75,3,4,1
+Architecture,workshop,Arts,club_student,196,0.31,0.21,0,4,1
+Education,hackathon,Engineering,dean_of_faculty,142,0.26,0.36,4,4,1
+Law,volunteer,Engineering,dean_of_faculty,218,0.26,0.68,4,3,1
+Medicine,hackathon,Sciences,club_event,150,0.94,0.49,2,3,1
+Business,seminar,Sciences,club_student,93,0.6,0.19,1,1,1
+Education,career,Computer Science,dean_of_faculty,155,0.59,0.21,4,4,1
+Arts,sports,Medicine,dean_of_faculty,271,0.31,0.14,3,1,1
+Law,cultural,Business,dean_of_faculty,49,0.48,0.66,0,0,1
+Arts,seminar,Medicine,club_event,198,0.7,0.99,1,1,1
+Engineering,career,Business,dean_of_faculty,223,0.9,0.41,1,0,1
+Education,seminar,Sciences,student_affairs,26,0.92,0.42,2,2,1
+Medicine,seminar,Medicine,club_student,234,0.39,0.13,1,5,1
+Computer Science,hackathon,Sciences,club_student,255,0.78,0.54,0,4,1
+Medicine,workshop,Medicine,club_student,220,0.52,0.6,0,2,1
+Medicine,hackathon,Medicine,club_student,130,0.86,0.66,3,5,1
+Medicine,hackathon,Medicine,club_event,217,0.73,0.59,2,4,1
+Medicine,seminar,Arts,student_affairs,148,0.98,0.82,0,0,1
+Business,social,Engineering,dean_of_faculty,199,0.32,0.94,0,2,1
+Architecture,seminar,Sciences,club_student,131,0.85,0.58,4,3,1
+Education,career,Sciences,club_event,66,0.56,0.33,2,4,0
+Architecture,workshop,Engineering,club_student,169,0.83,0.37,4,2,1
+Medicine,hackathon,Sciences,student_affairs,237,0.49,0.47,2,3,1
+Computer Science,sports,Arts,dean_of_faculty,201,0.54,0.5,4,0,1
+Medicine,volunteer,Business,club_event,274,0.82,0.13,1,1,1
+Education,sports,Computer Science,dean_of_faculty,210,0.8,0.87,1,3,1
+Medicine,workshop,Engineering,dean_of_faculty,186,0.64,0.41,0,0,1
+Law,social,Computer Science,club_event,75,0.26,0.36,3,3,0
+Architecture,cultural,Arts,dean_of_faculty,83,0.79,0.65,3,0,1
+Business,sports,Student Affairs,club_student,62,0.44,0.98,4,2,1
+Law,workshop,Engineering,club_student,70,0.53,0.56,3,3,1
+Business,career,Computer Science,club_student,103,0.62,0.89,2,3,1
+Computer Science,sports,Sciences,club_event,224,0.81,0.87,3,0,1
+Engineering,social,Engineering,club_event,143,0.31,0.78,3,2,1
+Education,hackathon,Computer Science,club_student,251,0.6,0.98,1,2,1
+Business,sports,Business,club_student,134,0.55,0.89,2,2,0
+Law,sports,Arts,student_affairs,161,0.69,0.4,1,1,1
+Engineering,seminar,Business,club_event,93,0.94,0.99,2,4,1
+Architecture,seminar,Sciences,dean_of_faculty,218,0.79,0.32,2,5,1
+Business,cultural,Business,club_student,113,0.88,0.6,3,5,1
+Engineering,cultural,Arts,club_student,46,0.82,0.16,3,1,1
+Medicine,volunteer,Student Affairs,club_event,31,0.45,0.99,1,2,1
+Business,sports,Medicine,club_event,184,0.86,0.89,0,0,1
+Engineering,seminar,Student Affairs,dean_of_faculty,240,0.53,0.36,0,3,1
+Business,sports,Arts,student_affairs,199,0.34,0.48,4,1,1
+Education,seminar,Sciences,club_event,245,0.73,0.6,0,5,1
+Education,career,Student Affairs,club_student,90,0.58,0.96,4,5,1
+Law,hackathon,Medicine,club_event,46,0.38,0.99,3,4,1
+Architecture,seminar,Arts,dean_of_faculty,85,0.33,0.31,0,5,1
+Law,sports,Business,student_affairs,82,0.91,0.85,1,4,1
+Arts,career,Medicine,club_student,92,0.98,0.99,4,3,0
+Business,career,Business,club_student,123,0.25,0.21,0,0,1
+Business,workshop,Engineering,club_student,212,0.52,0.44,0,0,1
+Architecture,hackathon,Engineering,club_student,57,0.84,0.27,3,0,1
+Arts,sports,Arts,club_event,58,0.63,0.78,3,2,1
+Business,career,Arts,student_affairs,224,0.88,0.63,0,0,0
+Computer Science,cultural,Computer Science,dean_of_faculty,108,0.1,0.84,2,2,1
+Law,cultural,Computer Science,club_student,184,0.12,0.72,3,3,1
+Law,hackathon,Arts,club_student,52,0.11,0.68,2,2,0
+Engineering,career,Arts,club_student,243,0.59,0.19,4,4,1
+Architecture,workshop,Medicine,club_student,203,0.8,0.78,3,3,1
+Medicine,social,Sciences,dean_of_faculty,96,0.45,0.51,0,4,1
+Law,seminar,Sciences,dean_of_faculty,52,0.43,0.43,4,3,1
+Architecture,seminar,Medicine,dean_of_faculty,208,0.12,0.64,1,0,1
+Business,hackathon,Student Affairs,student_affairs,247,0.86,0.67,4,4,1
+Business,hackathon,Engineering,student_affairs,55,0.6,0.11,4,2,1
+Engineering,cultural,Arts,student_affairs,276,0.38,0.96,3,3,1
+Engineering,social,Sciences,student_affairs,212,0.64,0.81,0,4,1
+Business,sports,Engineering,dean_of_faculty,85,0.49,0.26,1,4,1
+Education,seminar,Sciences,club_student,150,0.75,0.43,1,0,1
+Education,sports,Arts,dean_of_faculty,38,0.39,0.8,1,0,1
+Business,social,Computer Science,student_affairs,269,0.85,0.74,0,5,0
+Law,career,Student Affairs,student_affairs,224,0.35,0.15,1,1,1
+Medicine,cultural,Business,club_event,182,0.9,0.9,2,0,0
+Architecture,social,Business,student_affairs,246,0.32,0.22,3,0,1
+Education,workshop,Sciences,club_student,45,0.81,0.95,0,0,1
+Education,workshop,Medicine,club_event,252,0.9,0.2,0,2,1
+Engineering,workshop,Student Affairs,student_affairs,131,0.95,0.88,3,0,1
+Business,career,Engineering,club_student,251,0.16,0.49,2,5,0
+Architecture,sports,Student Affairs,club_student,273,0.62,0.38,2,5,1
+Business,cultural,Sciences,club_event,226,0.41,0.64,2,3,1
+Law,seminar,Medicine,club_event,257,0.28,0.38,4,0,1
+Engineering,workshop,Arts,student_affairs,38,0.24,0.8,4,3,1
+Business,seminar,Sciences,student_affairs,124,0.97,0.81,2,3,1
+Arts,volunteer,Computer Science,club_event,230,0.58,0.47,2,4,1
+Law,cultural,Business,club_event,143,0.9,0.94,4,1,1
+Business,volunteer,Computer Science,club_event,210,0.93,0.82,2,3,1
+Computer Science,volunteer,Arts,club_student,243,0.83,0.93,0,3,1
+Education,volunteer,Engineering,student_affairs,218,0.24,0.61,0,4,0
+Education,volunteer,Engineering,club_student,267,0.67,0.38,0,5,1
+Engineering,career,Engineering,club_student,66,0.52,0.56,3,0,1
+Computer Science,social,Arts,student_affairs,242,0.71,0.15,1,1,1
+Law,volunteer,Business,student_affairs,152,0.73,0.17,1,0,1
+Business,social,Sciences,student_affairs,197,0.88,0.15,1,3,1
+Computer Science,seminar,Arts,club_student,187,0.29,0.75,1,2,1
+Medicine,cultural,Student Affairs,student_affairs,31,0.49,0.14,3,0,0
+Arts,social,Sciences,club_student,196,0.74,0.63,2,5,0
+Arts,seminar,Engineering,club_student,216,0.36,0.71,1,2,1
+Computer Science,career,Student Affairs,club_student,16,0.35,0.21,0,1,0
+Medicine,seminar,Engineering,student_affairs,63,0.96,0.99,2,4,1
+Business,volunteer,Arts,club_event,206,0.72,0.41,0,2,1
+Computer Science,workshop,Sciences,dean_of_faculty,21,0.68,0.46,3,4,0
+Law,cultural,Sciences,student_affairs,37,0.8,0.91,3,4,1
+Business,career,Student Affairs,club_event,162,0.38,0.73,2,1,0
+Law,cultural,Sciences,dean_of_faculty,95,0.4,0.11,1,5,1
+Computer Science,seminar,Sciences,club_event,209,0.38,0.22,3,1,1
+Architecture,sports,Business,club_student,110,0.7,0.62,1,1,1
+Medicine,volunteer,Computer Science,club_student,50,0.11,0.81,4,0,0
+Law,workshop,Arts,club_event,17,0.67,0.96,4,3,1
+Arts,workshop,Business,club_student,60,0.45,0.5,1,4,1
+Medicine,volunteer,Sciences,student_affairs,245,0.39,0.61,1,0,1
+Law,sports,Business,dean_of_faculty,38,0.31,0.86,3,5,1
+Business,workshop,Student Affairs,club_event,249,0.43,0.57,0,2,1
+Architecture,workshop,Student Affairs,club_event,15,0.92,0.2,2,1,0
+Computer Science,social,Business,dean_of_faculty,101,0.19,0.82,1,0,1
+Engineering,cultural,Student Affairs,club_student,202,0.61,0.49,0,4,1
+Education,volunteer,Medicine,club_student,175,0.61,0.52,3,1,1
+Engineering,hackathon,Medicine,club_student,40,0.78,0.8,1,3,1
+Arts,seminar,Medicine,dean_of_faculty,94,0.56,0.62,1,4,1
+Medicine,workshop,Student Affairs,club_student,278,0.22,0.75,3,1,0
+Business,career,Medicine,student_affairs,80,0.66,0.85,1,1,1
+Business,workshop,Arts,club_student,157,0.35,0.99,1,5,1
+Engineering,seminar,Sciences,student_affairs,115,0.73,0.71,0,1,0
+Arts,workshop,Arts,club_event,127,0.87,0.22,3,3,1
+Business,seminar,Business,student_affairs,114,0.14,0.8,1,4,1
+Education,workshop,Sciences,student_affairs,217,0.28,0.71,0,2,1
+Arts,cultural,Sciences,dean_of_faculty,197,0.46,0.63,4,4,1
+Engineering,workshop,Student Affairs,club_event,60,0.47,0.9,0,3,1
+Computer Science,social,Medicine,club_event,76,0.95,0.13,1,5,1
+Medicine,seminar,Medicine,dean_of_faculty,215,0.25,0.61,1,0,1
+Computer Science,workshop,Arts,dean_of_faculty,203,0.97,0.48,3,3,1
+Computer Science,hackathon,Business,dean_of_faculty,93,0.18,0.56,3,2,0
+Medicine,sports,Computer Science,student_affairs,168,0.69,0.5,3,3,1
+Medicine,career,Student Affairs,club_event,228,0.41,0.37,4,3,1
+Arts,social,Computer Science,club_event,212,0.22,0.89,0,0,1
+Business,sports,Business,dean_of_faculty,85,0.93,0.76,4,5,1
+Business,seminar,Student Affairs,club_student,267,0.95,0.63,4,0,1
+Law,social,Student Affairs,club_event,174,0.92,0.74,4,4,1
+Medicine,career,Business,student_affairs,137,0.9,0.75,2,3,1
+Business,volunteer,Student Affairs,club_student,201,0.58,0.3,2,1,1
+Computer Science,career,Engineering,club_student,202,0.86,0.58,3,0,1
+Medicine,volunteer,Computer Science,dean_of_faculty,214,0.92,0.61,2,3,1
+Architecture,hackathon,Medicine,student_affairs,186,0.95,0.42,1,3,1
+Architecture,sports,Sciences,dean_of_faculty,272,0.44,0.83,3,1,1
+Business,seminar,Business,student_affairs,161,0.43,0.58,0,4,1
+Medicine,seminar,Computer Science,student_affairs,109,0.78,0.64,2,2,1
+Law,sports,Computer Science,dean_of_faculty,108,0.2,0.93,0,3,1
+Medicine,social,Business,student_affairs,75,0.34,0.45,2,0,1
+Medicine,career,Business,club_event,227,0.83,0.37,2,2,1
+Computer Science,cultural,Medicine,dean_of_faculty,127,0.69,0.51,0,5,1
+Computer Science,seminar,Sciences,student_affairs,100,0.23,0.21,2,5,1
+Engineering,sports,Arts,club_event,122,0.43,0.97,2,5,1
+Law,cultural,Arts,student_affairs,270,0.14,0.55,1,5,1
+Computer Science,hackathon,Computer Science,student_affairs,90,0.3,0.5,3,1,1
+Law,volunteer,Sciences,club_event,114,0.52,0.2,0,5,1
+Education,social,Computer Science,dean_of_faculty,47,0.12,0.94,2,5,1
+Computer Science,workshop,Engineering,club_event,262,0.87,0.26,1,0,1
+Education,cultural,Student Affairs,club_event,76,0.48,0.64,1,4,1
+Engineering,career,Computer Science,dean_of_faculty,59,0.54,0.25,0,1,1
+Law,volunteer,Arts,club_event,280,0.8,0.26,0,4,1
+Architecture,career,Arts,club_event,206,0.97,0.42,1,1,1
+Business,cultural,Business,club_event,104,0.1,0.43,3,5,1
+Arts,volunteer,Business,club_event,131,0.48,0.18,2,0,1
+Engineering,workshop,Medicine,dean_of_faculty,38,0.56,0.45,3,0,1
+Business,career,Sciences,club_student,65,0.11,0.21,3,0,0
+Arts,social,Student Affairs,club_student,267,0.7,0.86,3,5,1
+Medicine,hackathon,Sciences,club_event,181,0.5,0.34,1,1,1
+Arts,social,Business,club_event,275,0.12,0.2,4,2,1
+Business,volunteer,Medicine,club_event,109,0.26,0.96,3,0,1
+Education,career,Arts,club_student,214,0.32,0.91,3,1,1
+Engineering,workshop,Arts,dean_of_faculty,266,0.35,0.84,0,3,1
+Arts,sports,Computer Science,club_student,180,0.23,0.9,0,1,1
+Business,hackathon,Student Affairs,club_student,275,0.81,0.7,1,4,1
+Architecture,volunteer,Sciences,club_student,175,0.76,0.81,0,2,1
+Engineering,social,Student Affairs,club_student,203,0.18,0.98,2,0,1
+Education,volunteer,Sciences,student_affairs,23,0.61,0.7,4,5,1
+Arts,volunteer,Sciences,dean_of_faculty,198,0.82,0.15,0,1,0
+Business,hackathon,Business,club_student,51,0.66,0.69,0,1,1
+Engineering,social,Arts,club_student,118,0.61,0.78,3,4,1
+Architecture,hackathon,Engineering,dean_of_faculty,125,0.17,0.48,3,1,1
+Business,social,Sciences,dean_of_faculty,29,0.51,0.41,4,4,1
+Architecture,hackathon,Arts,club_event,121,0.95,0.72,2,1,1
+Engineering,hackathon,Arts,student_affairs,111,0.13,0.56,4,5,1
+Arts,seminar,Business,club_student,96,0.21,0.16,0,2,0
+Law,sports,Arts,dean_of_faculty,160,0.53,0.74,0,1,1
+Architecture,hackathon,Arts,student_affairs,237,0.55,0.37,3,4,1
+Medicine,seminar,Sciences,club_event,212,0.9,0.48,0,2,1
+Computer Science,workshop,Sciences,club_event,195,0.38,0.3,1,0,1
+Law,sports,Medicine,dean_of_faculty,110,0.97,0.5,0,5,1
+Education,social,Medicine,dean_of_faculty,129,0.39,0.14,2,4,1
+Computer Science,social,Arts,student_affairs,71,0.25,0.24,3,5,0
+Medicine,career,Engineering,student_affairs,163,0.92,0.66,4,4,1
+Law,volunteer,Arts,dean_of_faculty,237,0.32,0.98,2,2,1
+Medicine,sports,Computer Science,club_student,171,0.65,0.46,4,4,1
+Arts,sports,Arts,dean_of_faculty,160,0.3,0.89,3,2,0
+Business,social,Business,club_student,183,0.55,0.22,3,5,1
+Medicine,seminar,Business,club_event,68,0.97,1.0,4,3,1
+Business,seminar,Computer Science,dean_of_faculty,37,0.53,0.37,4,2,1
+Law,volunteer,Arts,dean_of_faculty,82,0.87,0.21,1,0,0
+Medicine,hackathon,Computer Science,student_affairs,210,0.94,0.23,4,1,1
+Computer Science,social,Student Affairs,student_affairs,69,0.22,0.2,3,2,0
+Education,hackathon,Business,student_affairs,187,0.67,0.86,0,4,1
+Engineering,career,Engineering,student_affairs,199,0.6,0.27,2,3,1
+Engineering,seminar,Business,student_affairs,39,0.9,0.37,1,1,1
+Business,social,Engineering,club_event,114,0.38,0.36,2,3,1
+Engineering,workshop,Arts,club_event,245,0.74,0.47,3,4,1
+Computer Science,volunteer,Student Affairs,club_event,158,0.44,0.62,0,1,1
+Engineering,cultural,Sciences,student_affairs,47,0.52,0.27,0,2,1
+Education,workshop,Business,club_event,202,0.95,0.25,4,4,1
+Law,hackathon,Arts,club_event,244,0.78,0.76,1,1,1
+Business,career,Engineering,club_event,23,0.22,0.46,0,1,0
+Computer Science,career,Engineering,club_event,116,0.33,0.52,0,5,1
+Law,cultural,Arts,club_student,239,0.87,0.23,3,4,1
+Education,career,Student Affairs,club_student,103,0.35,0.43,0,0,1
+Business,career,Student Affairs,student_affairs,264,0.25,0.13,2,5,1
+Business,workshop,Business,student_affairs,249,0.16,0.97,4,5,1
+Computer Science,seminar,Sciences,club_event,98,0.7,0.22,0,2,0
+Law,sports,Student Affairs,dean_of_faculty,67,0.85,0.53,3,2,1
+Law,seminar,Medicine,club_event,150,0.15,0.42,4,1,0
+Architecture,social,Computer Science,dean_of_faculty,90,0.41,0.88,0,1,1
+Computer Science,volunteer,Sciences,dean_of_faculty,159,0.74,0.92,1,1,1
+Arts,cultural,Medicine,club_student,110,0.19,0.18,0,0,0
+Computer Science,career,Student Affairs,student_affairs,227,0.83,0.77,0,5,1
+Engineering,cultural,Computer Science,club_student,263,0.36,0.13,1,4,1
+Engineering,sports,Student Affairs,student_affairs,106,0.64,0.76,0,3,1
+Business,social,Sciences,dean_of_faculty,145,0.32,0.6,1,1,0
+Medicine,social,Business,club_student,207,0.26,0.71,2,4,1
+Law,career,Business,club_student,115,0.28,0.36,2,3,1
+Computer Science,sports,Medicine,dean_of_faculty,275,0.64,0.93,0,2,1
+Business,workshop,Computer Science,student_affairs,208,0.79,0.72,0,4,1
+Education,career,Computer Science,dean_of_faculty,269,0.33,0.73,1,3,1
+Arts,social,Medicine,student_affairs,227,0.31,0.27,3,3,1
+Business,social,Arts,club_event,23,0.48,0.9,2,4,1
+Business,workshop,Student Affairs,student_affairs,95,0.24,0.36,0,2,1
+Law,career,Engineering,club_event,177,0.38,0.7,4,3,1
+Arts,cultural,Student Affairs,club_event,224,0.26,0.66,2,5,1
+Business,workshop,Sciences,dean_of_faculty,53,0.4,0.33,4,0,1
+Education,seminar,Business,club_event,69,0.3,0.58,0,0,0
+Arts,social,Engineering,club_student,105,0.87,0.18,1,0,1
+Medicine,seminar,Student Affairs,student_affairs,93,0.88,0.59,4,3,1
+Medicine,workshop,Engineering,club_student,182,0.34,0.58,3,2,1
+Business,workshop,Engineering,dean_of_faculty,105,0.61,0.55,3,3,1
+Architecture,career,Computer Science,student_affairs,182,0.8,0.96,3,2,1
+Law,sports,Computer Science,club_student,237,0.75,0.3,1,0,1
+Law,social,Business,club_student,113,0.26,0.38,0,0,1
+Medicine,career,Computer Science,club_student,159,0.76,0.94,4,5,1
+Engineering,cultural,Computer Science,dean_of_faculty,93,0.84,0.47,4,4,1
+Medicine,seminar,Student Affairs,club_event,278,0.73,0.2,4,0,0
+Law,hackathon,Sciences,club_student,101,0.74,0.16,2,1,1
+Education,career,Medicine,dean_of_faculty,111,0.89,0.1,0,2,1
+Medicine,career,Medicine,club_event,15,0.94,0.6,1,3,1
+Business,workshop,Engineering,dean_of_faculty,218,0.58,0.49,3,3,1
+Arts,social,Computer Science,club_event,271,0.65,0.45,1,1,1
+Law,seminar,Medicine,student_affairs,73,0.89,0.97,3,1,1
+Engineering,career,Sciences,student_affairs,70,0.1,0.17,1,5,0
+Business,career,Business,club_event,65,0.71,0.86,1,2,1
+Architecture,seminar,Medicine,dean_of_faculty,181,0.74,0.79,0,3,1
+Architecture,cultural,Sciences,club_student,37,0.48,0.67,2,4,1
+Engineering,sports,Business,club_student,80,0.52,0.5,3,0,1
+Engineering,volunteer,Medicine,dean_of_faculty,141,0.59,0.37,3,1,1
+Computer Science,social,Student Affairs,dean_of_faculty,207,0.43,0.96,3,4,1
+Business,volunteer,Medicine,club_student,85,0.39,0.28,4,4,1
+Business,volunteer,Arts,club_event,154,0.7,0.67,0,3,1
+Business,workshop,Sciences,student_affairs,258,0.23,0.66,3,4,1
+Medicine,seminar,Computer Science,dean_of_faculty,217,0.54,0.61,4,4,1
+Architecture,sports,Medicine,student_affairs,160,0.47,0.17,4,1,1
+Medicine,seminar,Sciences,dean_of_faculty,139,0.36,0.51,2,1,1
+Engineering,hackathon,Arts,club_student,150,0.36,0.11,4,1,1
+Law,workshop,Arts,club_event,75,0.85,0.99,1,3,1
+Architecture,workshop,Sciences,dean_of_faculty,163,0.6,0.91,0,4,1
+Medicine,volunteer,Medicine,club_student,128,0.1,0.89,4,4,1
+Computer Science,volunteer,Sciences,student_affairs,136,0.66,0.76,2,5,1
+Education,hackathon,Computer Science,club_event,22,0.23,0.96,2,0,1
+Arts,workshop,Student Affairs,student_affairs,214,0.78,0.46,4,4,1
+Arts,workshop,Arts,dean_of_faculty,164,0.19,0.33,4,1,1
+Medicine,hackathon,Sciences,club_student,272,0.79,0.92,0,5,1
+Architecture,social,Sciences,club_student,30,0.2,0.78,3,2,1
+Engineering,workshop,Business,student_affairs,166,0.37,0.97,1,4,1
+Computer Science,hackathon,Sciences,student_affairs,190,0.96,0.6,3,2,1
+Computer Science,hackathon,Business,club_event,74,0.39,0.41,4,3,1
+Business,volunteer,Sciences,club_event,109,0.95,0.26,4,0,1
+Arts,sports,Sciences,club_student,147,0.55,0.53,3,2,1
+Education,volunteer,Medicine,club_event,238,0.39,0.19,1,4,1
+Computer Science,cultural,Computer Science,club_student,85,0.36,0.76,1,0,1
+Computer Science,workshop,Student Affairs,club_event,216,0.21,0.27,0,0,0
+Architecture,career,Computer Science,club_event,252,0.55,0.48,2,4,1
+Arts,volunteer,Medicine,student_affairs,179,0.6,0.25,4,5,1
+Education,social,Student Affairs,student_affairs,66,0.47,0.98,2,3,1
+Engineering,cultural,Engineering,club_student,187,0.92,0.58,0,2,1
+Engineering,sports,Sciences,dean_of_faculty,172,0.34,0.31,2,5,1
+Business,sports,Sciences,student_affairs,72,0.85,0.86,0,2,1
+Architecture,career,Arts,student_affairs,119,0.13,0.31,4,4,0
+Arts,seminar,Medicine,club_event,230,0.17,0.81,1,1,1
+Business,hackathon,Engineering,dean_of_faculty,274,0.58,0.26,4,0,1
+Business,cultural,Medicine,dean_of_faculty,115,0.11,0.84,3,1,1
+Engineering,volunteer,Business,club_student,242,0.72,0.47,1,2,1
+Architecture,workshop,Engineering,club_student,197,0.48,0.53,2,2,1
+Architecture,seminar,Student Affairs,dean_of_faculty,241,0.77,0.94,4,3,1
+Engineering,sports,Business,club_event,217,0.22,0.64,2,3,1
+Law,sports,Arts,club_student,29,0.72,0.2,4,4,1
+Architecture,career,Medicine,club_student,134,0.85,0.72,2,1,1
+Engineering,hackathon,Student Affairs,student_affairs,162,0.25,0.37,2,5,1
+Medicine,cultural,Medicine,student_affairs,239,0.25,0.92,2,3,1
+Education,social,Medicine,club_student,41,0.26,0.16,4,3,0
+Engineering,social,Arts,club_event,246,0.91,0.52,2,4,1
+Medicine,volunteer,Computer Science,club_student,151,0.82,0.29,3,1,1
+Law,seminar,Engineering,club_event,126,0.67,0.29,4,2,1
+Engineering,seminar,Medicine,club_event,266,0.85,0.17,2,4,0
+Computer Science,social,Computer Science,club_student,242,0.52,0.14,2,1,1
+Law,hackathon,Medicine,club_event,128,0.84,0.44,2,5,1
+Computer Science,cultural,Student Affairs,club_student,178,0.28,0.71,0,5,1
+Engineering,career,Computer Science,club_student,20,0.32,0.87,1,4,1
+Medicine,social,Student Affairs,student_affairs,193,0.21,0.75,0,4,0
+Education,seminar,Computer Science,club_student,36,0.36,0.15,1,2,0
+Architecture,career,Sciences,club_student,190,0.94,0.82,4,3,1
+Law,social,Sciences,club_student,126,0.72,0.56,4,3,1
+Arts,volunteer,Business,club_student,18,0.66,0.59,3,0,1
+Medicine,cultural,Student Affairs,club_event,59,0.69,0.87,3,1,1
+Business,volunteer,Arts,club_student,66,0.44,0.32,4,0,1
+Arts,cultural,Sciences,club_event,248,0.13,0.24,4,3,1
+Law,hackathon,Engineering,student_affairs,142,0.37,0.57,3,2,1
+Law,seminar,Engineering,club_student,251,0.96,0.39,1,2,1
+Medicine,hackathon,Computer Science,student_affairs,36,0.98,0.97,0,1,1
+Computer Science,social,Sciences,club_event,19,0.34,0.54,1,3,0
+Engineering,sports,Student Affairs,student_affairs,153,0.51,0.58,4,1,1
+Arts,workshop,Medicine,dean_of_faculty,37,0.48,0.46,4,5,1
+Computer Science,social,Business,student_affairs,275,0.51,0.34,2,2,1
+Arts,volunteer,Medicine,dean_of_faculty,84,0.86,0.21,2,1,0
+Law,seminar,Computer Science,club_student,211,0.86,0.84,0,1,1
+Arts,seminar,Medicine,dean_of_faculty,120,0.59,0.5,2,4,1
+Arts,career,Sciences,student_affairs,258,0.5,0.85,0,1,1
+Computer Science,seminar,Arts,club_event,277,0.84,0.89,0,1,1
+Law,social,Arts,student_affairs,100,0.97,0.93,0,5,1
+Arts,seminar,Medicine,club_student,197,0.51,0.22,2,2,1
+Computer Science,cultural,Student Affairs,student_affairs,66,0.61,0.24,2,1,1
+Engineering,workshop,Medicine,dean_of_faculty,173,0.19,0.67,1,1,1
+Architecture,workshop,Medicine,dean_of_faculty,92,0.77,0.98,4,3,1
+Business,volunteer,Engineering,dean_of_faculty,167,0.81,0.27,0,2,1
+Arts,social,Sciences,club_student,70,0.58,0.66,0,1,1
+Law,seminar,Student Affairs,dean_of_faculty,125,0.15,0.11,4,3,0
+Business,workshop,Business,club_student,31,0.64,0.8,1,3,1
+Law,social,Engineering,student_affairs,115,0.47,0.59,0,0,1
+Architecture,volunteer,Engineering,club_student,64,0.55,0.22,4,0,0
+Architecture,career,Medicine,dean_of_faculty,60,0.27,0.8,3,1,0
+Engineering,career,Medicine,dean_of_faculty,36,0.77,0.53,0,5,1
+Business,social,Engineering,club_student,144,0.38,0.93,2,5,1
+Engineering,cultural,Engineering,club_event,50,0.53,0.11,2,2,1
+Computer Science,social,Computer Science,club_event,169,0.36,0.81,1,1,1
+Engineering,hackathon,Engineering,club_event,190,0.26,0.92,2,0,1
+Computer Science,sports,Arts,dean_of_faculty,257,0.89,0.44,0,1,1
+Law,volunteer,Arts,club_student,130,0.93,0.52,0,5,1
+Medicine,workshop,Student Affairs,club_event,153,0.95,0.84,2,4,1
+Engineering,hackathon,Engineering,club_event,69,0.2,0.7,2,4,1
+Engineering,social,Computer Science,dean_of_faculty,222,0.99,0.73,4,4,1
+Medicine,cultural,Medicine,dean_of_faculty,278,0.71,0.21,3,3,1
+Computer Science,sports,Arts,dean_of_faculty,147,0.12,0.77,3,5,1
+Engineering,seminar,Medicine,club_student,266,0.36,0.86,1,0,1
+Computer Science,workshop,Sciences,club_event,216,0.65,0.76,1,1,1
+Arts,sports,Medicine,student_affairs,276,0.49,0.5,0,4,1
+Arts,hackathon,Arts,student_affairs,236,0.27,0.74,0,1,1
+Business,career,Student Affairs,dean_of_faculty,90,0.88,0.42,2,0,1
+Arts,workshop,Engineering,club_student,24,0.59,0.44,2,5,1
+Law,cultural,Business,club_student,17,0.1,0.57,4,0,0
+Engineering,hackathon,Computer Science,club_student,26,0.62,0.87,0,3,1
+Business,career,Business,dean_of_faculty,118,0.94,0.77,4,5,1
+Architecture,workshop,Sciences,club_student,187,0.37,0.99,0,4,1
+Medicine,hackathon,Business,club_student,40,0.12,0.64,4,4,0
+Arts,career,Sciences,club_student,64,0.75,0.32,3,0,1
+Engineering,volunteer,Engineering,student_affairs,147,0.4,0.23,4,2,1
+Computer Science,career,Student Affairs,student_affairs,21,0.16,0.28,1,2,0
+Computer Science,cultural,Arts,dean_of_faculty,143,0.36,0.9,2,3,1
+Business,workshop,Engineering,club_student,85,0.34,0.68,0,1,1
+Engineering,social,Business,club_event,277,0.5,0.93,2,0,1
+Law,social,Engineering,student_affairs,271,0.9,0.55,2,1,1
+Education,career,Sciences,student_affairs,96,0.96,0.3,3,0,0
+Engineering,social,Medicine,club_student,86,0.6,0.4,4,0,1
+Engineering,social,Computer Science,student_affairs,192,0.61,0.36,3,0,1
+Computer Science,cultural,Medicine,club_event,127,0.15,0.48,0,0,0
+Arts,social,Sciences,club_student,30,0.18,0.89,1,1,0
+Business,hackathon,Engineering,student_affairs,60,0.21,0.69,2,4,0
+Computer Science,cultural,Student Affairs,dean_of_faculty,237,0.78,0.3,2,2,1
+Computer Science,sports,Student Affairs,club_event,88,0.98,0.48,1,5,1
+Computer Science,seminar,Medicine,club_student,185,0.31,0.43,1,5,1
+Business,sports,Business,student_affairs,230,0.17,1.0,4,1,1
+Education,seminar,Student Affairs,club_event,249,0.7,0.26,3,0,1
+Law,hackathon,Arts,dean_of_faculty,93,0.87,0.35,0,4,1
+Law,cultural,Medicine,student_affairs,165,0.53,0.85,1,4,1
+Arts,volunteer,Engineering,club_student,226,0.98,0.2,4,2,1
+Architecture,sports,Business,club_event,135,0.38,0.34,1,2,0
+Law,hackathon,Medicine,club_event,71,0.24,0.4,3,2,0
+Education,social,Arts,student_affairs,103,0.12,0.46,2,2,1
+Engineering,seminar,Engineering,dean_of_faculty,115,0.59,0.17,1,3,1
+Law,career,Arts,club_event,187,0.71,0.81,4,4,1
+Engineering,sports,Medicine,dean_of_faculty,26,0.99,0.46,0,2,1
+Engineering,workshop,Business,club_student,97,0.83,0.43,1,5,1
+Engineering,social,Business,club_student,75,0.74,0.15,4,5,1
+Law,workshop,Computer Science,club_event,269,0.23,0.74,4,3,0
+Computer Science,career,Business,club_student,118,0.19,0.5,4,4,1
+Computer Science,seminar,Engineering,student_affairs,31,0.94,0.29,3,0,1
+Architecture,seminar,Medicine,dean_of_faculty,227,0.14,0.77,3,1,1
+Education,workshop,Student Affairs,student_affairs,65,0.62,0.36,3,4,1
+Education,workshop,Student Affairs,club_student,54,0.29,0.49,1,2,1
+Engineering,workshop,Sciences,club_event,242,0.57,0.1,1,3,1
+Computer Science,career,Sciences,club_student,227,0.2,0.12,4,0,1
+Architecture,social,Business,club_event,211,0.33,0.54,0,4,1
+Education,career,Engineering,dean_of_faculty,229,0.6,0.2,0,1,1
+Computer Science,volunteer,Computer Science,student_affairs,253,0.88,0.55,0,1,1
+Medicine,career,Computer Science,club_event,124,0.89,0.97,1,0,1
+Computer Science,hackathon,Medicine,dean_of_faculty,195,0.86,0.33,3,0,1
+Architecture,volunteer,Engineering,dean_of_faculty,75,0.32,0.86,2,5,1
+Business,seminar,Arts,club_student,74,0.85,0.91,1,3,1
+Architecture,workshop,Business,club_event,201,0.14,0.95,4,2,1
+Business,sports,Computer Science,club_event,72,0.66,0.88,4,1,1
+Medicine,seminar,Business,club_student,20,0.37,0.2,3,4,0
+Engineering,workshop,Arts,club_event,38,0.23,0.43,0,3,0
+Education,hackathon,Student Affairs,student_affairs,221,0.74,0.32,4,2,1
+Engineering,seminar,Engineering,student_affairs,23,0.84,0.89,2,3,1
+Business,cultural,Medicine,dean_of_faculty,77,0.39,0.32,2,2,1
+Engineering,social,Medicine,club_student,244,0.92,0.4,0,1,1
+Education,cultural,Medicine,club_student,189,0.43,0.24,0,5,1
+Architecture,social,Business,dean_of_faculty,24,0.24,0.81,3,5,0
+Education,sports,Sciences,dean_of_faculty,254,0.23,0.42,3,0,0
+Arts,workshop,Computer Science,dean_of_faculty,77,0.43,0.82,3,4,1
+Arts,cultural,Student Affairs,club_student,125,0.19,0.39,1,4,0
+Business,cultural,Arts,club_student,169,0.55,0.39,3,5,1
+Computer Science,social,Medicine,club_event,185,0.33,0.78,4,3,1
+Architecture,social,Medicine,student_affairs,38,0.5,0.49,1,0,1
+Law,career,Business,dean_of_faculty,49,0.87,0.74,2,1,1
+Law,cultural,Sciences,club_event,198,0.64,0.3,4,3,1
+Architecture,workshop,Sciences,club_student,149,0.57,0.94,3,4,1
+Business,workshop,Student Affairs,student_affairs,204,0.8,0.33,2,0,1
+Business,cultural,Business,dean_of_faculty,57,0.96,0.39,3,3,1
+Computer Science,volunteer,Business,student_affairs,225,0.51,0.76,4,4,1
+Architecture,volunteer,Arts,student_affairs,96,0.49,0.17,0,1,1
+Medicine,social,Computer Science,club_event,259,0.29,0.46,1,3,1
+Business,workshop,Student Affairs,club_event,104,0.95,0.23,0,0,1
+Architecture,volunteer,Student Affairs,dean_of_faculty,233,0.65,0.97,0,3,1
+Medicine,social,Medicine,student_affairs,73,0.36,0.85,3,4,1
+Computer Science,volunteer,Business,club_student,232,0.96,0.11,4,1,1
+Business,hackathon,Medicine,club_student,63,1.0,0.9,1,5,1
+Architecture,seminar,Engineering,dean_of_faculty,27,0.88,0.51,0,1,1
+Engineering,hackathon,Business,dean_of_faculty,35,0.9,0.72,0,2,1
+Arts,social,Sciences,dean_of_faculty,108,0.33,0.35,4,1,1
+Architecture,social,Medicine,student_affairs,242,0.49,0.32,4,0,1
+Computer Science,hackathon,Computer Science,student_affairs,148,0.15,0.89,4,5,1
+Education,seminar,Student Affairs,club_event,130,0.21,0.73,3,1,1
+Engineering,social,Medicine,club_student,213,0.3,0.69,2,4,1
+Computer Science,social,Computer Science,dean_of_faculty,229,0.51,0.68,1,3,1
+Medicine,volunteer,Business,dean_of_faculty,150,0.66,0.66,2,0,1
+Computer Science,hackathon,Arts,club_student,229,0.77,0.99,3,0,1
+Computer Science,seminar,Medicine,club_event,38,0.25,0.79,2,2,1
+Arts,workshop,Arts,student_affairs,32,0.63,0.26,1,2,1
+Arts,career,Business,club_student,100,0.32,0.16,1,2,0
+Education,volunteer,Computer Science,club_student,73,0.66,0.76,2,2,1
+Computer Science,career,Computer Science,dean_of_faculty,273,0.83,0.83,2,5,1
+Arts,career,Business,club_event,165,0.86,0.45,1,4,1
+Computer Science,workshop,Arts,club_event,77,0.21,0.97,2,2,1
+Computer Science,cultural,Computer Science,student_affairs,216,0.38,0.89,4,4,1
+Computer Science,seminar,Business,club_event,269,0.46,0.17,3,2,1
+Medicine,social,Engineering,club_student,211,0.26,0.8,2,5,1
+Arts,cultural,Arts,club_student,82,0.26,0.5,1,0,1
+Arts,hackathon,Business,dean_of_faculty,155,0.53,0.24,4,5,1
+Medicine,hackathon,Engineering,club_event,28,0.9,0.48,3,1,0
+Business,sports,Arts,club_event,153,0.15,0.25,0,0,0
+Arts,volunteer,Arts,club_student,177,0.18,0.29,1,0,1
+Engineering,sports,Business,club_student,279,0.87,0.54,4,3,1
+Medicine,cultural,Medicine,club_event,206,0.72,0.33,1,1,1
+Arts,sports,Student Affairs,student_affairs,71,0.63,0.76,0,2,1
+Architecture,cultural,Engineering,dean_of_faculty,267,0.67,0.85,1,1,1
+Business,hackathon,Arts,club_student,198,0.89,0.95,1,2,1
+Medicine,hackathon,Arts,club_student,185,0.67,0.81,2,5,1
+Arts,social,Computer Science,student_affairs,238,0.74,0.53,3,1,0
+Medicine,hackathon,Sciences,club_event,101,0.43,0.93,2,5,1
+Law,social,Medicine,club_event,103,0.27,0.42,0,4,0
+Law,social,Computer Science,student_affairs,243,0.25,0.47,4,2,1
+Computer Science,seminar,Computer Science,club_event,98,0.32,0.35,2,4,1
+Computer Science,workshop,Medicine,dean_of_faculty,216,0.25,0.72,0,1,1
+Computer Science,sports,Computer Science,student_affairs,41,0.97,0.43,1,1,1
+Medicine,workshop,Engineering,club_event,53,0.14,0.78,4,1,0
+Arts,social,Business,club_event,167,0.85,0.18,4,1,1
+Computer Science,workshop,Sciences,club_student,88,0.52,0.69,2,3,1
+Engineering,hackathon,Computer Science,club_student,257,0.98,0.88,3,2,1
+Education,workshop,Engineering,student_affairs,131,0.52,0.28,3,0,1
+Law,social,Computer Science,club_event,71,0.29,0.88,1,3,1
+Medicine,sports,Student Affairs,club_student,237,0.37,0.94,0,3,1
+Medicine,seminar,Student Affairs,club_event,250,0.26,0.52,3,4,1
+Law,workshop,Sciences,club_event,143,0.64,0.26,0,2,1
+Engineering,cultural,Arts,student_affairs,66,0.56,0.5,0,3,1
+Arts,social,Arts,club_event,36,0.89,0.36,1,3,1
+Medicine,seminar,Computer Science,dean_of_faculty,101,0.3,0.41,2,1,0
+Law,sports,Sciences,club_student,99,0.42,0.36,4,2,1
+Law,social,Sciences,club_student,158,0.72,0.26,4,3,1
+Medicine,seminar,Student Affairs,club_student,16,0.64,0.3,2,5,1
+Architecture,sports,Business,club_student,215,0.75,0.31,4,4,0
+Computer Science,career,Sciences,club_student,149,0.7,0.14,3,5,1
+Engineering,sports,Business,dean_of_faculty,273,0.96,0.57,2,1,1
+Law,hackathon,Engineering,dean_of_faculty,194,0.89,0.33,3,3,1
+Law,career,Sciences,club_student,203,0.69,0.89,0,4,1
+Computer Science,workshop,Business,dean_of_faculty,258,0.93,0.25,0,0,1
+Medicine,volunteer,Engineering,dean_of_faculty,212,0.12,0.98,2,3,1
+Law,workshop,Arts,club_student,131,0.74,0.5,3,4,1
+Arts,workshop,Sciences,dean_of_faculty,240,0.7,0.12,3,3,1
+Engineering,social,Business,club_event,230,0.47,0.87,4,5,1
+Engineering,workshop,Computer Science,dean_of_faculty,275,0.68,0.49,1,4,1
+Computer Science,hackathon,Sciences,club_event,227,0.28,0.71,1,5,1
+Architecture,hackathon,Engineering,student_affairs,180,0.86,0.86,2,4,1
+Engineering,cultural,Engineering,student_affairs,231,0.79,0.79,4,3,1
+Architecture,workshop,Sciences,dean_of_faculty,120,0.27,0.16,0,3,0
+Computer Science,cultural,Business,club_event,275,0.86,0.17,4,4,1
+Architecture,seminar,Medicine,club_event,229,0.73,0.97,1,1,1
+Architecture,workshop,Medicine,dean_of_faculty,172,0.65,0.25,4,2,1
+Arts,career,Engineering,club_event,182,0.37,0.99,4,5,0
+Medicine,volunteer,Computer Science,dean_of_faculty,245,0.12,0.44,1,0,1
+Architecture,career,Engineering,student_affairs,147,1.0,0.58,2,1,1
+Medicine,career,Computer Science,club_student,90,0.8,0.72,0,3,1
+Engineering,hackathon,Sciences,club_student,212,0.67,0.96,2,5,1
+Engineering,volunteer,Student Affairs,club_student,67,0.44,0.87,4,5,1
+Engineering,volunteer,Engineering,club_event,244,0.8,0.2,0,4,1
+Law,sports,Engineering,dean_of_faculty,39,0.28,0.56,4,0,0
+Engineering,cultural,Business,dean_of_faculty,91,0.58,0.64,3,4,1
+Medicine,sports,Computer Science,student_affairs,30,0.69,0.12,1,4,1
+Education,social,Student Affairs,dean_of_faculty,156,0.18,0.48,0,3,1
+Engineering,hackathon,Computer Science,club_student,102,0.82,0.47,1,0,1
+Business,workshop,Business,club_student,248,0.15,0.78,1,3,1
+Medicine,sports,Arts,club_event,181,0.82,0.44,1,5,1
+Architecture,workshop,Engineering,club_event,20,0.76,0.37,1,2,1
+Education,career,Sciences,club_student,61,0.94,0.24,1,3,1
+Computer Science,social,Medicine,student_affairs,246,0.46,0.83,0,1,1
+Architecture,workshop,Business,student_affairs,139,0.44,0.22,2,0,1
+Arts,hackathon,Arts,club_student,240,0.81,0.8,2,5,0
+Arts,hackathon,Computer Science,student_affairs,276,0.59,0.21,4,3,1
+Arts,volunteer,Arts,dean_of_faculty,225,0.24,0.28,1,1,1
+Law,hackathon,Computer Science,dean_of_faculty,223,0.36,0.17,2,4,1
+Architecture,social,Business,club_student,146,0.27,0.57,1,1,1
+Business,workshop,Sciences,dean_of_faculty,218,0.17,0.51,4,4,1
+Arts,volunteer,Sciences,club_event,141,0.29,0.78,3,3,1
+Architecture,cultural,Sciences,club_event,205,0.92,0.49,2,0,1
+Business,workshop,Medicine,student_affairs,141,0.19,0.28,4,5,1
+Engineering,social,Business,dean_of_faculty,20,0.13,0.91,2,2,1
+Architecture,hackathon,Business,club_student,171,0.77,0.7,0,2,1
+Engineering,career,Arts,club_student,23,0.28,0.83,3,2,1
+Architecture,social,Engineering,dean_of_faculty,182,0.85,0.45,1,5,1
+Business,sports,Engineering,student_affairs,92,0.15,0.26,2,1,1
+Architecture,hackathon,Sciences,club_student,148,0.6,0.66,1,4,1
+Computer Science,volunteer,Sciences,club_event,17,0.18,0.69,1,5,0
+Architecture,hackathon,Sciences,club_student,235,0.61,0.98,1,5,1
+Medicine,workshop,Arts,club_event,172,0.54,0.21,1,2,1
+Engineering,career,Sciences,student_affairs,222,0.19,0.15,3,3,1
+Business,seminar,Sciences,student_affairs,46,0.3,0.18,4,5,0
+Computer Science,social,Student Affairs,student_affairs,51,0.63,0.56,1,1,1
+Arts,sports,Student Affairs,club_event,165,0.87,0.38,3,2,1
+Computer Science,sports,Sciences,dean_of_faculty,28,0.5,0.96,3,1,1
+Education,seminar,Engineering,dean_of_faculty,226,0.39,0.8,4,0,1
+Computer Science,volunteer,Engineering,dean_of_faculty,137,0.96,0.25,4,4,1
+Medicine,volunteer,Sciences,club_event,145,0.13,0.83,4,2,1
+Education,volunteer,Medicine,club_student,63,0.39,0.85,2,2,1
+Law,volunteer,Business,club_student,218,0.14,0.54,3,0,0
+Computer Science,career,Computer Science,club_student,174,0.39,0.38,4,2,1
+Arts,social,Business,club_student,27,0.71,0.63,3,1,1
+Computer Science,career,Medicine,student_affairs,219,0.72,0.35,0,5,1
+Computer Science,social,Sciences,student_affairs,95,0.65,0.4,3,2,1
+Arts,career,Student Affairs,club_event,190,0.75,0.22,0,1,1
+Architecture,sports,Arts,club_student,272,0.92,0.91,3,3,0
+Architecture,workshop,Medicine,club_event,36,0.98,0.74,4,5,1
+Medicine,career,Engineering,club_student,117,0.71,0.92,3,3,1
+Education,sports,Medicine,student_affairs,39,0.41,0.82,1,1,1
+Engineering,hackathon,Engineering,student_affairs,247,0.82,0.71,1,1,0
+Arts,cultural,Student Affairs,club_student,258,0.53,0.35,2,2,1
+Computer Science,social,Student Affairs,club_event,55,0.5,0.16,3,5,1
+Education,career,Medicine,student_affairs,230,0.89,0.54,3,3,1
+Law,social,Business,student_affairs,207,0.93,0.43,0,1,1
+Engineering,sports,Engineering,club_event,206,0.54,0.6,3,0,1
+Law,hackathon,Engineering,student_affairs,41,0.45,0.14,3,1,0
+Computer Science,volunteer,Engineering,club_event,59,0.68,0.49,0,4,1
+Engineering,workshop,Computer Science,club_event,37,0.63,0.99,0,5,1
+Computer Science,social,Arts,club_event,26,0.65,0.41,1,3,1
+Architecture,volunteer,Business,club_student,110,0.97,0.14,4,5,1
+Computer Science,social,Computer Science,dean_of_faculty,193,0.93,0.95,2,5,1
+Medicine,social,Engineering,student_affairs,161,0.77,0.97,2,5,1
+Education,career,Medicine,club_student,78,0.6,0.67,0,5,1
+Law,volunteer,Student Affairs,student_affairs,123,0.36,0.86,2,2,1
+Law,social,Computer Science,club_event,204,0.23,0.54,3,0,1
+Law,hackathon,Engineering,club_event,224,0.19,0.48,1,2,1
+Computer Science,cultural,Engineering,student_affairs,244,0.88,0.24,3,3,0
+Arts,volunteer,Computer Science,club_student,202,0.55,0.12,2,1,1
+Engineering,cultural,Business,club_student,231,0.55,0.18,3,0,1
+Architecture,workshop,Arts,club_event,106,0.33,0.17,1,4,0
+Architecture,sports,Engineering,dean_of_faculty,150,0.76,0.43,0,5,1
+Architecture,workshop,Arts,dean_of_faculty,78,0.62,0.76,4,5,1
+Law,hackathon,Student Affairs,student_affairs,222,0.62,0.49,3,0,1
+Arts,volunteer,Student Affairs,dean_of_faculty,150,0.66,0.6,3,4,1
+Education,cultural,Engineering,club_event,139,0.99,0.72,3,5,1
+Medicine,career,Computer Science,club_student,66,0.61,0.25,4,2,1
+Arts,career,Business,club_event,260,0.29,0.71,1,4,1
+Law,sports,Arts,club_student,110,0.88,0.93,2,1,1
+Law,cultural,Sciences,club_event,147,0.25,0.53,1,4,1
+Business,career,Student Affairs,student_affairs,87,0.14,0.31,1,0,1
+Medicine,workshop,Engineering,dean_of_faculty,111,0.31,0.82,4,2,1
+Arts,sports,Sciences,club_student,91,0.9,0.11,3,2,1
+Engineering,volunteer,Computer Science,student_affairs,190,0.21,0.45,3,2,1
+Engineering,career,Medicine,club_event,78,0.13,0.74,3,2,1
+Arts,social,Business,dean_of_faculty,92,0.92,0.54,3,3,1
+Engineering,hackathon,Student Affairs,club_student,218,0.46,0.37,3,0,1
+Architecture,workshop,Business,student_affairs,41,0.31,0.82,2,4,1
+Medicine,social,Student Affairs,student_affairs,58,0.76,0.13,3,5,1
+Computer Science,social,Sciences,student_affairs,24,0.71,0.88,3,2,1
+Law,cultural,Sciences,club_event,205,0.61,0.1,3,1,0
+Computer Science,career,Student Affairs,dean_of_faculty,112,0.82,0.7,2,5,1
+Law,sports,Sciences,club_student,159,0.62,0.34,4,3,1
+Arts,seminar,Medicine,club_event,263,0.77,0.85,2,4,1
+Medicine,hackathon,Engineering,student_affairs,175,0.11,0.35,1,1,0
+Law,sports,Business,club_event,82,0.77,0.98,2,3,1

@@ -1,0 +1,10 @@
+-- AAURA Phase 1: no seeded users.
+-- Production flow:
+-- 1. Flutter signs the user up through Supabase Auth.
+-- 2. Supabase creates auth.users automatically.
+-- 3. Backend receives the auth UUID and calls:
+--    select public.provision_application_user(...);
+-- 4. public.users is created with the default role 'student'.
+-- 5. Admin can later promote the user to club_organizer, student_affairs, dean_of_faculty, staff, or admin.
+--
+-- Keep this file as a placeholder so the seed directory is not empty.

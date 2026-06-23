@@ -1,0 +1,36 @@
+name: aaura
+description: "AAURA - Hybrid AI-Driven Campus Intelligence System (local prototype)."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  provider: ^6.1.2
+  shared_preferences: ^2.3.2
+  google_fonts: ^6.2.1
+  flutter_animate: ^4.5.0
+
+  # Backend integration
+  supabase_flutter: ^2.5.0
+  http: ^1.2.0
+  file_picker: ^11.0.2
+  url_launcher: ^6.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/

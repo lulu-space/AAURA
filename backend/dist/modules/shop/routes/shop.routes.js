@@ -1,0 +1,12 @@
+import { Router } from 'express';
+import { asyncHandler } from '../../../shared/middleware/async-handler.js';
+import { denyFacultyOps } from '../../../shared/middleware/role-based/deny-faculty-ops.js';
+import { validateRequest } from '../../../shared/middleware/validation/validate-request.js';
+import { shopController } from '../controllers/shop.controller.js';
+import { purchaseShopItemSchema } from '../dto/shop.dto.js';
+const router = Router();
+router.use(denyFacultyOps());
+router.get('/items', asyncHandler((req, res) => shopController.listItems(req, res)));
+router.get('/purchases/mine', asyncHandler((req, res) => shopController.listPurchases(req, res)));
+router.post('/purchase', validateRequest(purchaseShopItemSchema), asyncHandler((req, res) => shopController.purchase(req, res)));
+export default router;

@@ -1,0 +1,23 @@
+import { Router } from 'express';
+import { asyncHandler } from '../../../shared/middleware/async-handler.js';
+import { denyFacultyOps } from '../../../shared/middleware/role-based/deny-faculty-ops.js';
+import { validateRequest } from '../../../shared/middleware/validation/validate-request.js';
+import { clubMessagesController } from '../controllers/club-messages.controller.js';
+import { listClubMessagesSchema, sendClubMessageSchema } from '../dto/club-messages.dto.js';
+
+const router = Router();
+
+router.use(denyFacultyOps());
+
+router.get(
+  '/',
+  validateRequest(listClubMessagesSchema),
+  asyncHandler((req, res) => clubMessagesController.list(req, res))
+);
+router.post(
+  '/',
+  validateRequest(sendClubMessageSchema),
+  asyncHandler((req, res) => clubMessagesController.send(req, res))
+);
+
+export default router;

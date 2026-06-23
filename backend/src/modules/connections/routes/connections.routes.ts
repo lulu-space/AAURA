@@ -1,0 +1,31 @@
+import { Router } from 'express';
+import { asyncHandler } from '../../../shared/middleware/async-handler.js';
+import { denyFacultyOps } from '../../../shared/middleware/role-based/deny-faculty-ops.js';
+import { validateRequest } from '../../../shared/middleware/validation/validate-request.js';
+import { connectionsController } from '../controllers/connections.controller.js';
+import { connectSchema, disconnectParamsSchema } from '../dto/connections.dto.js';
+
+const router = Router();
+
+router.use(denyFacultyOps());
+
+router.get(
+  '/suggestions',
+  asyncHandler((req, res) => connectionsController.suggestions(req, res))
+);
+router.get(
+  '/mine',
+  asyncHandler((req, res) => connectionsController.listMine(req, res))
+);
+router.post(
+  '/connect',
+  validateRequest(connectSchema),
+  asyncHandler((req, res) => connectionsController.connect(req, res))
+);
+router.delete(
+  '/:userId',
+  validateRequest(disconnectParamsSchema),
+  asyncHandler((req, res) => connectionsController.disconnect(req, res))
+);
+
+export default router;
