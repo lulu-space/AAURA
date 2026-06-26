@@ -74,6 +74,7 @@ const SKILL_LEXICON: Record<string, string[]> = {
 const GOAL_PATTERNS = [
   /\bhope to\s+([^\.!\n;]+)/gi,
   /\b(?:want|plan|aim|looking) to\s+([^\.!\n;]+)/gi,
+  /\bmy goals? are to\s+([^\.!\n;]+)/gi,
   /\bmy goal is to\s+([^\.!\n;]+)/gi,
   /\bgoal is to\s+([^\.!\n;]+)/gi
 ];
