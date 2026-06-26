@@ -171,7 +171,9 @@ class ShamsBackendBot implements OnboardingBot {
               ? 'Your campus account may still be setting up — wait a moment, then try again.'
               : e.statusCode == 502 || e.statusCode == 503
                   ? 'Shams is temporarily unavailable. Try again in a moment, or tap Form to fill your profile manually.'
-                  : 'Something went wrong. Try again, or use the Form option above.';
+                  : e.statusCode >= 500
+                      ? 'Tap **Form** above to complete your profile manually, or try again in a moment.'
+                      : 'Something went wrong. Try again, or use the Form option above.';
       return BotTurn(state, [
         _bot(
           detail.isNotEmpty ? '$detail $hint' : hint,

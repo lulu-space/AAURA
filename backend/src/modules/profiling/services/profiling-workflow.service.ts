@@ -1,4 +1,5 @@
 import { ApiError } from '../../../core/errors/api-error.js';
+import { env } from '../../../config/env.js';
 import { supabaseAdmin } from '../../../config/supabase.js';
 import { proxyToAi } from '../../ai/services/ai-proxy.service.js';
 import { analyzeShamsMessageFallback } from './shams-profiling-fallback.service.js';
@@ -75,6 +76,15 @@ function buildStarterGoals(
   return Array.from(new Set(goals)).slice(0, 4);
 }
 
+/** Python AI is optional; on Render the default localhost URL is never reachable. */
+function shouldCallAiProfilingService(): boolean {
+  const url = env.AI_SERVICE_URL.toLowerCase();
+  if (url.includes('localhost') || url.includes('127.0.0.1')) {
+    return process.env.NODE_ENV !== 'production';
+  }
+  return true;
+}
+
 export class ProfilingWorkflowService {
   async chatWithShams(userId: string, message: string) {
     const extraction = await this.resolveShamsExtraction(message);
@@ -146,19 +156,34 @@ export class ProfilingWorkflowService {
   }
 
   private async resolveShamsExtraction(message: string): Promise<ShamsExtraction> {
-    try {
-      const { status, body } = await proxyToAi('/api/profiling/shams/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message })
-      });
-      if (status < 400 && body && typeof body === 'object') {
-        return body as ShamsExtraction;
+    if (shouldCallAiProfilingService()) {
+      try {
+        const { status, body } = await proxyToAi('/api/profiling/shams/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message })
+        });
+        if (
+          status < 400 &&
+          body &&
+          typeof body === 'object' &&
+          !Array.isArray(body)
+        ) {
+          return body as ShamsExtraction;
+        }
+      } catch {
+        // AI container not deployed — use built-in profiling fallback.
       }
-    } catch {
-      // AI container not deployed — use built-in profiling fallback.
     }
-    return analyzeShamsMessageFallback(message);
+    try {
+      return analyzeShamsMessageFallback(message);
+    } catch (error) {
+      console.error('[shams] fallback profiling failed', error);
+      throw new ApiError(
+        503,
+        'Shams profiling is temporarily unavailable. Try again or use the manual form.'
+      );
+    }
   }
 
   async getMyDraft(userId: string) {
