@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:provider/provider.dart';
 
 import '../../state/app_state.dart';
 import '../../theme/app_theme.dart';
+import '../../widgets/campus_qr_scan_panel.dart';
 import '../../widgets/success_burst.dart';
 
 /// Scan a volunteer QR code or open a join link from Student Affairs / dean.
@@ -31,13 +31,13 @@ class _VolunteerScanScreenState extends State<VolunteerScanScreen> {
     }
   }
 
-  Future<void> _apply(String token) async {
+  Future<void> _apply(String input) async {
     if (_busy) return;
     setState(() => _busy = true);
     try {
       final error = await context
           .read<AppState>()
-          .applyToVolunteerOpportunityByToken(token);
+          .applyToVolunteerOpportunityByToken(input);
       if (!mounted) return;
       if (error != null) {
         _snack(error);
@@ -50,16 +50,17 @@ class _VolunteerScanScreenState extends State<VolunteerScanScreen> {
     }
   }
 
-  Future<void> _simulateScan() async {
-    final state = context.read<AppState>();
-    final token = state.pendingVolunteerJoinToken;
-    if (token != null && token.isNotEmpty) {
-      await _apply(token);
+  void _onQrScanned(String raw) {
+    _apply(raw);
+  }
+
+  Future<void> _confirmPending() async {
+    final token = context.read<AppState>().pendingVolunteerJoinToken;
+    if (token == null || token.isEmpty) {
+      _snack('Scan the volunteer join QR from Student Affairs or your dean.');
       return;
     }
-    _snack(
-      'Open the join link from Student Affairs or your dean, then scan their QR code here.',
-    );
+    await _apply(token);
   }
 
   void _snack(String message) {
@@ -76,58 +77,22 @@ class _VolunteerScanScreenState extends State<VolunteerScanScreen> {
         child: ListView(
           padding: const EdgeInsets.all(AppSpacing.lg),
           children: [
-            Container(
-              height: 280,
-              decoration: BoxDecoration(
-                color: Colors.black,
-                borderRadius: BorderRadius.circular(AppRadii.lg),
-              ),
-              child: Stack(
-                alignment: Alignment.center,
-                children: [
-                  ..._buildScanFrame(),
-                  Container(
-                    width: 200,
-                    height: 4,
-                    color: AppColors.success,
-                  )
-                      .animate(onPlay: (c) => c.repeat(reverse: true))
-                      .moveY(begin: -90, end: 90, duration: 1800.ms),
-                  Positioned(
-                    bottom: 14,
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 12,
-                        vertical: 6,
-                      ),
-                      decoration: BoxDecoration(
-                        color: Colors.black.withValues(alpha: 0.5),
-                        borderRadius: BorderRadius.circular(AppRadii.pill),
-                      ),
-                      child: Text(
-                        'Scan volunteer opportunity QR',
-                        style: Theme.of(context)
-                            .textTheme
-                            .labelSmall
-                            ?.copyWith(color: Colors.white),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+            CampusQrScanPanel(
+              accent: AppColors.success,
+              hint: 'Scan volunteer join QR',
+              onDetect: _busy ? (_) {} : _onQrScanned,
             ),
-            const SizedBox(height: AppSpacing.lg),
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton.icon(
-                onPressed: _busy ? null : _simulateScan,
-                icon: const Icon(Icons.qr_code_scanner),
-                label: Text(hasPending ? 'Scan join link' : 'Scan QR code'),
-                style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(vertical: 14),
+            if (hasPending) ...[
+              const SizedBox(height: AppSpacing.md),
+              SizedBox(
+                width: double.infinity,
+                child: OutlinedButton.icon(
+                  onPressed: _busy ? null : _confirmPending,
+                  icon: const Icon(Icons.link_outlined),
+                  label: const Text('Confirm join link on this device'),
                 ),
               ),
-            ),
+            ],
             const SizedBox(height: AppSpacing.lg),
             Container(
               padding: const EdgeInsets.all(AppSpacing.md),
@@ -142,9 +107,7 @@ class _VolunteerScanScreenState extends State<VolunteerScanScreen> {
                   const SizedBox(width: AppSpacing.sm),
                   Expanded(
                     child: Text(
-                      hasPending
-                          ? 'A volunteer join link is ready. Tap Scan to submit your application to Student Affairs.'
-                          : 'Student Affairs or your dean shares a link and QR when they publish a volunteer opportunity. Open the link on this device, then scan here.',
+                      'Point your camera at the volunteer QR code, or open the join link on this device and tap Confirm.',
                       style: Theme.of(context).textTheme.bodySmall?.copyWith(
                             color: AppColors.textSecondary,
                             height: 1.35,
@@ -158,46 +121,5 @@ class _VolunteerScanScreenState extends State<VolunteerScanScreen> {
         ),
       ),
     );
-  }
-
-  List<Widget> _buildScanFrame() {
-    const corner = SizedBox(width: 28, height: 28);
-    const padding = 36.0;
-    Widget cornerBox(
-      BorderSide top,
-      BorderSide right,
-      BorderSide bottom,
-      BorderSide left,
-    ) =>
-        Container(
-          decoration: BoxDecoration(
-            border: Border(top: top, right: right, bottom: bottom, left: left),
-          ),
-          child: corner,
-        );
-    final side =
-        BorderSide(color: AppColors.success.withValues(alpha: 0.9), width: 3);
-    return [
-      Positioned(
-        top: padding,
-        left: padding,
-        child: cornerBox(side, BorderSide.none, BorderSide.none, side),
-      ),
-      Positioned(
-        top: padding,
-        right: padding,
-        child: cornerBox(side, side, BorderSide.none, BorderSide.none),
-      ),
-      Positioned(
-        bottom: padding,
-        left: padding,
-        child: cornerBox(BorderSide.none, BorderSide.none, side, side),
-      ),
-      Positioned(
-        bottom: padding,
-        right: padding,
-        child: cornerBox(BorderSide.none, side, side, BorderSide.none),
-      ),
-    ];
   }
 }

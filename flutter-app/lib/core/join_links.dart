@@ -56,4 +56,25 @@ class JoinLinks {
     ).firstMatch(trimmed);
     return match?.group(1);
   }
+
+  static final RegExp _uuid =
+      RegExp(r'^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$');
+
+  /// Personal event check-in token (reservation QR), not a join link.
+  static String? parseCheckInQrToken(String input) {
+    final trimmed = input.trim();
+    if (trimmed.isEmpty) return null;
+    if (_uuid.hasMatch(trimmed)) return trimmed;
+
+    final uri = Uri.tryParse(trimmed);
+    if (uri != null) {
+      for (final key in const ['qr_token', 'token', 'check_in']) {
+        final value = uri.queryParameters[key]?.trim();
+        if (value != null && _uuid.hasMatch(value)) return value;
+      }
+      final last = uri.pathSegments.isNotEmpty ? uri.pathSegments.last : '';
+      if (_uuid.hasMatch(last)) return last;
+    }
+    return null;
+  }
 }

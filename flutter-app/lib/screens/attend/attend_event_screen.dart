@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:provider/provider.dart';
 
+import '../../core/join_links.dart';
 import '../../core/network/api_exception.dart';
-import '../../models/event.dart';
 import '../../state/app_state.dart';
 import '../../theme/app_theme.dart';
 import '../../utils/transitions.dart';
+import '../../widgets/campus_qr_scan_panel.dart';
 import 'attend_success_screen.dart';
 
 class AttendEventScreen extends StatefulWidget {
@@ -19,21 +19,6 @@ class AttendEventScreen extends StatefulWidget {
 class _AttendEventScreenState extends State<AttendEventScreen> {
   bool _busy = false;
 
-  Future<void> _scanFakeQr() async {
-    final state = context.read<AppState>();
-    final token = state.nextCheckInQrToken;
-    if (token != null) {
-      await _checkIn(token);
-      return;
-    }
-    final pool = state.allEvents;
-    if (pool.isEmpty) {
-      _snack('Reserve an event first, then check in with its QR code.');
-      return;
-    }
-    await _attendMock(pool.first);
-  }
-
   Future<void> _checkIn(String qrToken) async {
     if (_busy) return;
     setState(() => _busy = true);
@@ -41,7 +26,7 @@ class _AttendEventScreenState extends State<AttendEventScreen> {
       final event = await context.read<AppState>().checkInByQrToken(qrToken);
       if (!mounted) return;
       if (event == null) {
-        _snack('Check-in failed. Use a valid reservation QR from your join link.');
+        _snack('Check-in failed. Use your personal check-in QR from Enrolled events.');
         return;
       }
       Navigator.of(context).pushReplacement(
@@ -58,22 +43,37 @@ class _AttendEventScreenState extends State<AttendEventScreen> {
     }
   }
 
-  Future<void> _attendMock(Event event) async {
-    if (_busy) return;
-    setState(() => _busy = true);
-    try {
-      await context
-          .read<AppState>()
-          .toggleEventJoin(event.id, rewardPoints: event.points);
-      if (!mounted) return;
-      Navigator.of(context).pushReplacement(
-        FadeSlidePageRoute(
-          builder: (_) => AttendSuccessScreen(event: event),
-        ),
-      );
-    } finally {
-      if (mounted) setState(() => _busy = false);
+  Future<void> _enrollThenPrompt(String raw) async {
+    final error = await context.read<AppState>().joinEventByToken(raw);
+    if (!mounted) return;
+    if (error != null) {
+      _snack(error);
+      return;
     }
+    _snack('Enrolled! Show your check-in QR from Enrolled events at the venue.');
+  }
+
+  void _onQrScanned(String raw) async {
+    if (_busy) return;
+
+    final checkInToken = JoinLinks.parseCheckInQrToken(raw);
+    if (checkInToken != null) {
+      await _checkIn(checkInToken);
+      return;
+    }
+
+    final joinToken = JoinLinks.parseEventToken(raw);
+    if (joinToken != null) {
+      setState(() => _busy = true);
+      try {
+        await _enrollThenPrompt(raw);
+      } finally {
+        if (mounted) setState(() => _busy = false);
+      }
+      return;
+    }
+
+    _snack('Unrecognized QR code. Use an event join QR or your check-in QR.');
   }
 
   void _snack(String message) {
@@ -82,62 +82,16 @@ class _AttendEventScreenState extends State<AttendEventScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final hasQr = context.watch<AppState>().nextCheckInQrToken != null;
     return Scaffold(
       appBar: AppBar(title: const Text('Attend event')),
       body: SafeArea(
         child: ListView(
           padding: const EdgeInsets.all(AppSpacing.lg),
           children: [
-            Container(
-              height: 280,
-              decoration: BoxDecoration(
-                color: Colors.black,
-                borderRadius: BorderRadius.circular(AppRadii.lg),
-              ),
-              child: Stack(
-                alignment: Alignment.center,
-                children: [
-                  ..._buildScanFrame(),
-                  Container(
-                    width: 200,
-                    height: 4,
-                    color: AppColors.accent,
-                  )
-                      .animate(onPlay: (c) => c.repeat(reverse: true))
-                      .moveY(begin: -90, end: 90, duration: 1800.ms),
-                  Positioned(
-                    bottom: 14,
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 12, vertical: 6),
-                      decoration: BoxDecoration(
-                        color: Colors.black.withValues(alpha: 0.5),
-                        borderRadius: BorderRadius.circular(AppRadii.pill),
-                      ),
-                      child: Text(
-                        'Scan your check-in QR',
-                        style: Theme.of(context)
-                            .textTheme
-                            .labelSmall
-                            ?.copyWith(color: Colors.white),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(height: AppSpacing.lg),
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton.icon(
-                onPressed: _busy ? null : _scanFakeQr,
-                icon: const Icon(Icons.qr_code_scanner),
-                label: Text(hasQr ? 'Simulate scan' : 'Simulate scan (offline)'),
-                style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(vertical: 14),
-                ),
-              ),
+            CampusQrScanPanel(
+              accent: AppColors.accent,
+              hint: 'Scan check-in or join QR',
+              onDetect: _busy ? (_) {} : _onQrScanned,
             ),
             const SizedBox(height: AppSpacing.lg),
             Container(
@@ -147,16 +101,17 @@ class _AttendEventScreenState extends State<AttendEventScreen> {
                 borderRadius: BorderRadius.circular(AppRadii.md),
               ),
               child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Icon(Icons.info_outline, color: AppColors.primary),
                   const SizedBox(width: AppSpacing.sm),
                   Expanded(
                     child: Text(
-                      hasQr
-                          ? 'Enroll via the organizer’s join link first, then scan your check-in QR here.'
-                          : 'Open the event join link from your dean or Student Affairs, enroll via QR, then return here to check in.',
+                      'Scan your personal check-in QR from Profile → Enrolled events, '
+                      'or scan an organizer’s event join QR to enroll first.',
                       style: Theme.of(context).textTheme.bodySmall?.copyWith(
                             color: AppColors.textSecondary,
+                            height: 1.35,
                           ),
                     ),
                   ),
@@ -167,42 +122,5 @@ class _AttendEventScreenState extends State<AttendEventScreen> {
         ),
       ),
     );
-  }
-
-  List<Widget> _buildScanFrame() {
-    const corner = SizedBox(width: 28, height: 28);
-    const padding = 36.0;
-    Widget cornerBox(BorderSide top, BorderSide right, BorderSide bottom,
-            BorderSide left) =>
-        Container(
-          decoration: BoxDecoration(
-            border: Border(top: top, right: right, bottom: bottom, left: left),
-          ),
-          child: corner,
-        );
-    final side =
-        BorderSide(color: AppColors.accent.withValues(alpha: 0.9), width: 3);
-    return [
-      Positioned(
-        top: padding,
-        left: padding,
-        child: cornerBox(side, BorderSide.none, BorderSide.none, side),
-      ),
-      Positioned(
-        top: padding,
-        right: padding,
-        child: cornerBox(side, side, BorderSide.none, BorderSide.none),
-      ),
-      Positioned(
-        bottom: padding,
-        left: padding,
-        child: cornerBox(BorderSide.none, BorderSide.none, side, side),
-      ),
-      Positioned(
-        bottom: padding,
-        right: padding,
-        child: cornerBox(BorderSide.none, side, side, BorderSide.none),
-      ),
-    ];
   }
 }

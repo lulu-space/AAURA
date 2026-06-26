@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 
 import '../../state/app_state.dart';
 import '../../theme/app_theme.dart';
@@ -109,12 +110,18 @@ class _EnrolledRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final state = context.watch<AppState>();
-    final pinned = state.isCvPinned(event.id as String);
+    final eventId = event.id as String;
+    final pinned = state.isCvPinned(eventId);
+    final checkInToken = state.reservationQrTokenForEvent(eventId);
+    final checkedIn = state.isEventCheckedIn(eventId);
     return Container(
       padding: const EdgeInsets.all(AppSpacing.md),
       decoration: cardDecoration(),
-      child: Row(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          Row(
+            children: [
           Container(
             width: 50,
             padding: const EdgeInsets.symmetric(vertical: 8),
@@ -202,6 +209,49 @@ class _EnrolledRow extends StatelessWidget {
             ),
             tooltip: pinned ? 'Pinned to CV' : 'Pin to CV',
           ),
+            ],
+          ),
+          if (checkInToken != null && !checkedIn) ...[
+            const SizedBox(height: AppSpacing.md),
+            Text(
+              'Your check-in QR',
+              style: Theme.of(context).textTheme.labelMedium?.copyWith(
+                    fontWeight: FontWeight.w800,
+                  ),
+            ),
+            const SizedBox(height: AppSpacing.xs),
+            Text(
+              'Show this at the venue or scan it from Profile → Scan.',
+              style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                    color: AppColors.textSecondary,
+                  ),
+            ),
+            const SizedBox(height: AppSpacing.sm),
+            Center(
+              child: Container(
+                padding: const EdgeInsets.all(AppSpacing.sm),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(AppRadii.md),
+                  border: Border.all(color: AppColors.divider),
+                ),
+                child: QrImageView(
+                  data: checkInToken,
+                  size: 120,
+                  backgroundColor: Colors.white,
+                ),
+              ),
+            ),
+          ] else if (checkedIn) ...[
+            const SizedBox(height: AppSpacing.sm),
+            Text(
+              'Checked in',
+              style: Theme.of(context).textTheme.labelMedium?.copyWith(
+                    color: AppColors.success,
+                    fontWeight: FontWeight.w700,
+                  ),
+            ),
+          ],
         ],
       ),
     );

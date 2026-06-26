@@ -8,6 +8,7 @@ import '../../models/volunteer_opportunity.dart';
 import '../../state/app_state.dart';
 import '../../theme/app_theme.dart';
 import '../../widgets/glow_widgets.dart';
+import '../../widgets/join_link_qr_card.dart';
 import '../../widgets/stat_chip.dart';
 
 /// Student Affairs: publish and manage campus volunteer opportunities.
@@ -358,35 +359,12 @@ class _OpportunityCard extends StatelessWidget {
           if (opportunity.joinToken != null &&
               opportunity.joinToken!.isNotEmpty) ...[
             const SizedBox(height: AppSpacing.md),
-            Text(
-              'Student join link',
-              style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                    fontWeight: FontWeight.w800,
-                  ),
-            ),
-            const SizedBox(height: AppSpacing.xs),
-            Text(
-              'Share this link or a QR code that points to it. Students scan to apply.',
-              style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                    color: AppColors.textSecondary,
-                    height: 1.35,
-                  ),
-            ),
-            const SizedBox(height: AppSpacing.sm),
-            SizedBox(
-              width: double.infinity,
-              child: OutlinedButton.icon(
-                onPressed: () {
-                  final link =
-                      VolunteerRequirements.joinLink(opportunity.joinToken!);
-                  Clipboard.setData(ClipboardData(text: link));
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Join link copied')),
-                  );
-                },
-                icon: const Icon(Icons.link_outlined, size: 18),
-                label: const Text('Copy join link for QR'),
-              ),
+            JoinLinkQrCard(
+              title: 'Student join link',
+              subtitle:
+                  'Students scan this QR or open the link to apply for this opportunity.',
+              link: VolunteerRequirements.joinLink(opportunity.joinToken!),
+              copyLabel: 'Copy join link',
             ),
           ],
           const SizedBox(height: AppSpacing.md),

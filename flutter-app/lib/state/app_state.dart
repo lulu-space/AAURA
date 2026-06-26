@@ -567,6 +567,16 @@ class AppState extends ChangeNotifier {
     return null;
   }
 
+  String? reservationQrTokenForEvent(String eventId) {
+    final token = _eventReservations[eventId]?['qr_token']?.toString();
+    if (token != null && isBackendId(token)) return token;
+    return null;
+  }
+
+  bool isEventCheckedIn(String eventId) =>
+      _eventReservations[eventId]?['reservation_status']?.toString() ==
+      'checked_in';
+
   String? _pendingVolunteerJoinToken;
 
   /// Join token from a shared volunteer link, ready for QR scan flow.

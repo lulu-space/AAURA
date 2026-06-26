@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:provider/provider.dart';
 
 import '../../state/app_state.dart';
 import '../../theme/app_theme.dart';
+import '../../widgets/campus_qr_scan_panel.dart';
 import '../../widgets/success_burst.dart';
 
 /// Scan an event QR code or open a join link from the organizer.
@@ -31,11 +31,11 @@ class _EnrollEventScanScreenState extends State<EnrollEventScanScreen> {
     }
   }
 
-  Future<void> _enroll(String token) async {
+  Future<void> _enroll(String input) async {
     if (_busy) return;
     setState(() => _busy = true);
     try {
-      final error = await context.read<AppState>().joinEventByToken(token);
+      final error = await context.read<AppState>().joinEventByToken(input);
       if (!mounted) return;
       if (error != null) {
         _snack(error);
@@ -48,16 +48,17 @@ class _EnrollEventScanScreenState extends State<EnrollEventScanScreen> {
     }
   }
 
-  Future<void> _simulateScan() async {
-    final state = context.read<AppState>();
-    final token = state.pendingEventJoinToken;
-    if (token != null && token.isNotEmpty) {
-      await _enroll(token);
+  void _onQrScanned(String raw) {
+    _enroll(raw);
+  }
+
+  Future<void> _confirmPending() async {
+    final token = context.read<AppState>().pendingEventJoinToken;
+    if (token == null || token.isEmpty) {
+      _snack('Scan the event join QR code from your organizer.');
       return;
     }
-    _snack(
-      'Open the join link your dean or Student Affairs sent you, then scan the QR code here.',
-    );
+    await _enroll(token);
   }
 
   void _snack(String message) {
@@ -73,58 +74,22 @@ class _EnrollEventScanScreenState extends State<EnrollEventScanScreen> {
         child: ListView(
           padding: const EdgeInsets.all(AppSpacing.lg),
           children: [
-            Container(
-              height: 280,
-              decoration: BoxDecoration(
-                color: Colors.black,
-                borderRadius: BorderRadius.circular(AppRadii.lg),
-              ),
-              child: Stack(
-                alignment: Alignment.center,
-                children: [
-                  ..._buildScanFrame(),
-                  Container(
-                    width: 200,
-                    height: 4,
-                    color: AppColors.accent,
-                  )
-                      .animate(onPlay: (c) => c.repeat(reverse: true))
-                      .moveY(begin: -90, end: 90, duration: 1800.ms),
-                  Positioned(
-                    bottom: 14,
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 12,
-                        vertical: 6,
-                      ),
-                      decoration: BoxDecoration(
-                        color: Colors.black.withValues(alpha: 0.5),
-                        borderRadius: BorderRadius.circular(AppRadii.pill),
-                      ),
-                      child: Text(
-                        'Scan event join QR',
-                        style: Theme.of(context)
-                            .textTheme
-                            .labelSmall
-                            ?.copyWith(color: Colors.white),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+            CampusQrScanPanel(
+              accent: AppColors.accent,
+              hint: 'Scan event join QR',
+              onDetect: _busy ? (_) {} : _onQrScanned,
             ),
-            const SizedBox(height: AppSpacing.lg),
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton.icon(
-                onPressed: _busy ? null : _simulateScan,
-                icon: const Icon(Icons.qr_code_scanner),
-                label: Text(hasPending ? 'Scan join link' : 'Scan QR code'),
-                style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(vertical: 14),
+            if (hasPending) ...[
+              const SizedBox(height: AppSpacing.md),
+              SizedBox(
+                width: double.infinity,
+                child: OutlinedButton.icon(
+                  onPressed: _busy ? null : _confirmPending,
+                  icon: const Icon(Icons.link_outlined),
+                  label: const Text('Confirm join link on this device'),
                 ),
               ),
-            ),
+            ],
             const SizedBox(height: AppSpacing.lg),
             Container(
               padding: const EdgeInsets.all(AppSpacing.md),
@@ -139,9 +104,7 @@ class _EnrollEventScanScreenState extends State<EnrollEventScanScreen> {
                   const SizedBox(width: AppSpacing.sm),
                   Expanded(
                     child: Text(
-                      hasPending
-                          ? 'An event join link is ready. Tap Scan to enroll.'
-                          : 'Organizers share a link and QR when they publish an event. Open the link on this device, then scan here to enroll.',
+                      'Point your camera at the organizer’s QR code, or open their join link on this device and tap Confirm.',
                       style: Theme.of(context).textTheme.bodySmall?.copyWith(
                             color: AppColors.textSecondary,
                             height: 1.35,
@@ -155,46 +118,5 @@ class _EnrollEventScanScreenState extends State<EnrollEventScanScreen> {
         ),
       ),
     );
-  }
-
-  List<Widget> _buildScanFrame() {
-    const corner = SizedBox(width: 28, height: 28);
-    const padding = 36.0;
-    Widget cornerBox(
-      BorderSide top,
-      BorderSide right,
-      BorderSide bottom,
-      BorderSide left,
-    ) =>
-        Container(
-          decoration: BoxDecoration(
-            border: Border(top: top, right: right, bottom: bottom, left: left),
-          ),
-          child: corner,
-        );
-    final side =
-        BorderSide(color: AppColors.accent.withValues(alpha: 0.9), width: 3);
-    return [
-      Positioned(
-        top: padding,
-        left: padding,
-        child: cornerBox(side, BorderSide.none, BorderSide.none, side),
-      ),
-      Positioned(
-        top: padding,
-        right: padding,
-        child: cornerBox(side, side, BorderSide.none, BorderSide.none),
-      ),
-      Positioned(
-        bottom: padding,
-        left: padding,
-        child: cornerBox(BorderSide.none, BorderSide.none, side, side),
-      ),
-      Positioned(
-        bottom: padding,
-        right: padding,
-        child: cornerBox(BorderSide.none, side, side, BorderSide.none),
-      ),
-    ];
   }
 }

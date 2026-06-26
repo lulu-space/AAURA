@@ -14,6 +14,7 @@ import '../../widgets/campus_people_list.dart';
 import '../profile/volunteer_scan_screen.dart';
 import 'enroll_event_scan_screen.dart';
 import '../../utils/transitions.dart';
+import '../../widgets/join_link_qr_card.dart';
 
 class EventDetailsScreen extends StatefulWidget {
   final Event event;
@@ -1581,44 +1582,12 @@ class _EventJoinLinkCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(AppSpacing.md),
-      decoration: cardDecoration(color: AppColors.surfaceMuted),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'Student join link',
-            style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                  fontWeight: FontWeight.w800,
-                ),
-          ),
-          const SizedBox(height: AppSpacing.xs),
-          Text(
-            'Share this link or a QR code that points to it. Students scan to enroll.',
-            style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                  color: AppColors.textSecondary,
-                  height: 1.35,
-                ),
-          ),
-          const SizedBox(height: AppSpacing.sm),
-          SizedBox(
-            width: double.infinity,
-            child: OutlinedButton.icon(
-              onPressed: () {
-                final link = JoinLinks.eventJoinLink(joinToken);
-                Clipboard.setData(ClipboardData(text: link));
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Join link copied')),
-                );
-              },
-              icon: const Icon(Icons.link_outlined, size: 18),
-              label: const Text('Copy join link for QR'),
-            ),
-          ),
-        ],
-      ),
+    return JoinLinkQrCard(
+      title: 'Student join link',
+      subtitle:
+          'Students scan this QR or open the link to enroll in the event.',
+      link: JoinLinks.eventJoinLink(joinToken),
+      copyLabel: 'Copy join link',
     );
   }
 }
