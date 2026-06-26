@@ -10,7 +10,7 @@ Set-Location $root
 
 $envFile = Join-Path $root "deploy.env"
 if (-not (Test-Path $envFile)) {
-    Write-Host "Missing deploy.env — copy deploy.env.example and set your production URLs." -ForegroundColor Red
+    Write-Host "Missing deploy.env - copy deploy.env.example and set your production URLs." -ForegroundColor Red
     exit 1
 }
 

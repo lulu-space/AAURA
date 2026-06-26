@@ -21,7 +21,8 @@ class StudySession {
   final StudySessionType type;
   final String details;
   final String when;
-  final int seatsLeft;
+  /// Null means no seat cap (open session).
+  final int? seatsLeft;
   final String host;
   final DateTime? startsAt;
   final DateTime? endsAt;
@@ -33,7 +34,7 @@ class StudySession {
     required this.type,
     required this.details,
     required this.when,
-    required this.seatsLeft,
+    this.seatsLeft,
     required this.host,
     this.startsAt,
     this.endsAt,

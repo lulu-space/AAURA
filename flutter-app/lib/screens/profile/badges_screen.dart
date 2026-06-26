@@ -60,6 +60,14 @@ class BadgesScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: AppSpacing.lg),
+            Text(
+              'Earn badges by attending events, volunteering, hosting study sessions, '
+              'leading clubs, reaching 90% on a skill, and collecting 2,000+ points.',
+              style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                    color: AppColors.textSecondary,
+                  ),
+            ),
+            const SizedBox(height: AppSpacing.md),
             for (var i = 0; i < badges.length; i++) ...[
               _BadgeRow(
                 name: badges[i].name,

@@ -1,6 +1,7 @@
 import { ApiError } from '../../../core/errors/api-error.js';
 import { supabaseAdmin } from '../../../config/supabase.js';
 import { proxyToAi } from '../../ai/services/ai-proxy.service.js';
+import { analyzeShamsMessageFallback } from './shams-profiling-fallback.service.js';
 import { strengthsFromTraits, mergeStrengths, strengthsFromSkillNames } from '../../student-profiles/services/skill-progress.service.js';
 
 type ShamsExtraction = {
@@ -76,17 +77,7 @@ function buildStarterGoals(
 
 export class ProfilingWorkflowService {
   async chatWithShams(userId: string, message: string) {
-    const { status, body } = await proxyToAi('/api/profiling/shams/chat', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message })
-    });
-
-    if (status >= 400) {
-      throw new ApiError(502, 'Shams profiling failed.', body);
-    }
-
-    const extraction = body as ShamsExtraction;
+    const extraction = await this.resolveShamsExtraction(message);
 
     if (extraction.needs_detail) {
       return {
@@ -152,6 +143,22 @@ export class ProfilingWorkflowService {
         needs_detail: false
       }
     };
+  }
+
+  private async resolveShamsExtraction(message: string): Promise<ShamsExtraction> {
+    try {
+      const { status, body } = await proxyToAi('/api/profiling/shams/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message })
+      });
+      if (status < 400 && body && typeof body === 'object') {
+        return body as ShamsExtraction;
+      }
+    } catch {
+      // AI container not deployed — use built-in profiling fallback.
+    }
+    return analyzeShamsMessageFallback(message);
   }
 
   async getMyDraft(userId: string) {

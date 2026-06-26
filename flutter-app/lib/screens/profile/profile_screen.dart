@@ -458,6 +458,9 @@ class ProfileScreen extends StatelessWidget {
         role: profile?.role.label ?? 'Student',
         major: profile?.major ?? '-',
         year: profile?.year ?? '-',
+        bio: profile?.bio,
+        careerGoal: profile?.careerGoal,
+        campus: profile?.campus,
         interests: profile?.interests ?? const [],
         onEditInterests: () => Navigator.of(context).push(
           FadeSlidePageRoute(builder: (_) => const ShamsUpdateChatScreen()),
@@ -472,6 +475,14 @@ class ProfileScreen extends StatelessWidget {
           FadeSlidePageRoute(builder: (_) => const BadgesScreen()),
         ),
       ),
+      Text(
+        'Earn badges by attending events, volunteering, hosting study sessions, '
+        'leading clubs, building skills to 90%, and collecting campus points.',
+        style: Theme.of(context).textTheme.bodySmall?.copyWith(
+              color: AppColors.textSecondary,
+            ),
+      ),
+      const SizedBox(height: AppSpacing.sm),
       Wrap(
         spacing: AppSpacing.md,
         runSpacing: AppSpacing.md,
@@ -855,6 +866,9 @@ class _AboutCard extends StatelessWidget {
   final bool showMajor;
   final bool showInterests;
   final String? facultyLabel;
+  final String? bio;
+  final String? careerGoal;
+  final String? campus;
   final VoidCallback? onEditInterests;
 
   const _AboutCard({
@@ -866,6 +880,9 @@ class _AboutCard extends StatelessWidget {
     this.showMajor = true,
     this.showInterests = true,
     this.facultyLabel,
+    this.bio,
+    this.careerGoal,
+    this.campus,
     this.onEditInterests,
   });
 
@@ -916,6 +933,23 @@ class _AboutCard extends StatelessWidget {
                   _kv(context, 'Faculty', facultyLabel!),
                 if (showMajor) _kv(context, 'Major', major),
                 _kv(context, 'Year', year),
+                if (campus != null && campus!.trim().isNotEmpty)
+                  _kv(context, 'Campus', campus!),
+                if (careerGoal != null && careerGoal!.trim().isNotEmpty)
+                  _kv(context, 'Career goal', careerGoal!),
+                if (bio != null && bio!.trim().isNotEmpty) ...[
+                  const SizedBox(height: AppSpacing.sm),
+                  Text('Bio',
+                      style: Theme.of(context).textTheme.labelMedium?.copyWith(
+                            color: AppColors.textMuted,
+                            fontWeight: FontWeight.w600,
+                          )),
+                  const SizedBox(height: 4),
+                  Text(bio!,
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                            color: AppColors.textSecondary,
+                          )),
+                ],
                 if (showInterests) ...[
                 const SizedBox(height: AppSpacing.sm),
                   Row(
@@ -1144,6 +1178,15 @@ class _SkillTab extends StatelessWidget {
             onPressed: () => _addSkill(context),
             icon: const Icon(Icons.add),
           ),
+        ),
+        const SizedBox(height: AppSpacing.sm),
+        Text(
+          'Percentages start from your Shams profile baseline, then rise when you '
+          'join events, study sessions, complete goals, and volunteer. Rings cap at 90%.',
+          textAlign: TextAlign.center,
+          style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                color: AppColors.textMuted,
+              ),
         ),
         const SizedBox(height: AppSpacing.sm),
         SkillProgressCard(

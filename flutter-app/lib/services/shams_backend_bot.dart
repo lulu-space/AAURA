@@ -166,14 +166,12 @@ class ShamsBackendBot implements OnboardingBot {
     } on ApiException catch (e) {
       final detail = e.message.trim();
       final hint = e.statusCode == 0
-          ? 'The profiling request took too long or the server is unreachable. '
-              'Ensure backend (npm run dev) and AI (npm run dev:ai) are running, '
-              'then try again — the first message may take a little longer.'
+          ? 'The request timed out. Please wait a moment and try again.'
           : e.statusCode == 403
-          ? 'Your campus account may still be setting up — wait a moment, then try again.'
-          : e.statusCode == 502 || e.statusCode == 503
-              ? 'Start the AI service (npm run dev:ai) and backend (npm run dev), then try again.'
-              : 'Check that the backend and AI service are running, then try again.';
+              ? 'Your campus account may still be setting up — wait a moment, then try again.'
+              : e.statusCode == 502 || e.statusCode == 503
+                  ? 'Shams is temporarily unavailable. Try again in a moment, or tap Form to fill your profile manually.'
+                  : 'Something went wrong. Try again, or use the Form option above.';
       return BotTurn(state, [
         _bot(
           detail.isNotEmpty ? '$detail $hint' : hint,
@@ -183,7 +181,7 @@ class ShamsBackendBot implements OnboardingBot {
     } catch (_) {
       return BotTurn(state, [
         _bot(
-          "I couldn't reach the profiling service. Check that the backend and AI service are running, then try again.",
+          "I couldn't reach the profiling service right now. Try again, or tap Form to complete your profile manually.",
           input: ChatInputMode.text,
         ),
       ]);

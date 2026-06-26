@@ -19,6 +19,7 @@ class _CreateStudySessionScreenState extends State<CreateStudySessionScreen> {
   late final TextEditingController _course;
   late final TextEditingController _details;
   late StudySessionType _type;
+  late bool _limitSeats;
   late int _seats;
   late DateTime _startsAt;
   late DateTime _endsAt;
@@ -32,6 +33,7 @@ class _CreateStudySessionScreenState extends State<CreateStudySessionScreen> {
     _course = TextEditingController(text: existing?.course ?? '');
     _details = TextEditingController(text: existing?.details ?? '');
     _type = existing?.type ?? StudySessionType.publicTogether;
+    _limitSeats = existing?.seatsLeft != null;
     _seats = existing?.seatsLeft ?? 4;
     _startsAt = existing?.startsAt ??
         DateTime.now().add(const Duration(days: 1)).copyWith(
@@ -99,7 +101,8 @@ class _CreateStudySessionScreenState extends State<CreateStudySessionScreen> {
         endsAt: _endsAt,
         title: course,
         details: details,
-        capacity: _seats,
+        capacity: _limitSeats ? _seats : null,
+        applyCapacity: true,
       );
       if (!mounted) return;
       if (!ok) {
@@ -116,7 +119,7 @@ class _CreateStudySessionScreenState extends State<CreateStudySessionScreen> {
         type: _type,
         details: details,
         when: _formatWhen(_startsAt),
-        seatsLeft: _seats,
+        seatsLeft: _limitSeats ? _seats : null,
         host: state.profile?.name ?? 'You',
         startsAt: _startsAt,
         endsAt: _endsAt,
@@ -188,37 +191,45 @@ class _CreateStudySessionScreenState extends State<CreateStudySessionScreen> {
             label: Text(_formatWhen(_endsAt)),
           ),
           const SizedBox(height: AppSpacing.md),
-          Text('Seats',
+          Text('Seats (optional)',
               style: Theme.of(context)
                   .textTheme
                   .labelLarge
                   ?.copyWith(color: AppColors.textSecondary)),
           const SizedBox(height: 6),
-          Row(
-            children: [
-              IconButton(
-                onPressed: () => setState(() {
-                  if (_seats > 1) _seats -= 1;
-                }),
-                icon: const Icon(Icons.remove_circle_outline),
-              ),
-              Text('$_seats',
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                        fontWeight: FontWeight.w800,
-                      )),
-              IconButton(
-                onPressed: () => setState(() {
-                  if (_seats < 30) _seats += 1;
-                }),
-                icon: const Icon(Icons.add_circle_outline),
-              ),
-              const Spacer(),
-              Text('seats available',
-                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                        color: AppColors.textMuted,
-                      )),
-            ],
+          SwitchListTile(
+            contentPadding: EdgeInsets.zero,
+            title: const Text('Limit seats'),
+            subtitle: const Text('Leave off for an open session'),
+            value: _limitSeats,
+            onChanged: (v) => setState(() => _limitSeats = v),
           ),
+          if (_limitSeats)
+            Row(
+              children: [
+                IconButton(
+                  onPressed: () => setState(() {
+                    if (_seats > 1) _seats -= 1;
+                  }),
+                  icon: const Icon(Icons.remove_circle_outline),
+                ),
+                Text('$_seats',
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                          fontWeight: FontWeight.w800,
+                        )),
+                IconButton(
+                  onPressed: () => setState(() {
+                    if (_seats < 30) _seats += 1;
+                  }),
+                  icon: const Icon(Icons.add_circle_outline),
+                ),
+                const Spacer(),
+                Text('seats available',
+                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                          color: AppColors.textMuted,
+                        )),
+              ],
+            ),
           const SizedBox(height: AppSpacing.md),
           Text('Details',
               style: Theme.of(context)

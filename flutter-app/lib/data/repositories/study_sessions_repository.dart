@@ -21,7 +21,7 @@ class StudySessionsRepository {
     required String topic,
     required DateTime startsAt,
     required DateTime endsAt,
-    required int capacity,
+    int? capacity,
     String? location,
   }) async {
     final result = await _api.post(
@@ -46,6 +46,7 @@ class StudySessionsRepository {
     DateTime? startsAt,
     DateTime? endsAt,
     int? capacity,
+    bool applyCapacity = false,
     String? location,
   }) async {
     final body = <String, dynamic>{};
@@ -53,7 +54,7 @@ class StudySessionsRepository {
     if (topic != null) body['topic'] = topic;
     if (startsAt != null) body['starts_at'] = startsAt.toUtc().toIso8601String();
     if (endsAt != null) body['ends_at'] = endsAt.toUtc().toIso8601String();
-    if (capacity != null) body['capacity'] = capacity;
+    if (applyCapacity) body['capacity'] = capacity;
     if (location != null) body['location'] = location;
     final result = await _api.patch('/study-sessions/$id', body: body);
     final row = asRow(result);

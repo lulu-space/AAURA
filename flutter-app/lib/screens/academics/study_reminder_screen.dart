@@ -200,7 +200,10 @@ class _StudyReminderScreenState extends State<StudyReminderScreen> {
                             color: AppColors.textSecondary,
                           )),
                   const SizedBox(height: 8),
-                  Text('${widget.session.seatsLeft} seats left',
+                  Text(
+                    widget.session.seatsLeft == null
+                        ? 'Open session'
+                        : '${widget.session.seatsLeft} seats left',
                       style: Theme.of(context).textTheme.labelMedium?.copyWith(
                             color: AppColors.primary,
                             fontWeight: FontWeight.w700,
@@ -248,12 +251,17 @@ class _StudyReminderScreenState extends State<StudyReminderScreen> {
                   child: OutlinedButton.icon(
                     onPressed: () {
                       ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('Snoozed for 10 min')),
+                        const SnackBar(
+                          content: Text(
+                            'Reminder dismissed. Snooze does not schedule a notification — '
+                            'check Academics when you are ready.',
+                          ),
+                        ),
                       );
                       Navigator.of(context).pop();
                     },
                     icon: const Icon(Icons.snooze_outlined),
-                    label: const Text('Snooze'),
+                    label: const Text('Dismiss'),
                   ),
                 ),
                 const SizedBox(width: AppSpacing.md),

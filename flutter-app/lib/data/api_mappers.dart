@@ -311,7 +311,9 @@ class ApiMappers {
       type: StudySessionType.publicTogether,
       details: details.isNotEmpty ? details : 'Open study session',
       when: _formatDateTime(row['starts_at']),
-      seatsLeft: _asInt(row['capacity'], fallback: 4),
+      seatsLeft: row['capacity'] == null
+          ? null
+          : _asInt(row['capacity'], fallback: 4),
       host: hostName,
       startsAt: startsAt,
       endsAt: endsAt,
@@ -324,7 +326,7 @@ class ApiMappers {
     required String topic,
     required DateTime startsAt,
     required DateTime endsAt,
-    required int capacity,
+    int? capacity,
     String? location,
   }) =>
       {
@@ -334,7 +336,7 @@ class ApiMappers {
           'location': location.trim(),
         'starts_at': startsAt.toUtc().toIso8601String(),
         'ends_at': endsAt.toUtc().toIso8601String(),
-        'capacity': capacity,
+        if (capacity != null) 'capacity': capacity,
       };
 
   static VolunteerRequest volunteerRequest(Map<String, dynamic> row) {

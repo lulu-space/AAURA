@@ -842,6 +842,17 @@ class AppState extends ChangeNotifier {
     return List.unmodifiable(_customSessions);
   }
 
+  /// Sessions that have not ended yet (hidden from Academics carousel).
+  List<StudySession> get activeStudySessions {
+    final now = DateTime.now();
+    return studySessions
+        .where((s) {
+          final end = s.endsAt;
+          return end == null || end.isAfter(now);
+        })
+        .toList(growable: false);
+  }
+
   /// Skill names used for home personalization (profile + skill progress).
   List<String> get personalizationSkillNames {
     final names = <String>{};
@@ -867,8 +878,8 @@ class AppState extends ChangeNotifier {
 
   /// Study sessions ranked for the signed-in student; excludes mismatched topics.
   List<StudySession> get suggestedStudySessions {
-    if (isStaffOrAffairs) return studySessions;
-    final sessions = studySessions;
+    if (isStaffOrAffairs) return activeStudySessions;
+    final sessions = activeStudySessions;
     if (sessions.isEmpty) return sessions;
 
     final ranked = HomePersonalizationService.rankStudySessions(
@@ -1131,6 +1142,31 @@ class AppState extends ChangeNotifier {
   }
 
   /// Loads events, reservations, and gamification from the backend.
+  Future<void> _syncEarnedBadgesInBackground(
+    Map<String, dynamic> gamification,
+  ) async {
+    try {
+      final synced = await _api.post('/gamification/sync-badges');
+      if (synced is Map<String, dynamic>) {
+        final badges = synced['badges'];
+        if (badges is List) {
+          _earnedBadgeIds
+            ..clear()
+            ..addAll(badges.map((b) => b.toString()));
+          notifyListeners();
+        }
+      }
+    } catch (_) {
+      final badges = gamification['badges'];
+      if (badges is List) {
+        _earnedBadgeIds
+          ..clear()
+          ..addAll(badges.map((b) => b.toString()));
+      }
+    }
+  }
+
+  /// Loads events, reservations, and gamification from the backend.
   Future<void> refreshAll() async {
     if (!AppConfig.backendEnabled || !_auth.isReady || !_auth.isSignedIn) {
       _useBackendData = false;
@@ -1179,40 +1215,60 @@ class AppState extends ChangeNotifier {
         if (gamification != null) {
           _gamificationRowId = gamification['id']?.toString();
           _points = (gamification['points'] as num?)?.toInt() ?? 0;
-          try {
-            final synced = await _api.post('/gamification/sync-badges');
-            if (synced is Map<String, dynamic>) {
-              final badges = synced['badges'];
-              if (badges is List) {
-                _earnedBadgeIds
-                  ..clear()
-                  ..addAll(badges.map((b) => b.toString()));
-              } else {
-                final existing = gamification['badges'];
-                if (existing is List) {
-                  _earnedBadgeIds
-                    ..clear()
-                    ..addAll(existing.map((b) => b.toString()));
-                }
-              }
-            }
-      } catch (_) {
-            final badges = gamification['badges'];
-            if (badges is List) {
-              _earnedBadgeIds
-                ..clear()
-                ..addAll(badges.map((b) => b.toString()));
-            }
+          final existing = gamification['badges'];
+          if (existing is List) {
+            _earnedBadgeIds
+              ..clear()
+              ..addAll(existing.map((b) => b.toString()));
           }
+          unawaited(_syncEarnedBadgesInBackground(gamification));
         }
       }
 
-      final sessions = await _studySessionsRepo.list();
+      final parallel = await Future.wait<Object?>([
+        _studySessionsRepo.list(),
+        _studySessionMembershipRepo.listMine(),
+        _shopRepo.listItems(),
+        _shopRepo.listPurchasedItems(),
+        _recommendationsRepo.listMine(),
+        _clubMembershipRepo.listMine(),
+        isDeanOfFaculty
+            ? Future<List<dynamic>>.value(const [])
+            : _clubsRepo.list(),
+        _notificationsRepo.listMine(),
+        _calendarRepo.listMine(),
+        _studyPlansRepo.listMine(),
+        _gamificationRepo.leaderboard(limit: 10),
+        _badgesRepo.listDefinitions(),
+        _clubsRepo.activityFeed(),
+        _volunteeringOpportunitiesRepo.listOpen(),
+        if (isStudentAffairs)
+          _volunteeringOpportunitiesRepo.listAll()
+        else
+          Future<List<dynamic>>.value(const []),
+        if (isStudent)
+          _eventFeedbackRepo.listMine()
+        else
+          Future<List<Map<String, dynamic>>>.value(const []),
+        if (isStudent)
+          Future.wait([
+            _volunteeringRepo.listMine(),
+            _connectionsRepo.suggestions(),
+            _connectionsRepo.listMine(),
+            _studentProfilesRepo.mine(),
+          ])
+        else
+          Future<List<dynamic>>.value(const []),
+      ]);
+
+      var i = 0;
+      final sessions = parallel[i++] as List<StudySession>;
       _backendStudySessions
         ..clear()
         ..addAll(sessions);
 
-      final sessionMemberships = await _studySessionMembershipRepo.listMine();
+      final sessionMemberships =
+          parallel[i++] as List<Map<String, dynamic>>;
       _studySessionMembershipIds.clear();
       _joinedSessionIds.clear();
       for (final row in sessionMemberships) {
@@ -1225,16 +1281,17 @@ class AppState extends ChangeNotifier {
         }
       }
 
-      final shopItems = await _shopRepo.listItems();
+      final shopItems = parallel[i++] as List<dynamic>;
       _backendShopItems
         ..clear()
-        ..addAll(shopItems);
-      final purchased = await _shopRepo.listPurchasedItems();
+        ..addAll(shopItems.cast());
+
+      final purchased = parallel[i++] as List<dynamic>;
       _ownedShopItemIds
         ..clear()
         ..addAll(purchased.map((item) => item.id));
 
-      final recommendations = await _recommendationsRepo.listMine();
+      final recommendations = parallel[i++] as List<Map<String, dynamic>>;
       _recommendedEventIds
         ..clear()
         ..addAll(
@@ -1247,58 +1304,9 @@ class AppState extends ChangeNotifier {
       await _refreshStaffVolunteerQueue();
       if (isStudentAffairs || isDeanOfFaculty || isAdmin) {
         await _loadEventReviews();
-      } else if (isStudent) {
-        final mine = await _volunteeringRepo.listMine();
-        _volunteerRequests
-          ..clear()
-          ..addAll(mine);
-        _recomputeVolunteerHours();
-
-        final suggestions = await _connectionsRepo.suggestions();
-        _suggestedConnections
-          ..clear()
-          ..addAll(suggestions);
-        final connected = await _connectionsRepo.listMine();
-        _myConnections
-          ..clear()
-          ..addAll(connected);
-        _connectionIds
-          ..clear()
-          ..addAll(connected.map((c) => c.id));
-
-        await loadPeerInbox();
-
-        final studentProfile = await _studentProfilesRepo.mine();
-        _skillProgress = ApiMappers.skillsFromProfile(studentProfile);
-        final plans = await _studyPlansRepo.listMine();
-        _semesterGoals = ApiMappers.goalsFromProfileAndPlans(
-          studentProfile,
-          plans,
-        );
-        // Merge Shams-derived interests + summary into the live profile so the
-        // profile/personalization screens show real data, not placeholders.
-        if (studentProfile != null && _profile != null) {
-          final interests = (studentProfile['interests'] as List?)
-                  ?.map((e) => e.toString())
-                  .where((e) => e.isNotEmpty)
-                  .toList() ??
-              const <String>[];
-          final summary =
-              (studentProfile['profile_summary'] as String?)?.trim();
-          final skillNames = _skillProgress
-              .map((s) => s['name']?.toString())
-              .whereType<String>()
-              .where((s) => s.isNotEmpty)
-              .toList();
-          _profile = _profile!.copyWith(
-            interests: interests.isNotEmpty ? interests : null,
-            bio: (summary != null && summary.isNotEmpty) ? summary : null,
-            skills: skillNames.isNotEmpty ? skillNames : null,
-          );
-        }
       }
 
-      final memberships = await _clubMembershipRepo.listMine();
+      final memberships = parallel[i++] as List<Map<String, dynamic>>;
       _clubMembershipIds.clear();
       _clubMemberRoles.clear();
       _joinedClubIds.clear();
@@ -1322,8 +1330,8 @@ class AppState extends ChangeNotifier {
         _backendClubs
           ..clear()
           ..addAll(_deanFacultyClubs);
-    } else {
-        final clubs = await _clubsRepo.list();
+      } else {
+        final clubs = parallel[i++] as List<Club>;
         _backendClubs
           ..clear()
           ..addAll(clubs.map((club) {
@@ -1334,12 +1342,12 @@ class AppState extends ChangeNotifier {
           }));
       }
 
-      final notifications = await _notificationsRepo.listMine();
+      final notifications = parallel[i++] as List<AppNotification>;
       _notifications
         ..clear()
         ..addAll(notifications);
 
-      final calendar = await _calendarRepo.listMine();
+      final calendar = parallel[i++] as List<Map<String, dynamic>>;
       _backendCourses
         ..clear()
         ..addAll(
@@ -1356,29 +1364,41 @@ class AppState extends ChangeNotifier {
               .map(ApiMappers.calendarDeadline),
         );
 
-      final studyPlans = await _studyPlansRepo.listMine();
+      final studyPlans = parallel[i++] as List<Map<String, dynamic>>;
       _backendStudyPlans
         ..clear()
         ..addAll(studyPlans);
       _reloadStudyPlanCourses();
 
-      final leaderboard = await _gamificationRepo.leaderboard(limit: 10);
+      final leaderboard = parallel[i++] as List<Map<String, dynamic>>;
       _leaderboardEntries
         ..clear()
         ..addAll(leaderboard.map(ApiMappers.leaderboardEntry));
 
-      final badgeCatalog = await _badgesRepo.listDefinitions();
+      final badgeCatalog = parallel[i++] as List<AppBadge>;
       _badgeCatalog
         ..clear()
         ..addAll(badgeCatalog);
 
-      final activityFeed = await _clubsRepo.activityFeed();
+      final activityFeed = parallel[i++] as List<Map<String, String>>;
       _clubActivityFeed
         ..clear()
         ..addAll(activityFeed);
 
+      final opportunities = parallel[i++] as List<dynamic>;
+      _volunteeringOpportunities
+        ..clear()
+        ..addAll(opportunities.cast());
+
+      final managedOpportunities = parallel[i++] as List<dynamic>;
+      if (isStudentAffairs) {
+        _managedVolunteerOpportunities
+          ..clear()
+          ..addAll(managedOpportunities.cast());
+      }
+
+      final feedbackRows = parallel[i++] as List<Map<String, dynamic>>;
       if (isStudent) {
-        final feedbackRows = await _eventFeedbackRepo.listMine();
         _eventFeedbackByEventId.clear();
         for (final row in feedbackRows) {
           final eventId = row['event_id']?.toString();
@@ -1388,15 +1408,57 @@ class AppState extends ChangeNotifier {
         }
       }
 
-      final opportunities = await _volunteeringOpportunitiesRepo.listOpen();
-      _volunteeringOpportunities
-        ..clear()
-        ..addAll(opportunities);
-      if (isStudentAffairs) {
-        final managed = await _volunteeringOpportunitiesRepo.listAll();
-        _managedVolunteerOpportunities
+      final studentBundle = parallel[i++] as List<dynamic>;
+      if (isStudent && studentBundle.isNotEmpty) {
+        final mine = studentBundle[0] as List<VolunteerRequest>;
+        _volunteerRequests
           ..clear()
-          ..addAll(managed);
+          ..addAll(mine);
+        _recomputeVolunteerHours();
+
+        final suggestions = studentBundle[1] as List<dynamic>;
+        _suggestedConnections
+          ..clear()
+          ..addAll(suggestions.cast());
+
+        final connected = studentBundle[2] as List<dynamic>;
+        _myConnections
+          ..clear()
+          ..addAll(connected.cast());
+        _connectionIds
+          ..clear()
+          ..addAll(_myConnections.map((c) => c.id));
+
+        unawaited(loadPeerInbox());
+
+        final studentProfile =
+            studentBundle[3] as Map<String, dynamic>?;
+        _skillProgress = ApiMappers.skillsFromProfile(studentProfile);
+        _semesterGoals = ApiMappers.goalsFromProfileAndPlans(
+          studentProfile,
+          studyPlans,
+        );
+        if (studentProfile != null && _profile != null) {
+          final interests = (studentProfile['interests'] as List?)
+                  ?.map((e) => e.toString())
+                  .where((e) => e.isNotEmpty)
+                  .toList() ??
+              const <String>[];
+          final summary =
+              (studentProfile['profile_summary'] as String?)?.trim();
+          final skillNames = _skillProgress
+              .map((s) => s['name']?.toString())
+              .whereType<String>()
+              .where((s) => s.isNotEmpty)
+              .toList();
+          _profile = _profile!.copyWith(
+            interests: interests.isNotEmpty ? interests : null,
+            bio: (summary != null && summary.isNotEmpty)
+                ? summary
+                : _profile!.bio,
+            skills: skillNames.isNotEmpty ? skillNames : null,
+          );
+        }
       }
 
       // Club-founding requests: students see their own, reviewers see the queue.
@@ -1645,7 +1707,7 @@ class AppState extends ChangeNotifier {
     _onboarded = true;
     notifyListeners();
     await _save();
-    await refreshAll();
+    unawaited(refreshAll());
   }
 
   /// Finishes Shams NLP onboarding: confirms draft on backend, then saves locally.
@@ -1880,7 +1942,7 @@ class AppState extends ChangeNotifier {
       _profile = _profile?.copyWith(
         interests: interests.isNotEmpty ? interests : null,
         skills: savedSkillNames.isNotEmpty ? savedSkillNames : profile.skills,
-        bio: (summary != null && summary.isNotEmpty) ? summary : null,
+        bio: (summary != null && summary.isNotEmpty) ? summary : _profile?.bio,
       );
       notifyListeners();
     }
@@ -3636,6 +3698,7 @@ class AppState extends ChangeNotifier {
     String? title,
     String? details,
     int? capacity,
+    bool applyCapacity = false,
   }) async {
     if (_useBackendData && isBackendId(session.id)) {
       try {
@@ -3645,7 +3708,8 @@ class AppState extends ChangeNotifier {
           topic: details ?? session.details,
           startsAt: startsAt,
           endsAt: endsAt,
-          capacity: capacity ?? session.seatsLeft,
+          capacity: capacity,
+          applyCapacity: applyCapacity,
         );
         if (updated != null) {
           final idx =
@@ -3673,7 +3737,7 @@ class AppState extends ChangeNotifier {
     _customSessions[idx] = session.copyWith(
       course: title ?? session.course,
       details: details ?? session.details,
-      seatsLeft: capacity ?? session.seatsLeft,
+      seatsLeft: applyCapacity ? capacity : session.seatsLeft,
       startsAt: startsAt,
       endsAt: endsAt,
       when: _formatSessionWhen(startsAt),
@@ -4468,7 +4532,9 @@ class AppState extends ChangeNotifier {
                 orElse: () => StudySessionType.publicTogether),
         details: m['details'] as String,
         when: m['when'] as String,
-        seatsLeft: (m['seatsLeft'] as num).toInt(),
+        seatsLeft: m['seatsLeft'] == null
+            ? null
+            : (m['seatsLeft'] as num).toInt(),
         host: m['host'] as String,
         startsAt: m['startsAt'] != null
             ? DateTime.tryParse(m['startsAt'] as String)

@@ -6,7 +6,7 @@ const studySessionBody = z.object({
   location: z.string().optional(),
   starts_at: z.string().datetime(),
   ends_at: z.string().datetime(),
-  capacity: z.number().int().positive()
+  capacity: z.number().int().positive().optional().nullable()
 });
 
 export const createStudySessionSchema = z.object({

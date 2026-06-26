@@ -34,13 +34,12 @@ class _OnboardingFormFallbackState extends State<OnboardingFormFallback> {
   final _careerGoal = TextEditingController();
   final _skills = TextEditingController();
   final _otherInterests = TextEditingController();
-  final _otherSkills = TextEditingController();
   final _bio = TextEditingController();
   String _major = CampusFormOptions.majors.first;
   String _year = CampusFormOptions.years.first;
   String? _gender;
   String? _campus;
-  String? _gradYear;
+  String? _gradYear = CampusFormOptions.graduationYears.first;
   DateTime? _dob;
   final Set<String> _selectedInterests = {};
   bool _prefilled = false;
@@ -79,7 +78,6 @@ class _OnboardingFormFallbackState extends State<OnboardingFormFallback> {
     _careerGoal.dispose();
     _skills.dispose();
     _otherInterests.dispose();
-    _otherSkills.dispose();
     _bio.dispose();
     super.dispose();
   }
@@ -96,11 +94,7 @@ class _OnboardingFormFallbackState extends State<OnboardingFormFallback> {
     }
 
     final extraInterests = _splitList(_otherInterests.text);
-    final extraSkills = _splitList(_otherSkills.text);
-    final skills = [
-      ..._splitList(_skills.text),
-      ...extraSkills,
-    ];
+    final skills = _splitList(_skills.text);
 
     final profile = UserProfile(
       name: _name.text.trim(),
@@ -152,11 +146,14 @@ class _OnboardingFormFallbackState extends State<OnboardingFormFallback> {
 
   Future<void> _pickDob() async {
     final now = DateTime.now();
+    final earliest = DateTime(1998, 1, 1);
+    final latest = DateTime(now.year - 16, now.month, now.day);
     final picked = await showDatePicker(
       context: context,
-      initialDate: _dob ?? DateTime(now.year - 19, now.month, now.day),
-      firstDate: DateTime(now.year - 70),
-      lastDate: now,
+      initialDate: _dob ?? DateTime(2006, 6, 15),
+      firstDate: earliest,
+      lastDate: latest,
+      initialDatePickerMode: DatePickerMode.year,
       builder: (context, child) {
         return Theme(
           data: Theme.of(context).copyWith(
@@ -395,16 +392,8 @@ class _OnboardingFormFallbackState extends State<OnboardingFormFallback> {
           TextFormField(
             controller: _skills,
             style: const TextStyle(color: _ink),
-            decoration:
-                _fieldDecoration(hint: 'Comma-separated, e.g. Python, Design'),
-          ),
-          const SizedBox(height: AppSpacing.md),
-          _label('Other skills'),
-          TextFormField(
-            controller: _otherSkills,
-            style: const TextStyle(color: _ink),
             decoration: _fieldDecoration(
-              hint: 'Anything not listed above, comma-separated',
+              hint: 'Comma-separated, e.g. Python, Web development, Design',
             ),
           ),
           const SizedBox(height: AppSpacing.md),

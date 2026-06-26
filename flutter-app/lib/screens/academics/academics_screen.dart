@@ -41,7 +41,7 @@ class AcademicsScreen extends StatefulWidget {
 class _AcademicsScreenState extends State<AcademicsScreen> {
   void _openJoinSheet(BuildContext context) {
     final state = context.read<AppState>();
-    final all = state.studySessions;
+    final all = state.activeStudySessions;
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
@@ -131,7 +131,10 @@ class _AcademicsScreenState extends State<AcademicsScreen> {
                                               ?.copyWith(
                                                   color: AppColors
                                                       .textSecondary)),
-                                      Text('${s.seatsLeft} seats left',
+                                      Text(
+                                        s.seatsLeft == null
+                                            ? 'Open session'
+                                            : '${s.seatsLeft} seats left',
                                           style: Theme.of(consumerCtx)
                                               .textTheme
                                               .labelSmall
@@ -771,7 +774,9 @@ class _StudySessionCard extends StatelessWidget {
                   children: [
                     _SessionGlassChip(
                       icon: Icons.event_seat_outlined,
-                      label: '${session.seatsLeft} seats',
+                      label: session.seatsLeft == null
+                          ? 'Open'
+                          : '${session.seatsLeft} seats',
                     ),
                     const SizedBox(height: 10),
                     SizedBox(
