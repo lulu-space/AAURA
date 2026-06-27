@@ -791,16 +791,11 @@ class AppState extends ChangeNotifier {
     if (!AppConfig.backendEnabled || !_auth.isReady || !_auth.isSignedIn) {
       return 'Sign in with your campus account.';
     }
-    if (!_useBackendData) {
-      await refreshAll();
-    }
-    if (!_useBackendData) {
-      return 'Could not reach the server. Check your connection and try again.';
-    }
     try {
       await action();
+      _useBackendData = true;
       await _loadEventReviews();
-      await refreshAll();
+      unawaited(refreshAll());
       return null;
     } on ApiException catch (e) {
       return e.message.trim().isNotEmpty
@@ -815,18 +810,16 @@ class AppState extends ChangeNotifier {
     if (!AppConfig.backendEnabled || !_auth.isReady || !_auth.isSignedIn) {
       return 'Sign in with your campus account.';
     }
-    if (!_useBackendData) {
-      await refreshAll();
-    }
-    if (!_useBackendData) {
-      return 'Could not reach the server. Check your connection and try again.';
-    }
     try {
       await action();
-      await refreshAll();
+      _useBackendData = true;
+      await refreshClubRequestQueue();
+      unawaited(refreshAll());
       return null;
     } on ApiException catch (e) {
-      return e.message;
+      return e.message.trim().isNotEmpty
+          ? e.message.trim()
+          : 'Action failed.';
     } catch (_) {
       return 'Action failed. Check your connection and try again.';
     }
@@ -1505,6 +1498,7 @@ class AppState extends ChangeNotifier {
       if (isStudentAffairs || isDeanOfFaculty || isAdmin) {
         await _loadEventReviews();
       }
+      _useBackendData = true;
       notifyListeners();
       await _save();
     } catch (_) {}

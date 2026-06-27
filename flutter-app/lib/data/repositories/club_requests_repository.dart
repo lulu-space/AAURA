@@ -67,8 +67,9 @@ class ClubRequestsRepository {
   Future<void> revoke(String id, {String? note}) => _review(id, 'revoke', note);
 
   Future<void> _review(String id, String action, String? note) async {
+    final trimmed = note?.trim() ?? '';
     await _api.patch('/club-requests/$id/$action', body: {
-      if (note != null && note.trim().isNotEmpty) 'review_note': note.trim(),
+      if (trimmed.isNotEmpty) 'review_note': trimmed,
     });
   }
 }
