@@ -705,7 +705,7 @@ class _SuggestedEvents extends StatelessWidget {
     final events = state.suggestedEvents;
     if (events.isEmpty) {
       return Text(
-        'No matching events yet. Add interests or skills on your profile.',
+        'No matching events yet. Add interests or skills on your profile, or browse all events on the Events tab.',
         style: Theme.of(context).textTheme.bodyMedium?.copyWith(
               color: AppColors.textSecondary,
             ),
@@ -745,7 +745,7 @@ class _SuggestedClubs extends StatelessWidget {
     final clubs = state.suggestedClubs;
     if (clubs.isEmpty) {
       return Text(
-        'No clubs to suggest yet.',
+        'No matching clubs yet. Add interests or skills on your profile, or browse all clubs on the Clubs tab.',
         style: Theme.of(context).textTheme.bodyMedium?.copyWith(
               color: AppColors.textSecondary,
             ),

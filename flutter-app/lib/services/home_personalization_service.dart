@@ -6,6 +6,9 @@ import '../models/study_session.dart';
 class HomePersonalizationService {
   const HomePersonalizationService._();
 
+  /// Minimum score to appear on the personalized home feed (not the full catalog).
+  static const double minSuggestionScore = 0.12;
+
   static List<Event> rankEvents(
     List<Event> events, {
     required List<String> interests,
@@ -34,7 +37,7 @@ class HomePersonalizationService {
       ..sort((a, b) => b.score.compareTo(a.score));
 
     return scored
-        .where((row) => row.score > 0.01)
+        .where((row) => row.score >= minSuggestionScore)
         .map((row) => row.event)
         .take(limit)
         .toList(growable: false);
@@ -69,7 +72,7 @@ class HomePersonalizationService {
       ..sort((a, b) => b.score.compareTo(a.score));
 
     return scored
-        .where((row) => row.score > 0.01)
+        .where((row) => row.score >= minSuggestionScore)
         .map((row) => row.club)
         .take(limit)
         .toList(growable: false);
@@ -157,6 +160,27 @@ class HomePersonalizationService {
     String? major,
   }) {
     const topicKeywords = <String, List<String>>{
+      'art': [
+        'art',
+        'artist',
+        'painting',
+        'drawing',
+        'gallery',
+        'sculpture',
+        'illustration',
+        'visual arts',
+      ],
+      'music': ['music', 'orchestra', 'choir', 'band', 'concert', 'singing'],
+      'sports': [
+        'sport',
+        'football',
+        'basketball',
+        'soccer',
+        'athletic',
+        'fitness',
+        'volleyball',
+      ],
+      'drama': ['drama', 'theatre', 'theater', 'acting', 'performance'],
       'business': [
         'business',
         'entrepreneur',
@@ -176,7 +200,7 @@ class HomePersonalizationService {
     final lower = text.toLowerCase();
 
     for (final entry in topicKeywords.entries) {
-      final hitsTopic = entry.value.any((kw) => lower.contains(kw));
+      final hitsTopic = entry.value.any((kw) => _textMentionsKeyword(lower, kw));
       if (!hitsTopic) continue;
 
       final profileMatch = _listMatchScore(
@@ -192,6 +216,16 @@ class HomePersonalizationService {
     return false;
   }
 
+  /// Avoid substring false positives (e.g. "art" inside "smart").
+  static bool _textMentionsKeyword(String lowerText, String keyword) {
+    final normalized = keyword.trim().toLowerCase();
+    if (normalized.isEmpty) return false;
+    if (normalized.length <= 4) {
+      return RegExp('\\b${RegExp.escape(normalized)}\\b').hasMatch(lowerText);
+    }
+    return lowerText.contains(normalized);
+  }
+
   static double _scoreEvent(
     Event event, {
     required List<String> interests,
@@ -202,15 +236,31 @@ class HomePersonalizationService {
         '${event.title} ${event.about} ${event.format} ${event.tags.join(' ')} '
         '${event.targetInterests.join(' ')} ${event.category.label}';
 
+    if (_isExcludedTopic(text, interests: interests, skills: skills, major: major)) {
+      return 0;
+    }
+
+    final interestMatch = _listMatchScore(interests, text);
+    final skillMatch = _listMatchScore(skills, text);
+    final targetInterestMatch = event.targetInterests.isEmpty
+        ? 0.0
+        : _listMatchScore(interests, event.targetInterests.join(' '));
+
+    if (interestMatch <= 0 && skillMatch <= 0 && targetInterestMatch <= 0) {
+      return 0;
+    }
+
     var score = 0.0;
-    score += _listMatchScore(interests, text) * 0.42;
-    score += _listMatchScore(skills, text) * 0.38;
-    score += _listMatchScore(event.targetInterests, text, emptyDefault: 0) * 0.08;
+    score += interestMatch * 0.42;
+    score += skillMatch * 0.38;
+    score += targetInterestMatch * 0.12;
 
     final normalizedMajor = major?.trim();
-    if (normalizedMajor != null && normalizedMajor.isNotEmpty) {
-      score += _listMatchScore([normalizedMajor], text) * 0.07;
-      if (event.targetMajors.isEmpty ||
+    if (normalizedMajor != null &&
+        normalizedMajor.isNotEmpty &&
+        normalizedMajor != 'Undeclared') {
+      score += _listMatchScore([normalizedMajor], text) * 0.08;
+      if (event.targetMajors.isNotEmpty &&
           event.targetMajors.any(
             (m) => m.toLowerCase() == normalizedMajor.toLowerCase(),
           )) {
@@ -231,12 +281,24 @@ class HomePersonalizationService {
         '${club.name} ${club.description} ${club.focus} ${club.category.label} '
         '${club.roles.join(' ')}';
 
+    if (_isExcludedTopic(text, interests: interests, skills: skills, major: major)) {
+      return 0;
+    }
+
+    final interestMatch = _listMatchScore(interests, text);
+    final skillMatch = _listMatchScore(skills, text);
+    if (interestMatch <= 0 && skillMatch <= 0) {
+      return 0;
+    }
+
     var score = 0.0;
-    score += _listMatchScore(interests, text) * 0.48;
-    score += _listMatchScore(skills, text) * 0.37;
+    score += interestMatch * 0.48;
+    score += skillMatch * 0.37;
 
     final normalizedMajor = major?.trim();
-    if (normalizedMajor != null && normalizedMajor.isNotEmpty) {
+    if (normalizedMajor != null &&
+        normalizedMajor.isNotEmpty &&
+        normalizedMajor != 'Undeclared') {
       score += _listMatchScore([normalizedMajor], text) * 0.15;
     }
 

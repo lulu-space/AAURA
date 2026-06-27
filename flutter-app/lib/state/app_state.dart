@@ -919,9 +919,7 @@ class AppState extends ChangeNotifier {
         major: _profile?.major,
         limit: 6,
       );
-      if (ranked.isNotEmpty) {
-        return ranked.take(4).toList(growable: false);
-      }
+      return ranked.take(4).toList(growable: false);
     }
 
     if (_useBackendData && _recommendedEventIds.isNotEmpty) {
@@ -946,9 +944,7 @@ class AppState extends ChangeNotifier {
         major: _profile?.major,
         limit: 6,
       );
-      if (ranked.isNotEmpty) {
-        return ranked.take(4).toList(growable: false);
-      }
+      return ranked.take(4).toList(growable: false);
     }
     return allClubs.take(4).toList(growable: false);
   }
@@ -956,14 +952,13 @@ class AppState extends ChangeNotifier {
   /// Hero trending strip — top matches when profile signals exist.
   List<Event> get trendingEventsForHome {
     if (_hasHomePersonalizationSignals) {
-      final ranked = HomePersonalizationService.rankEvents(
+      return HomePersonalizationService.rankEvents(
         allEvents,
         interests: _profile?.interests ?? const [],
         skills: personalizationSkillNames,
         major: _profile?.major,
         limit: 6,
       );
-      if (ranked.isNotEmpty) return ranked;
     }
     return allEvents.take(6).toList(growable: false);
   }
