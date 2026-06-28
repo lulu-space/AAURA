@@ -202,6 +202,27 @@ class _DeanDashboardScreenState extends State<DeanDashboardScreen> {
                     onAction: () => _pickFaculty(context),
                   ),
                 ] else ...[
+                  if (state.deanLastError != null &&
+                      state.deanLastError!.trim().isNotEmpty) ...[
+                    const SizedBox(height: AppSpacing.md),
+                    Container(
+                      width: double.infinity,
+                      padding: const EdgeInsets.all(AppSpacing.md),
+                      decoration: BoxDecoration(
+                        color: AppColors.danger.withValues(alpha: 0.08),
+                        borderRadius: BorderRadius.circular(AppRadii.md),
+                        border: Border.all(
+                          color: AppColors.danger.withValues(alpha: 0.25),
+                        ),
+                      ),
+                      child: Text(
+                        state.deanLastError!,
+                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                              color: AppColors.danger,
+                            ),
+                      ),
+                    ),
+                  ],
                   const SizedBox(height: AppSpacing.lg),
                   Wrap(
                     spacing: AppSpacing.sm,

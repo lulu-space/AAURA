@@ -82,6 +82,20 @@ export async function listStudentUserIdsInFaculty(faculty: string): Promise<stri
     for (const row of byMajor ?? []) {
       if (row.user_id) ids.add(row.user_id as string);
     }
+
+    // Partial major match when department is unset (common on provisioned rows).
+    for (const major of majors) {
+      const token = major.split(' ')[0]?.trim();
+      if (!token || token.length < 4) continue;
+      const { data: partialRows } = await supabaseAdmin
+        .from('students')
+        .select('user_id')
+        .ilike('major', `%${token}%`);
+
+      for (const row of partialRows ?? []) {
+        if (row.user_id) ids.add(row.user_id as string);
+      }
+    }
   }
 
   return [...ids];

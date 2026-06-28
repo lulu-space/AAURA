@@ -220,12 +220,19 @@ export class ClubRequestsService {
       role: 'lead'
     });
 
-    // Promote the requester so RLS lets them manage their club + events.
-    await supabaseAdmin
+    // Promote the requester so they can publish club events (even if role was stale).
+    const { data: requesterUser } = await supabaseAdmin
       .from('users')
-      .update({ role: 'club_organizer' })
+      .select('role')
       .eq('id', request.requester_id)
-      .eq('role', 'student');
+      .maybeSingle();
+
+    if (requesterUser?.role === 'student') {
+      await supabaseAdmin
+        .from('users')
+        .update({ role: 'club_organizer' })
+        .eq('id', request.requester_id);
+    }
 
     const { data: updated, error: updateError } = await supabaseAdmin
       .from('club_requests')

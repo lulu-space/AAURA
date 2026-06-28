@@ -430,9 +430,9 @@ class AppState extends ChangeNotifier {
       AppConfig.backendEnabled && _auth.isReady && _auth.isSignedIn;
 
   List<LeaderboardEntry> get leaderboardEntries {
-    // Authenticated users always see real standings (even if short); mock data
-    // is only used in the offline/demo experience.
-    if (_useBackendData) return List.unmodifiable(_leaderboardEntries);
+    if (AppConfig.backendEnabled && _auth.isReady && _auth.isSignedIn) {
+      return List.unmodifiable(_leaderboardEntries);
+    }
     return const [];
   }
 
@@ -2408,15 +2408,21 @@ class AppState extends ChangeNotifier {
   bool isEventFavorite(String id) => _favoriteEventIds.contains(id);
   bool isCvPinned(String id) => _cvPinnedEventIds.contains(id);
 
-  Future<void> _refreshLeaderboard() async {
-    if (!_useBackendData) return;
+  Future<void> refreshLeaderboard() async {
+    if (!AppConfig.backendEnabled || !_auth.isReady || !_auth.isSignedIn) {
+      return;
+    }
     try {
       final leaderboard = await _gamificationRepo.leaderboard(limit: 10);
       _leaderboardEntries
         ..clear()
         ..addAll(leaderboard.map(ApiMappers.leaderboardEntry));
+      _useBackendData = true;
+      notifyListeners();
     } catch (_) {}
   }
+
+  Future<void> _refreshLeaderboard() => refreshLeaderboard();
 
   Future<void> _boostSkillProgress(SkillActivityKind activity) async {
     if (!_useBackendData || _skillProgress.isEmpty) return;
@@ -2845,6 +2851,9 @@ class AppState extends ChangeNotifier {
       return;
     }
     _deanLastError = null;
+    if (!deanHasFaculty) {
+      await _hydrateProfileFromBackend();
+    }
     if (!deanHasFaculty) {
       _deanDashboard = null;
       _deanInsights = null;

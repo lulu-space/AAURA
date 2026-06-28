@@ -1,7 +1,6 @@
 import { ApiError } from '../../../core/errors/api-error.js';
 import { supabaseAdmin } from '../../../config/supabase.js';
 import type { CrudCreateDto } from '../../../shared/interfaces/crud.types.js';
-import { EVENT_MANAGER_ROLES } from '../../../shared/constants/roles.js';
 import {
   assertNoScopedEventDuplicate,
   findCrossOrganizerEventDuplicates
@@ -9,6 +8,10 @@ import {
 import { majorsForFaculty } from '../../../shared/utils/faculty-scope.js';
 import { syncVolunteerOpportunityFromEvent } from '../../volunteering-opportunities/services/volunteer-opportunity-sync.service.js';
 import { isEventVisibleToUser } from '../../../shared/utils/content-visibility.js';
+import {
+  promoteClubOrganizerIfNeeded,
+  userCanManageEvents
+} from '../utils/event-manager-access.js';
 
 const AUTO_APPROVE_ROLES = new Set(['student_affairs', 'dean_of_faculty', 'admin']);
 
@@ -79,13 +82,17 @@ export class EventsMutationService {
   }
 
   async create(userId: string, role: string | undefined, payload: CrudCreateDto) {
-    if (!role || !EVENT_MANAGER_ROLES.includes(role as (typeof EVENT_MANAGER_ROLES)[number])) {
-      throw new ApiError(403, 'Forbidden.');
+    const clubId = (payload.club_id as string | null | undefined) ?? null;
+    const canManage = await userCanManageEvents(userId, role, clubId);
+    if (!canManage) {
+      throw new ApiError(
+        403,
+        'Only club organizers and campus event managers can publish events.'
+      );
     }
 
     const autoApprove = !!role && AUTO_APPROVE_ROLES.has(role);
     const startsAt = String(payload.starts_at ?? '');
-    const clubId = (payload.club_id as string | null | undefined) ?? null;
 
     if (!autoApprove && startsAt) {
       await assertNoScopedEventDuplicate({
@@ -105,6 +112,7 @@ export class EventsMutationService {
       .single();
 
     if (error) throw new ApiError(500, 'Failed to create event.', error);
+    await promoteClubOrganizerIfNeeded(userId, role).catch(() => undefined);
     const mapped = mapEventRow(data as Record<string, unknown>);
     await syncVolunteerOpportunityFromEvent(
       data as Record<string, unknown>,
